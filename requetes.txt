@@ -61,6 +61,80 @@ CREATE TABLE Extras (
     image VARCHAR (500) NULL,
     type VARCHAR (15) NOT NULL )
 
+INSERT INTO Extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
+                                                                          Mais avant cette création, le bénin a connu plusieurs étapes dans le domaine de la lutte contre la malnutrition.
+
+                                                                          Le Bénin jouit d’une longue expérience d’interventions en matière d’alimentation, de nutrition et de sécurité alimentaire. Ses premières actions remontent au début des années 60, mais pour des raisons diverses, la politique et les actions de lutte contre la sous-alimentation et la malnutrition, de même que leurs résultats ont évolué en dents de scie, malgré la volonté affichée et les efforts déployés par les gouvernements successifs et les Partenaires au développement. Face à ce tableau peu reluisant et les risques de non atteinte des OMD qui y sont associés, le pays s’est engagé depuis 2007 dans un processus de politique économique de réformes dans le secteur de l’alimentation et de la nutrition. Ainsi, les acteurs du secteur de l’alimentation et de la nutrition se sont dotés d’une vision suite à un diagnostic plurifactoriel à l’issue de l’atelier de consensus de Guédévy (Abomey) en novembre 2007. Deux consensus se sont dégagés au terme de la rencontre de Guédévy à savoir :
+
+                                                                          L’institutionnalisation de la politique d’alimentation et de nutrition ; et
+                                                                          La nécessité d’un leadership en vue d’une coordination efficace du secteur de l’alimentation et de la nutrition au Bénin.
+
+
+                                                                          En application des conclusions de Guédévy, d’une part, un Conseil de l’Alimentation et de la Nutrition (CAN) a été créé par décret N° 2009-245 DU 09 JUIN 2009. Il a été officiellement installé par le Chef de l’Etat, le 29 novembre 2011 et son Secrétaire Permanent nommé en conseil des Ministres. Ce dernier a pris effectivement service en mars 2013.
+
+
+
+                                                                          Depuis, le CAN a fait du chemin sur la voix de l’institutionnalisation administrative avec la mise en place des Coordinations Régionales (CR), des Cadres Départementaux de Concertation (CDC), des Cadres Communaux de Concertation (CCC) et des organisations communautaires de prise en charge de la nutrition (Groupe d’Assistance en Nutrition : GAN et Comité de Surveillance en Alimentation et Nutrition : CSAN).
+
+
+
+                                                                          Le leadership du CAN se réaffirme peu à peu en vue d’une coordination effective du secteur de l’alimentation et de la nutrition. En effet, le CAN a mis en place et organise les rencontres périodiques de la Task Force Communication qui réunit toutes les parties prenantes de la nutrition autour d’un objectif commun qui est l’harmonisation de la communication pour la bonne alimentation et nutrition. Ce creuset à l’avantage d’avoir élaboré le document de stratégie de communication pour un changement social et de comportement en faveur de la nutrition  2017-2021.
+
+
+
+                                                                          Le présent document présente successivement la composition du CAN, ses attributions et missions, son fonctionnement, ses chantiers, ses acquis et perspectives",NULL, 'presentation')
+
+INSERT INTO Extras (title,description,image,type) VALUES ('VISION DU CAN', "« A l’horizon 2030, le Bénin est un pays où chaque personne jouit d’un état nutritionnel optimal pour son bien-être, lui permettant de participer activement à la création de richesse nationale et au développement durable »
+
+
+                                                                            Ralliement du Bénin au « Défi Zéro faim »
+
+                                                                            PSDAN s’inscrit dans le Partenariat Mondial REACH  (Efforts Renouvelés contre la Malnutrition Infantile)
+",NULL,'vision')
+
+INSERT INTO Missions (title,description) VALUES ('Mission 1', "Définir la Politique Nationale en matière d'Alimentation et de Nutrition ;")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 2', "Assurer l’élaboration, la mise en œuvre, Ie suivi et l'évaluation du Plan d'Action National pour l'Alimentation et la Nutrition ;")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 3', "Assurer la coordination des actions Iiées à l'Alimentation et à la Nutrition.")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 4', "Assurer l'élaboration et I 'adoption des documents de politique, des textes législatifs et des dispositions règlementaires nécessaires a I ‘expression effective de I ‘engagement politique du Gouvernement et des Collectivités Iocales dans Ie domaine de l'Alimentation et de la Nutrition")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 5',"Assurer Ie développement de programmes multisectorialisés d'alimentation et de nutrition impliquant les différents intervenants notamment l'Etat, les Collectivités locales, Ie Secteur privé et les Organisations Non Gouvernementales:")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 6',"Négocier et mobiliser les ressources nécessaires à la mise en œuvre correcte des Programmes d'Alimentation et de Nutrition")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 7',"Exploiter les résultats des études ou travaux effectués dans le domaine de l’alimentation et de la nutrition
+")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 8',"Coordonner les activités de toutes les structures nationales et internationales qui interviennent dans le domaine de l’Alimentation et de la Nutrition au Bénin")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 9',"Créer des synergies nécessaires entre les politiques sectorielles, les acteurs et les actions pertinentes devant concourir aux plans local, communal, départemental et national à une alimentation saine et équilibrée des populations")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 10',"Assurer l’élaboration des normes standards en matière d’Alimentation et de Nutrition")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 11',"Harmoniser les indicateurs de suivi-évaluation des activités et conseiller les différents intervenants impliqués dans la mise en œuvre de la politique nationale en matière d’Alimentation et de Nutrition")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 12',"Identifier, évaluer et recommander de façon systématique aux autorités compétentes, les mesures urgentes qui pourraient être adoptées pour assurer une bonne alimentation et une bonne nutrition des populations")
+
+INSERT INTO Missions (title,description) VALUES ('Mission 13',"Développer un partenariat avec les institutions régionales et internationales qui poursuivent les mêmes buts")
+
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 1', "Est doté d’une autonomie administrative et financière ;",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 2', "Moyens financiers mis à sa disposition par le Gouvernement,",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 3', "Organe Exécutif dénommé ‘’Secrétariat Permanent’’ dirigé par un Secrétaire Permanent, entouré d’un personnel compétent adéquatement avec les attributions du CAN. Le Secrétaire Permanent a un mandat de 3 ans renouvelable une seule fois,",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 4', "S’appuie sur les intervenants du secteur de l’Alimentation et de la Nutrition au Bénin ;",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 5', "Peut solliciter la création d’un Fonds de soutien à la promotion de l’Alimentation et de la Nutrition",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 6', "En session ordinaire : deux fois par an, pour approuver le rapport annuel et le plan de travail annuel",NULL, 'fonctionnement')
+
+INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 7', "En session extraordinaire au besoin suivant les circonstances",NULL, 'fonctionnement')
+
+
 
 
 
