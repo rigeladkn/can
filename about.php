@@ -22,17 +22,29 @@
     <link rel="stylesheet" href="assets/css/icomoon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
-	  function changeActivePage(){
-        document.getElementById("ftco-nav").innerHTML = '<ul class="navbar-nav mr-auto">'+
-	        	'<li class="nav-item " id="home"><a href="index.php" class="nav-link">Home</a></li>'+
-	        	'<li class="nav-item active"><a href="about.php" id="about" class="nav-link">About</a></li>'+
-	        	'<li class="nav-item"><a href="team.php" id="team" class="nav-link">Team</a></li>'+
-	        	'<li class="nav-item"><a href="project.php" id="studies" class="nav-link">Case Studies</a></li>'+
-	        	'<li class="nav-item " ><a href="services.php" class="nav-link">Services</a></li>'+
-	        	'<li class="nav-item"><a href="blog.php" id="blog" class="nav-link">Blog</a></li>'+
-	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
-			'</ul>';
-	  }
+      function changeActivePage(){
+          document.getElementById("ftco-nav").innerHTML = 	  '<a class="navbar-brand" href="index.php"><img style="height:64px" src="assets/images/can.png"></a>'+
+            '<ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">'+
+              '<li class="nav-item " id="home"><a href="index.php" class="nav-link">Accueil</a></li>'+
+          '<li class="nav-item dropdown active">'+
+            '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>'+
+            '<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
+              '<a class="dropdown-item" href="about.php">Présentation</a>'+
+              '<a class="dropdown-item" href="#">Mot du directeur</a>'+
+              '<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
+              '<div class="dropdown-divider"></div>'+
+              '<a class="dropdown-item" href="team.php">Membres</a>'+
+              '<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
+            '</div>'+
+              '</li>'+
+              
+              '<li class="nav-item"><a href="team.php" id="team" class="nav-link">Projets</a></li>'+
+              '<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
+              '<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
+              '<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
+              '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
+            '</ul>';
+      }
   </script>
 	
   </head>
