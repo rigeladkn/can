@@ -44,31 +44,31 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Case Studies</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Projects <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Nos Projets</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Projets <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
     </section>
 		
-		<section class="ftco-section">
-			<div class="container">
-				<div class="row no-gutters justify-content-center mb-5">
-          <div class="col-md-6 text-center heading-section ftco-animate">
-          	<span class="subheading">Projects Done</span>
-            <h2 class="mb-4">Case Studies</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-            <p></p>
-          </div>
-        </div>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row no-gutters justify-content-center mb-5">
+          		<div class="col-md-6 text-center heading-section ftco-animate">
+					<span class="subheading">Projets réalisés</span>
+					<h2 class="mb-4">Nos Projets</h2>
+					<p>Voici une liste de quelques projets réalisés par le Conseil de l'Alimentation et de la Nutrition (CAN) : </p>
+					<p></p>
+			</div>
+		</div>
         <div class="row">
         	<div class="col-md-4">
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-1.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Consulting</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">En cours</span>
+        				<h3><a href="#">Banque mondiale</a></h3>
+        				<p>Projet de Nutrition et du Développement de la Petite Enfance (PNDPE)</p>
         			</div>
         		</div>
         	</div>
@@ -76,9 +76,9 @@
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-2.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Marketing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">En cours</span>
+        				<h3><a href="#">Pays du G8</a></h3>
+        				<p>La Nouvelle Alliance pour la Sécurité alimentaire et la Nutrition (NASAN) soutenue par les pays du G8 au Bénin</p>
         			</div>
         		</div>
         	</div>
@@ -86,9 +86,9 @@
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-3.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Financing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">En cours</span>
+        				<h3><a href="#">Union africaine</a></h3>
+        				<p>L’Alliance Globale pour l’Initiative Résilience au Sahel et en Afrique de l’Ouest (AGIR) soutenue par l’Union Européenne et le CILSS;</p>
         			</div>
         		</div>
         	</div>
@@ -96,19 +96,9 @@
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-4.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Audit &amp; Taxes</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-5.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Financing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">En cours</span>
+        				<h3><a href="#">Banque mondiale</a></h3>
+        				<p>Le Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) Un crédit IDA de 28 millions de dollars US,  entré en vigueur depuis le 8 avril 2014 et qui couvre la période 2014-2019 en financement du Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) ;</p>
         			</div>
         		</div>
         	</div>
@@ -116,40 +106,19 @@
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-6.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Real Estate</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">Clôturé</span>
+        				<h3><a href="#">Banque mondiale</a></h3>
+        				<p>L’IDF, projet d’appui institutionnel financé par la Banque Mondiale pour un montant de 375 mille de dollars US et couvrant la période 2014-2016 ;</p>
         			</div>
         		</div>
         	</div>
-
         	<div class="col-md-4">
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/image_4.jpg);"></div>
         			<div class="text w-100 text-center">
-        				<span class="cat">Audit &amp; Taxes</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/image_5.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Financing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/image_6.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Real Estate</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+        				<span class="cat">Clôturé</span>
+        				<h3><a href="#">Fonds Japonais (Banque mondiale)</a></h3>
+        				<p>Le Projet pédagogique de Nutrition Communautaire (PNC)</p>
         			</div>
         		</div>
         	</div>

@@ -36,6 +36,7 @@
   </script>
 	
   </head>
+
   <body  onLoad="changeActivePage()" >
     
     <?php include('includes/navbar.php')?>
@@ -45,8 +46,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Blog</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Nos activités </h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Activités <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -59,16 +60,16 @@
             <div class="blog-entry">
               <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_1.jpg');">
 								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
+                  <span class="day">03</span>
+                  <span class="mos">Mai</span>
+                  <span class="yr">2018</span>
                 </div>
               </a>
               <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3 class="heading"><a href="#">Rencontres de la plateforme multisectorielle CAN et PTF SUN</a></h3>
+                <p>Visite d’échange d’expérience par une délégation du Bénin ...</p>
                 <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
 	                <p class="ml-auto mb-0">
 	                	<a href="#" class="mr-2">Admin</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
@@ -81,16 +82,16 @@
             <div class="blog-entry">
               <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_2.jpg');">
 								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
+                  <span class="day">18</span>
+                  <span class="mos">Juil.</span>
+                  <span class="yr">2018</span>
                 </div>
               </a>
               <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3 class="heading"><a href="#">L'élaboration des Cadres Communs de Résultats (CCR) des 77 communes ...</a></h3>
+                <p>Dans le cadre de la réalisation de cette activité, plusieurs ...</p>
                 <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
 	                <p class="ml-auto mb-0">
 	                	<a href="#" class="mr-2">Admin</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
@@ -99,96 +100,6 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_4.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_5.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_6.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
