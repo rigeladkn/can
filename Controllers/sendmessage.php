@@ -11,7 +11,7 @@ if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["sujet"])&& is
  
     if($messageObj->dbConnect()){
         echo 'connecté ';
-        if($result = $messageObj->insertNewMessage($messageObj)){
+        if($result = $messageObj->insertNewMessage()){
             echo "succès";
             // echo "Redirection vers la page de connexion dans 5s";
             // sleep(5);
