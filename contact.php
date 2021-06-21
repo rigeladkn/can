@@ -88,18 +88,18 @@
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-10 mb-md-5">
           	<h2 class="text-center">Avez-vous des questions ? <br> N'hésitez pas à nous laisser un message.</h2>
-            <form action="#" class="border p-5 contact-form">
+            <form action="Controllers/sendmessage.php" class="border p-5 contact-form" method="post">
               <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Entrez votre nom">
+                <input type="text" class="form-control" name="nom" placeholder="Entrez votre nom">
               </div>
               <div class="form-group">
                 <input type="text" name="email" class="form-control" placeholder="Entrez votre email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name = "subject" placeholder="Sujet / Objet">
+                <input type="text" class="form-control" name ="sujet" placeholder="Sujet / Objet">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" name = "text" placeholder="Message"></textarea>
+                <textarea id="" cols="30" rows="7" class="form-control" name ="texte" placeholder="Message"></textarea>
               </div>
               <center>
               <div class="form-group">
