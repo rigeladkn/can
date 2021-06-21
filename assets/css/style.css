@@ -8246,12 +8246,12 @@ h1, h2, h3, h4, h5,
       font-size: 20px; }
 
 .ftco-navbar-light {
-  background: #3e64ff !important;
+  background: #343a40 !important;
   z-index: 3;
   padding: 0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #3e64ff !important;
+      background:#343a40 !important;
       position: relative;
       top: 0;
       padding: 10px 15px; } }
