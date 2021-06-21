@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Negotiate - Free Bootstrap 4 Template by Colorlib</title>
+    <title>CAN | Accueil</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    
+    |
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -34,7 +34,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Negotiate Consulting</span>
             <h1 class="mb-4">We Are The Best Consulting Agency</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder       <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Negotiate Consulting</span>
             <h1 class="mb-4">We Help to Grow Your Business</h1>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Our Services</a></p>
+            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder       <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
@@ -65,7 +65,7 @@
 					<div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
 						<div class="heading-section mb-4">
 							
-							<h2>Bienvenue</h2>
+							<h2>Bienvenue sur CAN</h2>
 						</div>
 						<p>Nous vous assurons votre destinee</p>
 						<div class="tabulation-2 mt-4">
@@ -366,7 +366,7 @@
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Blog Posts</span> -->
-            <h2 class="mb-4">Recent Blog</h2>
+            <h2 class="mb-4">Activités récentes</h2>
             <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
           </div>
         </div>
@@ -385,10 +385,7 @@
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
 	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
+	               
                 </div>
               </div>
             </div>
@@ -407,10 +404,7 @@
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
 	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
+	                
                 </div>
               </div>
             </div>
@@ -429,10 +423,10 @@
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
 	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
+	                <!-- <p class="ml-auto mb-0">
 	                	<a href="#" class="mr-2">Admin</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
+	                </p> -->
                 </div>
               </div>
             </div>
@@ -440,18 +434,18 @@
         </div>
 			</div>
 		</section>
-    <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/bg_1.jpg);">
+    <!-- <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/bg_1.jpg);">
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-lg-9 col-md-8 d-flex align-items-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3 mb-md-0">You Always Get the Best Guidance</h2>
+            <h2 class="mb-3 mb-md-0">Replacer la nutrition au coeur du développement</h2>
           </div>
           <div class="col-lg-3 col-md-4 ftco-animate">
-          	<p class="mb-0"><a href="#" class="btn btn-secondary py-3 px-4">Request Quote</a></p>
+          	<p class="mb-0"><a href="#" class="btn btn-secondary py-3 px-4">Contactez-nous</a></p>
           </div>
         </div>	
     	</div>
-    </section>
+    </section> -->
 
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">
@@ -459,27 +453,76 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Testimonies</span> -->
             <h2 class="mb-4">Nos partenaires</h2>
-            <!-- <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p> -->
+            <p>Ils nous font confiance</p>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
               <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_1.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Racky Henderson</p>
-                    <span class="position">Father</span>
-                  </div>
-                </div>
+					<center>
+							<div class="testimony-wrap" style="background:none;">
+							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
+							</div>
+							<div class="text py-1">
+							
+							<p>Racky Henderson</p>
+							
+							</div>
+							<!-- <div class="text pl-4">
+								<span class="quote d-flex align-items-center justify-content-center">
+								<i class="icon-quote-left"></i>
+								</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="name">Racky Henderson</p>
+								<span class="position">Father</span>
+							</div> -->
+							</div>
+					</center>
               </div>
-              <div class="item">
+			  <div class="item">
+					<center>
+							<div class="testimony-wrap" style="background:none;">
+							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
+							</div>
+							<div class="text py-1">
+							
+							<p>Racky Henderson</p>
+							
+							</div>
+							<!-- <div class="text pl-4">
+								<span class="quote d-flex align-items-center justify-content-center">
+								<i class="icon-quote-left"></i>
+								</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="name">Racky Henderson</p>
+								<span class="position">Father</span>
+							</div> -->
+							</div>
+					</center>
+              </div>
+			  <div class="item">
+					<center>
+							<div class="testimony-wrap" style="background:none;">
+							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
+							</div>
+							<div class="text py-1">
+							
+							<p>Racky Henderson</p>
+							
+							</div>
+							<!-- <div class="text pl-4">
+								<span class="quote d-flex align-items-center justify-content-center">
+								<i class="icon-quote-left"></i>
+								</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<p class="name">Racky Henderson</p>
+								<span class="position">Father</span>
+							</div> -->
+							</div>
+					</center>
+              </div>
+              <!-- <div class="item">
                 <div class="testimony-wrap d-flex">
                   <div class="user-img" style="background-image: url(assets/images/person_2.jpg)">
                   </div>
@@ -533,8 +576,8 @@
                     <p class="name">Ken Bosh</p>
                     <span class="position">Businesswoman</span>
                   </div>
-                </div>
-              </div>
+                </div> 
+              </div>-->
             </div>
           </div>
         </div>
