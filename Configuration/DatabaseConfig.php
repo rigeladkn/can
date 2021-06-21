@@ -10,7 +10,7 @@ class DatabaseConfig {
        $this->servername = 'localhost';
        $this->username = 'root';
        $this->password = '';
-       $this->databasename = 'gestnotes';
+       $this->databasename = 'can';
    }
 }
  

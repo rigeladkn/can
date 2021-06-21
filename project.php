@@ -28,15 +28,15 @@
 	        	'<li class="nav-item"><a href="about.php" id="about" class="nav-link">About</a></li>'+
 	        	'<li class="nav-item"><a href="team.php" id="team" class="nav-link">Team</a></li>'+
 	        	'<li class="nav-item active"><a href="project.php" id="studies" class="nav-link">Case Studies</a></li>'+
-	        	'<li class="nav-item " ><a href="services.php" class="nav-link">Services</a></li>'+
-	        	'<li class="nav-item  "><a href="blog.php" id="blog" class="nav-link">Blog</a></li>'+
+	        	'<li class="nav-item" ><a href="services.php" class="nav-link">Services</a></li>'+
+	        	'<li class="nav-item"><a href="blog.php" id="blog" class="nav-link">Blog</a></li>'+
 	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 			'</ul>';
 	  }
   </script>
 	
   </head>
-	  
+<body  onLoad="changeActivePage()" >
 	<?php include('includes/navbar.php')?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">

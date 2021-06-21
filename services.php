@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Negotiate - Free Bootstrap 4 Template by Colorlib</title>
+    <title>CAN | Services</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -47,7 +47,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Services</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -58,21 +58,22 @@
     		<div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<span class="subheading">Services</span>
-            <h2 class="mb-4">Why Choose Us?</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+            <h2 class="mb-4">Pourquoi nous choisir ?</h2>
+            <p>Le Conseil de l'Administration et de la Nutrition ................................. <br> ..............................................
+			</p>
           </div>
         </div>
   			<div class="row tabulation mt-4 ftco-animate">
   				<div class="col-md-4">
 						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
 						  <li class="nav-item text-left">
-						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span> Business Analysis</a>
+						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span>Service 1</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span> Business Consulting</a>
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span>Service 2</a>
 						  </li>
 						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span> Business Insurance</a>
+						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span> Service 3</a>
 						  </li>
 						  <li class="nav-item text-left">
 						    <a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-money mr-2"></span> Global Investigation</a>
@@ -125,7 +126,7 @@
 
     <section class="ftco-section">
 			<div class="container">
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-lg-4 d-flex">
 						<div class="services-2 border rounded text-center ftco-animate">
 							<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
@@ -180,15 +181,16 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
-		</section>
+	</section>
 
 		
 		<?php include("includes/footer.php") ?>
     
   
 
+  
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
  

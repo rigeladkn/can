@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Negotiate - Free Bootstrap 4 Template by Colorlib</title>
+    <title>CAN | Contact</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -37,7 +37,7 @@
   </script>
 	
   </head>
-  <body  onLoad="changeActivePage()" >
+  <body  onLoad="changeActivePage()">
     
     <?php include('includes/navbar.php')?>
     
@@ -46,8 +46,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Contact</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Nous contacter</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
 			          	<div class="icon">
 			          		<span class="icon-map-o"></span>
 			          	</div>
-			            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+			            <p><span>Adresse :</span>Cotonou, premier carrefour à gauche avant l'étoile rouge en quittant le stade M.K BENIN </p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -71,7 +71,7 @@
 			          	<div class="icon">
 			          		<span class="icon-tablet"></span>
 			          	</div>
-			            <p><span>Phone:</span> <a href="tel://1234567920">Call us: + 1235 2355 98</a></p>
+			            <p><span>Téléphone : </span> <a href="tel://67673524">+229 21 32 13 98 / 67 67 35 24</a></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -79,7 +79,7 @@
 			          	<div class="icon">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+			            <p><span>Email:</span> <a href="mailto:contact@can-benin.bj">contact@can-benin.bj</a></p>
 			          </div>
 		          </div>
 		        </div>
@@ -87,23 +87,25 @@
         </div>
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-10 mb-md-5">
-          	<h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
+          	<h2 class="text-center">Avez-vous des questions ? <br> N'hésitez pas à nous laisser un message.</h2>
             <form action="#" class="border p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" name="name" placeholder="Entrez votre nom">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" name="email" class="form-control" placeholder="Entrez votre email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" name = "subject" placeholder="Sujet / Objet">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" name = "text" placeholder="Message"></textarea>
               </div>
+              <center>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Envoyer le message" class="btn btn-primary btn-sm py-3 px-5">
               </div>
+              </center>
             </form>
           
           </div>
@@ -111,7 +113,7 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
+    <!-- <section class="ftco-section ftco-no-pb ftco-no-pt">
     	<div class="container-fluid px-0">
     		<div class="row justify-content-center">
         	<div class="col-md-12">
@@ -119,7 +121,7 @@
         	</div>
         </div>
     	</div>
-    </section>
+    </section> -->
 		
     <?php include("includes/footer.php") ?>
     
