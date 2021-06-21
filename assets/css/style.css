@@ -8326,7 +8326,7 @@ h1, h2, h3, h4, h5,
         color: #fff;
         background: #3e64ff; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    background: #fa5c20 !important;
+    background: #3e64ff !important;
     color: #fff; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item.active > a {
@@ -8691,7 +8691,7 @@ h1, h2, h3, h4, h5,
         border-color: #fff;
         color: #3e64ff; }
   .btn.btn-secondary {
-    background: #fa5c20;
+    background: #3e64ff;
     border: 1px solid #fa5c20;
     color: #fff; }
     .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
