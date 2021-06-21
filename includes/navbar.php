@@ -1,38 +1,36 @@
-<div class="bg-top navbar-light d-flex flex-column-reverse">
-    	<div class="container py-3">
+<div class="bg-top navbar-light d-flex flex-column-reverse" style="background:#e8e8e8">
+    	<div class="container">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
-    			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.php">Negotiate <span>Consulting Agency</span></a>
-    			</div>
-	    		<div class="col-lg-8 d-block">
+    		
+	    		<div class="col-lg-12 d-block">
 		    		<div class="row d-flex">
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-paper-plane"></span></div>
+					    <div class="col-md-3 d-flex topper al ign-items-center align-items-stretch py-2" style="font-size:12px" style="text-color:white;">
+					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
-						    	<span>youremail@email.com</span>
+						    	<span> contact@can-benin.bj</span>
 						    </div>
 					    </div>
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-call"></span></div>
+					    <div class="col-md-2 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px">
+					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-call" style="font-size:17px"></span></div>
 						    <div class="text">
-						    	<span>Call</span>
-						    	<span>+123 523 5598</span>
+						    	<span>Télephone</span>
+						    	<span>+229 21 32 13 98</span>
 						    </div>
 					    </div>
-					    <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-time"></span></div>
-						    <div class="text">
-						    	<span>Working Hours</span>
-						    	<span>Mon - Sat 8am - 5pm</span>
+					    
+						<div class="col-md-7 py-2" style="text-align: right;font-size:16px">
+					    	
+					    	<div class="">
+					    		<span> <strong style="color:#484848;">Replacer la nutrition au coeur du developpement</strong>  </span>
 						    </div>
 					    </div>
 				    </div>
 			    </div>
 		    </div>
 		  </div>
-		  <div class="top-social-menu py-2 bg-light">
-		  	<div class="container">
+		  <!--<div class="top-social-menu py-2 bg-light">
+		  	 <div class="container">
 		  		<div class="row">
 			    	<div class="col">
 			    		<p class="social mb-0">
@@ -45,28 +43,40 @@
 			    		<a href="#" class="btn-link">Request A Quote</a>
 			    	</div>
 			    </div>
-		  	</div>
-		  </div>
+		  	</div> 
+		  </div>-->
     </div>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	  <nav class="navbar navbar-expand-lg navbar-dark  ftco-navbar-light bg-dark" id="ftco-navbar" style="background:white">
 	    <div class="container d-flex align-items-center">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <form action="#" class="searchform order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search">
-            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
-          </div>
-        </form>
+	        </button>
+	      	<form action="#" class="searchform order-lg-last" style="width:10%; height:39px">
+				<div class="form-group d-flex">
+					<input type="text" class="form-control pl-3" style="height:37px !important;" placeholder="Search">
+					<button type="submit" placeholder="" class="form-control search" style="height:37px !important;"><span class="ion-ios-search"></span></button>
+				</div>
+        	</form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active" id="home"><a href="index.php" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.php" id="about" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="team.php" id="team" class="nav-link">Team</a></li>
-	        	<li class="nav-item"><a href="project.php" id="studies" class="nav-link">Case Studies</a></li>
+		  <a class="navbar-brand" href="https://finances.bj"><img style="height:64px" src="assets/images/can.png"></a>
+	        <ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">
+	        	<li class="nav-item active" id="home"><a href="index.php" class="nav-link">Accueil</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+						<a class="dropdown-item" href="#">Présentation</a>
+						<a class="dropdown-item" href="#">Mot du directeur</a>
+						<a class="dropdown-item" href="#">Vision et misions</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Membres</a>
+						<a class="dropdown-item" href="#">Fonctionnement</a>
+					</div>
+        	   </li>
+	        	
+	        	<li class="nav-item"><a href="team.php" id="team" class="nav-link">Projets</a></li>
+	        	<li class="nav-item"><a href="project.php" id="studies" class="nav-link">Actualités</a></li>
 	        	<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="blog.php" id="blog" class="nav-link">Blog</a></li>
+	        	<li class="nav-item"><a href="blog.php" id="blog" class="nav-link">Partenaires</a></li>
 	          <li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
