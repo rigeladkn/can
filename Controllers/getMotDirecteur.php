@@ -1,13 +1,13 @@
 <?php
 
-function getvisions($from){
+function getMotDirecteur($from){
 
     include_once('Models/Extra.php');
 
-    $vision = new Extra("", "", "", "", $from);
+    $mot_directeur = new Extra("", "", "", "", $from);
 
-    if($vision->dbConnect()){
-        if($result = $vision->getAllExtras("vision")){
+    if($mot_directeur->dbConnect()){
+        if($result = $mot_directeur->getAllExtras("motDirecteur")){
             return $result;
         }
         else{

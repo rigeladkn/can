@@ -1,5 +1,5 @@
  
- <form action="../../../Controllers/addMission.php" method="POST"> 
+ <form action="../../../Controllers/modifMission.php" method="POST"> 
  <div class="modal fade" id="missionModal" tabindex="-1" role="dialog" aria-labelledby="missionModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

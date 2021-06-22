@@ -1,15 +1,15 @@
 <?php
 
-require_once '../Models/Actualite.php';
+require_once '../Models/Extra.php';
 
-if(isset($_POST["title"]) && isset($_POST["description"]) && isset($_POST["image"]) && isset($_POST["ladate"]))
-{
+if(isset($_POST["title"]) && isset($_POST["description"])){
     echo 'reçu';
-    $actualite = new Actualite($_POST["title"], $_POST["description"], $_POST["image"], $_POST["ladate"], "admin");
 
-    if($actualite->dbConnect()){
+    $vision = new Extra($_POST["title"], $_POST["description"], "", "vision", "admin");
+
+    if($vision->dbConnect()){
         echo 'Connecté';
-        if($result = $actualite->insertActualite()){
+        if($result = $vision->updateExtra()){
             echo 'Succès';
             header("location: http://localhost/workspace/can/admin/dashboard/can/index.php");
             die();

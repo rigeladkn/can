@@ -2,10 +2,10 @@
 
 require_once '../Models/Extra.php';
 
-if(iisset($_POST["title"]) && isset($_POST["description"])){
+if(isset($_POST["title"]) && isset($_POST["description"])){
     echo 'reçu';
 
-    $vision = new Extra($_POST["title"], $_POST["description"], "", "vision");
+    $vision = new Extra($_POST["title"], $_POST["description"], "", "vision", "admin");
 
     if($vision->dbConnect()){
         echo 'Connecté';

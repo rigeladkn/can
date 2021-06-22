@@ -1,13 +1,23 @@
 <?php
 
-require_once '../Models/Extra.php';
+function getmissions($from){
+    
+    include_once('Models/Extra.php');
 
-function getMissions(){
-    $mission = new Extra("", "", "", "");
+    $mission = new Extra("", "", "", "", $from);
 
-    $result = $mission->getAllExtras("mission");
-
-    return $result;
+    if($mission->dbConnect()){
+        if($result = $mission->getAllExtras("mission")){
+            // var_dump($result);
+            return $result;
+        }
+        else{
+            echo 'Echec';
+        }
+    }
+    else{
+        echo 'Connexion impossible';
+    }
 }
 
 ?>

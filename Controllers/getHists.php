@@ -1,13 +1,22 @@
 <?php
 
-require_once '../Models/Extra.php';
+function getHistorique($from){
 
-function getVisions(){
-    $historique = new Extra("", "", "", "");
+    include_once('Models/Extra.php');
 
-    $result = $historique->getAllExtras("historique");
+    $historique = new Extra("", "", "", "", $from);
 
-    return $result;
+    if($historique->dbConnect()){
+        if($result = $historique->getAllExtras("historique")){
+            return $result;
+        }
+        else{
+            echo 'Echec';
+        }
+    }
+    else{
+        echo 'Connexion impossible';
+    }
 }
 
 ?>

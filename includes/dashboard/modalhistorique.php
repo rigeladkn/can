@@ -1,5 +1,5 @@
  
- <form action="../../../Controllers/modiHist.php" method="POST"> 
+ <form action="../../../Controllers/modifHist.php" method="POST"> 
  <div class="modal fade" id="historiqueModal" tabindex="-1" role="dialog" aria-labelledby="historiqueModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

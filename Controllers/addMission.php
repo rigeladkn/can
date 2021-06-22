@@ -5,7 +5,7 @@ require_once '../Models/Extra.php';
 if(isset($_POST["description"])){
     echo 'reçu';
 
-    $mission = new Extra("", $_POST["description"], "", "mission");
+    $mission = new Extra("", $_POST["description"], "", "mission", "admin");
 
     if($mission->dbConnect()){
         echo 'Connecté';

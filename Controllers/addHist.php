@@ -5,7 +5,7 @@ require_once '../Models/Extra.php';
 if(iisset($_POST["title"]) && isset($_POST["description"])){
     echo 'reçu';
 
-    $historique = new Extra($_POST["title"], $_POST["description"], "", "historique");
+    $historique = new Extra($_POST["title"], $_POST["description"], "", "historique", "admin");
 
     if($historique->dbConnect()){
         echo 'Connecté';

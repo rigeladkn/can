@@ -1,13 +1,13 @@
 <?php
 
-function getvisions($from){
+function getPresentation($from){
 
     include_once('Models/Extra.php');
 
-    $vision = new Extra("", "", "", "", $from);
+    $presentation = new Extra("", "", "", "", $from);
 
-    if($vision->dbConnect()){
-        if($result = $vision->getAllExtras("vision")){
+    if($presentation->dbConnect()){
+        if($result = $presentation->getAllExtras("presentation")){
             return $result;
         }
         else{

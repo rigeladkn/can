@@ -20,7 +20,7 @@
                     <textarea name="description" type="text"   rows="2"  class="form-control" required> </textarea>
                 </div>
                 <div class="form-group">
-                    <label for="description" class="col-form-label">Photo de profil du Directeur</label>
+                    <label for="image" class="col-form-label">Photo de profil du Directeur</label>
                         <input type="file" class="form-control" name="image">
                 </div>
                 </form>
