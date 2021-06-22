@@ -30,7 +30,7 @@ class Project{
 
     function dbConnect()
     {
-        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename,);
+        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename);
         return $this->connect;
     }
 

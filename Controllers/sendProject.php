@@ -11,7 +11,7 @@ if(isset($_POST["status"]) && isset($_POST["financement"]) && isset($_POST["desc
         echo 'Connecté';
         if($result = $project->insertProject()){
             echo 'Succès';
-            header("location: http://localhost/can/dashboard.php");
+            header("location: http://localhost/workspace/can/admin/dashboard/can/index.php");
             die();
         }
         else{

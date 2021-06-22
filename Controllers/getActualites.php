@@ -3,7 +3,7 @@
 require_once '../Models/Actualite.php';
 
 function getActualites(){
-    $actualite = new Actualite("", "", "");
+    $actualite = new Actualite("", "", "", "");
 
     $result = $actualite->getAllActualites();
 

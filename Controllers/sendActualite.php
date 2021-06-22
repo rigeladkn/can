@@ -11,7 +11,7 @@ if(isset($_POST["title"]) && isset($_POST["description"]) && isset($_POST["image
         echo 'Connecté';
         if($result = $actualite->insertActualite()){
             echo 'Succès';
-            header("location: http://localhost/can/dashboard.php");
+            header("location: http://localhost/workspace/can/admin/dashboard/can/index.php");
             die();
         }
         else{
