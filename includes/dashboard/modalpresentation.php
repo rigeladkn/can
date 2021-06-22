@@ -1,10 +1,10 @@
  
- <form action="../../../Controllers/modiFonct.php" method="POST"> 
- <div class="modal fade" id="fonctionnementModal" tabindex="-1" role="dialog" aria-labelledby="fonctionnementModalLabel" aria-hidden="true" data-backdrop="static">
+ <form action="../../../Controllers/modifPresentation.php" method="POST"> 
+ <div class="modal fade" id="presentationModal" tabindex="-1" role="dialog" aria-labelledby="presentationModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Fonctionnement (ou Historique)</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Présentation</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>

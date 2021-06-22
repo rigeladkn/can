@@ -56,7 +56,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Lorem Ipsum is simply dummy text of the printing</p>
+                                            <p class="m-b-0">Menu "Le CAN"</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -101,12 +101,12 @@
                                                         <p>
                                                             Cliquez sur un composant pour en ajouter (ou modifier son contenu) sur le site web
                                                         </p>
-                                                        <button class="btn btn-primary waves-effect waves-light col-2">Présentation</button>
-                                                        <button class="btn btn-success waves-effect waves-light col-2">Mot du directeur</button>
+                                                        <button class="btn btn-primary waves-effect waves-light col-2" data-toggle="modal" data-target="#presentationModal">Présentation</button>
+                                                        <button class="btn btn-success waves-effect waves-light col-2" data-toggle="modal" data-target="#directeurModal">Mot du directeur</button>
                                                         <button class="btn waves-effect waves-light col-1" style="background-color: #ff7814; color:white" data-toggle="modal" data-target="#visionModal">Vision</button>
 
                                                         <button class="btn btn-info waves-effect waves-light col-2" data-toggle="modal" data-target="#missionModal" ><i class="icofont icofont-alt-3" >Mission</button>
-                                                        <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#fonctionnementModal">Fonctionnement</button>
+                                                        <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#historiqueModal">Historique</button>
                                                         <button class="btn btn-inverse waves-effect waves-light col-2" data-toggle="modal" data-target="#membreModal">Membre</button>
                                                     </div>
                                                 </div>
@@ -165,12 +165,16 @@
 
  <!-- modal ajout mission -->
  <?php include("../../../includes/dashboard/modalajoutmission.php")?> 
- <!-- modal pour fonctionnement -->
- <?php include("../../../includes/dashboard/modalfonctionnement.php")?>
+ <!-- modal pour historique -->
+ <?php include("../../../includes/dashboard/modalhistorique.php")?>
  <!-- modal pour vivion -->
  <?php include("../../../includes/dashboard/modalvision.php")?> 
- <!-- modal pour vivion -->
+ <!-- modal pour membre -->
  <?php include("../../../includes/dashboard/modalajoutmembre.php")?>
+ <!-- modal pour presentation -->
+ <?php include("../../../includes/dashboard/modalpresentation.php")?>
+  <!-- modal pour mot directeur -->
+ <?php include("../../../includes/dashboard/modalmotdirecteur.php")?>
 
 
 
