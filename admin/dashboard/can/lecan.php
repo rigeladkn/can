@@ -55,7 +55,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Buttons</h5>
+                                            <h5 class="m-b-10">Dashboard</h5>
                                             <p class="m-b-0">Lorem Ipsum is simply dummy text of the printing</p>
                                         </div>
                                     </div>
@@ -64,10 +64,9 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Basic Components</a>
+                                            <li class="breadcrumb-item"><a href="lecan.php">Le CAN</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Buttons</a>
-                                            </li>
+                                          
                                         </ul>
                                     </div>
                                 </div>
@@ -85,7 +84,7 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <div class="card-header-left">
-                                                            <h5>Basic Buttons</h5>
+                                                            <h5>Le CAN</h5>
                                                         </div>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
@@ -100,15 +99,15 @@
                                                     <div class="card-block">
                                                         <!-- button Default -->
                                                         <p>
-                                                            Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.
+                                                            Cliquez sur un composant pour en ajouter (ou modifier son contenu) sur le site web
                                                         </p>
-                                                        <button class="btn btn-primary waves-effect waves-light">Présentation</button>
-                                                        <button class="btn btn-success waves-effect waves-light">Mot du directeur</button>
-                                                        <button class="btn waves-effect waves-light" style="background-color: #ff7814; color:white">Vision</button>
+                                                        <button class="btn btn-primary waves-effect waves-light col-2">Présentation</button>
+                                                        <button class="btn btn-success waves-effect waves-light col-2">Mot du directeur</button>
+                                                        <button class="btn waves-effect waves-light col-1" style="background-color: #ff7814; color:white" data-toggle="modal" data-target="#visionModal">Vision</button>
 
-                                                        <button class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target="#missionModal" ><i class="icofont icofont-alt-3" >Mission</button>
-                                                        <button class="btn btn-danger waves-effect waves-light">Fonctionnement</button>
-                                                        <button class="btn btn-inverse waves-effect waves-light">Membre</button>
+                                                        <button class="btn btn-info waves-effect waves-light col-2" data-toggle="modal" data-target="#missionModal" ><i class="icofont icofont-alt-3" >Mission</button>
+                                                        <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#fonctionnementModal">Fonctionnement</button>
+                                                        <button class="btn btn-inverse waves-effect waves-light col-2" data-toggle="modal" data-target="#membreModal">Membre</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -135,49 +134,7 @@
     </div>
 
  
-
-    <!-- Older IE warning message -->
-    <!--[if lt IE 10]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="../../../assets/dashboard/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../../../assets/dashboard/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="../../../assets/dashboard/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="../../../assets/dashboard/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../../../assets/dashboard/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
+ 
     <!-- Warning Section Ends -->
     <!-- Required Jquery -->
     <script type="text/javascript" src="../../../assets/dashboard/js/jquery/jquery.min.js "></script>
@@ -207,7 +164,13 @@
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
  <!-- modal ajout mission -->
- <?php include("../../../includes/dashboard/modalajoutmission.php")?>
+ <?php include("../../../includes/dashboard/modalajoutmission.php")?> 
+ <!-- modal pour fonctionnement -->
+ <?php include("../../../includes/dashboard/modalfonctionnement.php")?>
+ <!-- modal pour vivion -->
+ <?php include("../../../includes/dashboard/modalvision.php")?> 
+ <!-- modal pour vivion -->
+ <?php include("../../../includes/dashboard/modalajoutmembre.php")?>
 
 
 
