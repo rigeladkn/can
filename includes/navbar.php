@@ -4,7 +4,7 @@
     		
 	    		<div class="col-lg-12 d-block">
 		    		<div class="row d-flex">
-					    <div class="col-md-3 d-flex topper al ign-items-center align-items-stretch py-2" style="font-size:12px" style="text-color:white;">
+					    <div class="col-md-3 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px" style="color:white;">
 					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
