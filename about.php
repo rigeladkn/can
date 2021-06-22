@@ -49,6 +49,11 @@
 	
   </head>
   <body  onLoad="changeActivePage()" >
+
+  <?php
+      include ('Controllers/getMissions.php');
+      $result = getMissions();
+  ?>
 	  <?php include('includes/navbar.php')?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">
@@ -88,7 +93,12 @@
 							<div class="tab-content bg-light rounded mt-2">
 							  <div class="tab-pane container p-0 active" id="home1">
                                   <p>
-                                      mission
+                                      <?php
+                                        while ($i=mysqli_fetch_array($result)){
+                                            echo($i['description']);
+                                            echo "<br>";
+                                        }
+                                      ?>
                                   </p>
                               </div>
 							  <div class="tab-pane container p-0 fade" id="home2">
