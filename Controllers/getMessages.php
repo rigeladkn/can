@@ -7,7 +7,7 @@ function getMessages($from){
     $messageObj = new Message("", "", "", "", $from);
 
     if($messageObj->dbConnect()){
-        if($result = $messageObj->getAllMessages();){
+        if($result = $messageObj->getAllMessages()){
             return $result;
         }
         else{
