@@ -1,10 +1,10 @@
  
- <form action="../../../Controllers/modiFonct.php" method="POST"> 
- <div class="modal fade" id="fonctionnementModal" tabindex="-1" role="dialog" aria-labelledby="fonctionnementModalLabel" aria-hidden="true" data-backdrop="static">
+ <form action="../../../Controllers/addService.php" method="POST"> 
+ <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="serviceModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Fonctionnement (ou Historique)</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter un service</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,12 +12,12 @@
             <div class="modal-body">
                 <form>
                 <div class="form-group">
-                    <label for="title" class="col-form-label">Titre</label>
-                    <input name="title" type="text" maxlength="50" class="form-control" required> </input>
+                    <label for="title" class="col-form-label">Titre du service</label>
+                    <input name="title" type="text" maxlength="25"  class="form-control" required> </input>
                 </div>
                 <div class="form-group">
                     <label for="description" class="col-form-label">Description</label>
-                    <textarea name="description" type="text"   rows="10"     class="form-control" required> </textarea>
+                    <textarea name="description" type="text"   rows="12"  style="max-height:100px" class="form-control" required> </textarea>
                 </div>
                 </form>
                 

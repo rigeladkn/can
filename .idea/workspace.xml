@@ -2,8 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="566b14f7-efb9-4068-8ebf-1b656c234753" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/addHist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/addMembre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/addService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/addVision.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/getHists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/getMembres.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/getMotDirecteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/getPresentation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/getVisions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/modifHist.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/modifMission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/modifMotDirecteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/modifPresentation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/modifVision.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Membre.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/can/actualites.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/can/projects.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard/can/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/dashboard/modalajoutactualite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/dashboard/modalajoutproject.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/dashboard/modalajoutservice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/dashboard/modalmotdirecteur.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/dashboard/modalpresentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/addMission.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/addMission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/getActualites.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/getActualites.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/getMessages.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/getMessages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/getMissions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/getMissions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/getProjects.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/getProjects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/modiFonct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/sendActualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/sendActualite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/sendProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/sendProject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/sendmessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/sendmessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Actualite.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Actualite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Extra.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Extra.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actualites.php" beforeDir="false" afterPath="$PROJECT_DIR$/actualites.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/can/accordion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/can/lecan.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard/can/lecan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard/can/tabs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonctionnement.php" beforeDir="false" afterPath="$PROJECT_DIR$/fonctionnement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dashboard/modalajoutmembre.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dashboard/modalajoutmembre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dashboard/modalajoutmission.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dashboard/modalajoutmission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dashboard/modalfonctionnement.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dashboard/modalhistorique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/dashboard/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/dashboard/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/services.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

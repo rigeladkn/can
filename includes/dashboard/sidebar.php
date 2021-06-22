@@ -61,23 +61,23 @@
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="accordion.php" class="waves-effect waves-dark">
+                                            <a href="projects.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Accordion</span>
+                                                <span class="pcoded-mtext">Projets</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="tabs.php" class="waves-effect waves-dark">
+                                            <a href="actualites.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Tabs</span>
+                                                <span class="pcoded-mtext">Actualités</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="color.php" class="waves-effect waves-dark">
+                                            <a href="services.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Color</span>
+                                                <span class="pcoded-mtext">Services</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>

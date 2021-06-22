@@ -1,13 +1,22 @@
 <?php
 
-require_once '../Models/Actualite.php';
+function getActualites($from){
+    
+    include_once('Models/Actualite.php');
 
-function getActualites(){
-    $actualite = new Actualite("", "", "","");
+    $actualite = new Actualite("", "", "", "", $from);
 
-    $result = $actualite->getAllActualites();
-
-    return $result;
+    if($actualite->dbConnect()){
+        if($result = $actualite->getAllActualites()){
+            return $result;
+        }
+        else{
+            echo 'Echec';
+        }
+    }
+    else{
+        echo 'Connexion impossible';
+    }
 }
 
 ?>

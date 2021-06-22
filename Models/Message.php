@@ -12,12 +12,22 @@ class Message{
     private $email;
     private $sujet;
     private $texte;
+
+    private $from;
 //fin
 //Attributs propres
    
 //fin
 
-    public function __construct($nom,$email,$sujet,$texte){
+    public function __construct($nom, $email, $sujet, $texte, $from){
+        $this->from = $from;
+
+        if($this->from == 'client')
+            $lien = 'Configuration/DatabaseConfig.php';
+        else
+            $lien = '../Configuration/DatabaseConfig.php';
+        require_once($lien);
+        
         //$this->sql = null;
         $dbc = new DatabaseConfig();
         $this->servername = $dbc->servername;

@@ -1,10 +1,10 @@
  
- <form action="../../../Controllers/modifMission.php" method="POST"> 
- <div class="modal fade" id="missionModal" tabindex="-1" role="dialog" aria-labelledby="missionModalLabel" aria-hidden="true" data-backdrop="static">
+ <form action="../../../Controllers/modifPresentation.php" method="POST"> 
+ <div class="modal fade" id="presentationModal" tabindex="-1" role="dialog" aria-labelledby="presentationModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ajouter une mission</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Présentation</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,8 +12,12 @@
             <div class="modal-body">
                 <form>
                 <div class="form-group">
-                    <label for="description" class="col-form-label">Enoncé de la mission</label>
-                    <textarea name="description" type="text" cols="12" rows="5"  maxlength="200"  style="max-height:100px" class="form-control" required> </textarea>
+                    <label for="title" class="col-form-label">Titre</label>
+                    <input name="title" type="text" maxlength="50" class="form-control" required> </input>
+                </div>
+                <div class="form-group">
+                    <label for="description" class="col-form-label">Description</label>
+                    <textarea name="description" type="text"   rows="10"     class="form-control" required> </textarea>
                 </div>
                 </form>
                 

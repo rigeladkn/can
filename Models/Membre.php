@@ -1,16 +1,6 @@
 <?php
 
-/*
-try{
-    require('../Configuration/DatabaseConfig.php');
-}
-catch(Exception $e){
-    require('Configuration/DatabaseConfig.php');
-}
-*/
-
-
-class Extra{
+class Membre{
 
     private $connect;
     private $data;
@@ -18,17 +8,19 @@ class Extra{
     private $from;
 
     private $table;
-    private $title;
+    private $nom;
+    private $poste;
     private $description;
     private $image;
-    private $type;
+    private $tweetlink;
+    private $facelink;
 
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($title, $description, $image, $type, $from){
+    public function __construct($nom, $poste, $description, $image, $tweetlink, $facelink, $from){
         $this->from = $from;
 
         if($this->from == 'client')
@@ -43,12 +35,13 @@ class Extra{
         $this->username  = $dbc->username;
         $this->password = $dbc->password;
         $this->databasename = $dbc->databasename;
-        $this->table = "extras";
-        $this->title = $title;
+        $this->table = "membres";
+        $this->nom = $nom;
+        $this->poste = $poste;
         $this->description = $description;
         $this->image = $image;
-        $this->type = $type;
-        
+        $this->tweetlink = $tweetlink;
+        $this->facelink = $facelink;
     }
 
     function dbConnect()
@@ -61,16 +54,18 @@ class Extra{
     {
         return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
-  
-    function insertExtra(){
-        $title = $this->prepareData($this->title);
+    
+    function insertMembre(){
+        $nom = $this->prepareData($this->nom);
+        $poste = $this->prepareData($this->poste);
         $description = $this->prepareData($this->description);
         $image = $this->prepareData($this->image);
-        $type = $this->prepareData($this->type);
+        $tweetlink = $this->prepareData($this->tweetlink);
+        $facelink = $this->prepareData($this->facelink);
         $table = $this->table;
 
-        $this->sql = "INSERT INTO ".$table." (title, description, image, type)
-         VALUES ('".$title."', '".$description."', '".$image."', '".$type."')";
+        $this->sql = "INSERT INTO ".$table." (nom, poste, description, image, tweeterlink, facebooklink)
+         VALUES ('".$nom."', '".$poste."', '".$description."', '".$image."', '".$tweetlink."', '".$facelink."')";
 
         if($this->connect->query($this->sql)){
             return true;
@@ -80,14 +75,18 @@ class Extra{
         }
     }
 
-    function updateExtra(){
-        $title = $this->prepareData($this->title);
+    function updateMembre(){
+        $nom = $this->prepareData($this->nom);
+        $poste = $this->prepareData($this->poste);
         $description = $this->prepareData($this->description);
         $image = $this->prepareData($this->image);
-        $type = $this->prepareData($this->type);
+        $tweetlink = $this->prepareData($this->tweetlink);
+        $facelink = $this->prepareData($this->facelink);
         $table = $this->table;
 
-        $this->sql = "UPDATE ".$table." SET title = '".$title."', description = '".$description."', image = '".$image."', type = '".$type."' WHERE type = '".$type."' ";
+        $this->sql = "UPDATE ".$table." SET nom = '".$nom."', poste = '".$poste."', 
+        description = '".$description."', image = '".$image."', tweeterlink = '".$tweetlink."', 
+        facebooklink = '".$facelink."' WHERE nom = '".$nom."' ";
 
         if($this->connect->query($this->sql)){
             return true;
@@ -97,8 +96,8 @@ class Extra{
         }
     }
 
-    function getAllExtras($typeParam){
-        $this->sql = "SELECT * FROM ".$this->table." WHERE type = '".$typeParam."' ";
+    function getAllMembres(){
+        $this->sql = "SELECT * FROM ".$this->table;
         $output = [];
 
         if($result = $this->connect->query($this->sql)){

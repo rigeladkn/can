@@ -50,10 +50,15 @@
   </head>
   <body  onLoad="changeActivePage()" >
 
-  <?php
-      include ('Controllers/getMissions.php');
-      $result = getMissions();
-  ?>
+    <?php
+      include('Controllers/getMissions.php');
+      include('Controllers/getVisions.php');
+      $resultMissions = getmissions("client");
+      $resultVisions = getvisions("client");
+      // var_dump($resultMissions);
+    ?>
+
+
 	  <?php include('includes/navbar.php')?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">
@@ -61,8 +66,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">About</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php"> Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About<i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">A propos</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php"> Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>A propos<i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -94,16 +99,20 @@
 							  <div class="tab-pane container p-0 active" id="home1">
                                   <p>
                                       <?php
-                                        while ($i=mysqli_fetch_array($result)){
-                                            echo($i['description']);
-                                            echo "<br>";
+                                        while($resMis = mysqli_fetch_assoc($resultMissions)){
+                                          echo $resMis["description"]."<br>";
                                         }
                                       ?>
                                   </p>
                               </div>
 							  <div class="tab-pane container p-0 fade" id="home2">
-							  	<p>
-                                    valeur
+                                  <p>
+                                    <?php
+                                      while($resVis = mysqli_fetch_assoc($resultVisions)){
+                                        echo $resVis["description"]."<br>";
+                                      }
+                                    ?>
+                                  </p>
 							  </div>
 							</div>
 						</div>

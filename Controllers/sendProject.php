@@ -5,7 +5,7 @@ require_once '../Models/Project.php';
 if(isset($_POST["status"]) && isset($_POST["financement"]) && isset($_POST["description"]))
 {
     echo 'reçu';
-    $project = new Project($_POST["status"], $_POST["financement"], $_POST["description"]);
+    $project = new Project($_POST["status"], $_POST["financement"], $_POST["description"], "admin");
 
     if($project->dbConnect()){
         echo 'Connecté';

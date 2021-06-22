@@ -6,16 +6,27 @@ class Project{
     private $connect;
     private $data;
     private $sql;
+    private $from;
+
     private $table;
     private $status;
     private $financement;
     private $description;
+
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($status, $financement, $description){
+    public function __construct($status, $financement, $description, $from){
+        $this->from = $from;
+
+        if($this->from == 'client')
+            $lien = 'Configuration/DatabaseConfig.php';
+        else
+            $lien = '../Configuration/DatabaseConfig.php';
+        require_once($lien);
+        
         $this->sql = null;
         $dbc = new DatabaseConfig();
         $this->servername = $dbc->servername;

@@ -50,6 +50,10 @@
 </head>
 <body  onLoad="changeActivePage()" >
 
+<?php
+
+?>
+
 <?php include('includes/navbar.php')?>
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">

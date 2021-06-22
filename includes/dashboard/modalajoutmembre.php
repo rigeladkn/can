@@ -24,7 +24,7 @@
                     <textarea name="description" type="text"   rows="2"  maxlength="200"   class="form-control" required> </textarea>
                 </div>
                 <div class="form-group">
-                    <label for="description" class="col-form-label">Photo de profil</label>
+                    <label for="image" class="col-form-label">Photo de profil</label>
                    
                         <input type="file" class="form-control" name="image">
                    

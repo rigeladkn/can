@@ -56,7 +56,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Lorem Ipsum is simply dummy text of the printing</p>
+                                            <p class="m-b-0">Menu "Le CAN"</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -101,22 +101,168 @@
                                                         <p>
                                                             Cliquez sur un composant pour en ajouter (ou modifier son contenu) sur le site web
                                                         </p>
-                                                        <button class="btn btn-primary waves-effect waves-light col-2">Présentation</button>
-                                                        <button class="btn btn-success waves-effect waves-light col-2">Mot du directeur</button>
-                                                        <button class="btn waves-effect waves-light col-1" style="background-color: #ff7814; color:white" data-toggle="modal" data-target="#visionModal">Vision</button>
+                                                        <div class="row card-block">
+                                                            <button class="btn btn-primary waves-effect waves-light col-2" data-toggle="modal" data-target="#presentationModal">Présentation</button>
+                                                            <button class="btn btn-success waves-effect waves-light col-2" data-toggle="modal" data-target="#directeurModal"></i>Mot du directeur</button>
+                                                            <button class="btn waves-effect waves-light col-1" style="background-color: #ff7814; color:white" data-toggle="modal" data-target="#visionModal">Vision</button>
+                                                            <button class="btn btn-info waves-effect waves-light col-2" data-toggle="modal" data-target="#missionModal" >Mission</button>
+                                                            <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#historiqueModal">Historique</button>
+                                                            <button class="btn btn-inverse waves-effect waves-light col-2" data-toggle="modal" data-target="#membreModal">Membre</button>
+                                                        </div>
+                                                    </div>
 
-                                                        <button class="btn btn-info waves-effect waves-light col-2" data-toggle="modal" data-target="#missionModal" ><i class="icofont icofont-alt-3" >Mission</button>
-                                                        <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#fonctionnementModal">Fonctionnement</button>
-                                                        <button class="btn btn-inverse waves-effect waves-light col-2" data-toggle="modal" data-target="#membreModal">Membre</button>
+                                                    
+                                                </div>
+                                            </div> 
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <!-- Material tab card start -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Aperçu des composants de la page</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <!-- Row start -->
+                                                        <div class="row m-b-30">
+                                                            <div class="col-lg-12 col-xl-12">
+                                                                <div class="sub-title">Les données actuelles enregistrées</div>
+                                                                <!-- Nav tabs -->
+                                                                <ul class="nav nav-tabs md-tabs" role="tablist">
+                                                                  
+                                                                    
+                                                                        <li class="nav-item" style="margin-right: 90px;">
+                                                                            <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Présentation</a>
+                                                                            <div class="slide"></div>
+                                                                        </li>
+                                                                   
+
+                                                                        <li class="nav-item" style="margin-right: 90px;">
+                                                                            <a class="nav-link" data-toggle="tab" href="#profile3" role="tab"> Mot du directeur </a>
+                                                                            <div class="slide"></div>
+                                                                        </li>
+                                                                   
+                                                                
+                                                                
+                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                        <a class="nav-link" data-toggle="tab" href="#messages3" role="tab">Vision</a>
+                                                                        <div class="slide"></div>
+                                                                    </li>
+                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                        <a class="nav-link" data-toggle="tab" href="#settings3" role="tab">Missions</a>
+                                                                        <div class="slide"></div>
+                                                                    </li>
+                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                        <a class="nav-link" data-toggle="tab" href="#historique3" role="tab">Historique</a>
+                                                                        <div class="slide"></div>
+                                                                    </li>
+                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                        <a class="nav-link" data-toggle="tab" href="#membres3" role="tab">Membres</a>
+                                                                        <div class="slide"></div>
+                                                                    </li>
+                                                                     
+                                                                </ul>
+                                                                <!-- Tab panes -->
+                                                                <div class="tab-content card-block">
+                                                                    <div class="tab-pane active" id="home3" role="tabpanel">
+                                                                        <p class="m-0">1. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                                                            bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                                                            mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="profile3" role="tabpanel">
+                                                                        <p class="m-0">2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
+                                                                            felis amet.</p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="messages3" role="tabpanel">
+                                                                        <p class="m-0">3. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+                                                                            bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                                                                            mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="settings3" role="tabpanel">
+                                                                        <p class="m-0">4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
+                                                                            felis amet.</p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="historique3" role="tabpanel">
+                                                                        <p class="m-0">5.HIstorique equat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
+                                                                            felis amet.</p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="membres3" role="tabpanel">
+                                                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <!-- Hover table card start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Liste des membres du CAN</h5>
+                                                    <div class="card-header-right">
+                                                        <ul class="list-unstyled card-option">
+                                                            <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                            <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                            <li><i class="fa fa-minus minimize-card"></i></li>
+                                                            <li><i class="fa fa-refresh reload-card"></i></li>
+                                                            <li><i class="fa fa-trash close-card"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="card-block table-border-style">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#</th>
+                                                                    <th>Nom et prénom(s)</th>
+                                                                    <th>Poste</th>
+                                                                    <th>Description</th>
+                                                                    <th>Image</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td>Mark</td>
+                                                                    <td>Otto</td>
+                                                                    <td>@mdo</td>
+                                                                    <td>@mdo</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>Jacob</td>
+                                                                    <td>Thornton</td>
+                                                                    <td>@fat</td>
+                                                                    <td>@fat</td>
+                                                                </tr>
+                                                                 
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- Hover table card end -->
+                                            <!-- Page-body end -->
                                         </div>
-                                  
-                                    </div>
-                                    <!-- Page-body end -->
-                                </div>
+                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                        <!-- Row end -->
+                                                    </div>
+                                                </div>
+                                                <!-- Material tab card end -->
+                                            </div>
+                                        </div>
+
+                                      
+                                        
+                                    </div>   
+ 
+                                   
+
+
+                     
                             </div>
+
                             <!-- Warning Section Starts -->
 
                             <div id="styleSelector">
@@ -165,12 +311,16 @@
 
  <!-- modal ajout mission -->
  <?php include("../../../includes/dashboard/modalajoutmission.php")?> 
- <!-- modal pour fonctionnement -->
- <?php include("../../../includes/dashboard/modalfonctionnement.php")?>
+ <!-- modal pour historique -->
+ <?php include("../../../includes/dashboard/modalhistorique.php")?>
  <!-- modal pour vivion -->
  <?php include("../../../includes/dashboard/modalvision.php")?> 
- <!-- modal pour vivion -->
+ <!-- modal pour membre -->
  <?php include("../../../includes/dashboard/modalajoutmembre.php")?>
+ <!-- modal pour presentation -->
+ <?php include("../../../includes/dashboard/modalpresentation.php")?>
+  <!-- modal pour mot directeur -->
+ <?php include("../../../includes/dashboard/modalmotdirecteur.php")?>
 
 
 
