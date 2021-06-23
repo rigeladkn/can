@@ -51,12 +51,12 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	        </button>
-	      	<form action="#" class="searchform order-lg-last" style="width:10%; height:39px">
+	      	<!-- <form action="#" class="searchform order-lg-last" style="width:10%; height:39px">
 				<div class="form-group d-flex">
 					<input type="text" class="form-control pl-3" style="height:37px !important;" placeholder="Search">
 					<button type="submit" placeholder="" class="form-control search" style="height:37px !important;"><span class="ion-ios-search"></span></button>
 				</div>
-        	</form>
+        	</form> -->
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 		  <a class="navbar-brand" href="index.php"><img style="height:64px" src="assets/images/can.png"></a>
 	        <ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">
