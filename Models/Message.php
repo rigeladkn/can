@@ -73,7 +73,7 @@ class Message{
 
     function getAllMessages(){
      
-        $sql = "SELECT * FROM ".$this->table;
+        $sql = "SELECT * FROM ".$this->table." ORDER BY DESC";
       
         if( $result = $this->connect->query($sql)){
 

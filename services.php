@@ -48,7 +48,17 @@
   </script>
 	
   </head>
+  
   <body  onLoad="changeActivePage()" >
+
+  	<?php
+      include('Controllers/getServices.php');
+      $resultServices = getServices("client");
+	  $rServices = [];
+	  while($ligne = mysqli_fetch_assoc($resultServices)){
+		  array_push($rServices, $resultServices);
+	  }
+    ?>
 	  
 	<?php include('includes/navbar.php')?>
     
@@ -77,28 +87,49 @@
   			<div class="row tabulation mt-4 ftco-animate">
   				<div class="col-md-4">
 						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
-						  <li class="nav-item text-left">
-						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span>Service 1</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span>Service 2</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span> Service 3</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-money mr-2"></span> Global Investigation</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-5"><span class="flaticon-rating mr-2"></span> Audit &amp; Evaluation</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-6"><span class="flaticon-search-engine mr-2"></span> Marketing Strategy</a>
-						  </li>
+							<?php
+								for($i = 1; $i <= sizeof($rServices); $i++){
+									echo "<li class=\"nav-item text-left\">";
+										echo "<a class=\"nav-link py-4\" data-toggle=\"tab\" href=\"#services-".$i."\"><span class=\"flaticon-analysis mr-2\"></span>Service ".$i."</a>";
+									echo "</li>";
+								}
+							?>
+							<!--
+							<li class="nav-item text-left">
+								<a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span>Service 1</a>
+							</li>
+							<li class="nav-item text-left">
+								<a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span>Service 2</a>
+							</li>
+							<li class="nav-item text-left">
+								<a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span> Service 3</a>
+							</li>
+							<li class="nav-item text-left">
+								<a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-money mr-2"></span> Global Investigation</a>
+							</li>
+							<li class="nav-item text-left">
+								<a class="nav-link py-4" data-toggle="tab" href="#services-5"><span class="flaticon-rating mr-2"></span> Audit &amp; Evaluation</a>
+							</li>
+							<li class="nav-item text-left">
+								<a class="nav-link py-4" data-toggle="tab" href="#services-6"><span class="flaticon-search-engine mr-2"></span> Marketing Strategy</a>
+							</li>
+							-->
 						</ul>
 					</div>
 					<div class="col-md-8">
 						<div class="tab-content">
+							<?php
+							/*
+								for($i = 1; $i <= sizeof($rServices); $i++){
+									echo "<div class=\"tab-pane container p-0 active\" id=\"services-".$i."\">";
+											echo "<div class=\"img\" style=\"background-image: url(assets/images/project-2.jpg);\"></div>";
+											echo "<h3><a href=\"#\">".$rServices[$i-1]["title"]."</a></h3>";
+											echo "<p>".$rServices[$i-1]["description"]."</p>";
+										echo "</div>";
+								}
+							*/
+							?>
+
 						  <div class="tab-pane container p-0 active" id="services-1">
 						  	<div class="img" style="background-image: url(assets/images/project-2.jpg);"></div>
 						  	<h3><a href="#">Business Analysis</a></h3>

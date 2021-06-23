@@ -1,6 +1,7 @@
 <?php
+require '../Configuration/DatabaseConfig.php';
 
-class Project{
+class Partenaire{
 
     private $connect;
     private $data;
@@ -8,16 +9,15 @@ class Project{
     private $from;
 
     private $table;
-    private $status;
-    private $financement;
-    private $description;
+    private $nom;
+    private $logo;
 
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($status, $financement, $description, $from){
+    public function __construct($nom, $logo, $from){
         $this->from = $from;
 
         if($this->from == 'client')
@@ -32,10 +32,9 @@ class Project{
         $this->username  = $dbc->username;
         $this->password = $dbc->password;
         $this->databasename = $dbc->databasename;
-        $this->table = "projects";
-        $this->status = $status;
-        $this->financement = $financement;
-        $this->description = $description;
+        $this->table = "partenaires";
+        $this->nom = $nom;
+        $this->logo = $logo;
     }
 
     function dbConnect()
@@ -49,14 +48,13 @@ class Project{
         return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
   
-    function insertProject(){
-        $status = $this->prepareData($this->status);
-        $financement = $this->prepareData($this->financement);
-        $description = $this->prepareData($this->description);
+    function insertPartenaire(){
+        $nom = $this->prepareData($this->nom);
+        $logo = $this->prepareData($this->logo);
         $table = $this->table;
 
-        $this->sql = "INSERT INTO ".$table." (status, financement, description)
-         VALUES ('".$status."','".$financement."','".$description."')";
+        $this->sql = "INSERT INTO ".$table." (nom, logo)
+         VALUES ('".$nom."', '".$logo."')";
 
         if($this->connect->query($this->sql)){
             return true;
@@ -66,9 +64,8 @@ class Project{
         }
     }
 
-    function getAllProjects(){
+    function getAllPartenaires(){
         $this->sql = "SELECT * FROM ".$this->table;
-        $output = [];
 
         if($result=$this->connect->query($this->sql)){
             return $result;
