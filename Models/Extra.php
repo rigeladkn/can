@@ -1,14 +1,5 @@
 <?php
 
-/*
-try{
-    require('../Configuration/DatabaseConfig.php');
-}
-catch(Exception $e){
-    require('Configuration/DatabaseConfig.php');
-}
-*/
-
 
 class Extra{
 

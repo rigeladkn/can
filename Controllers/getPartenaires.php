@@ -2,9 +2,15 @@
 
 function getPartenaires($from){
 
-    include_once('Models/Partenaire.php');
+    if($from == 'client'){
+         
+        include_once('Models/Partenaire.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Partenaire.php');
+    }
 
-    $partenaire = new Partenaire("", "", $from);
+    $partenaire = new Partenaire("", "", $from,"show");
 
     if($partenaire->dbConnect()){
         if($result = $partenaire->getAllPartenaires()){

@@ -1,5 +1,5 @@
 <?php
-require '../Configuration/DatabaseConfig.php';
+ 
 
 class Partenaire{
 
@@ -17,14 +17,23 @@ class Partenaire{
     protected $password;
     protected $databasename;
 
-    public function __construct($nom, $logo, $from){
+    public function __construct($nom, $logo, $from,$op){
         $this->from = $from;
 
-        if($this->from == 'client')
+        if($this->from == 'client'){
             $lien = 'Configuration/DatabaseConfig.php';
-        else
-            $lien = '../Configuration/DatabaseConfig.php';
-        require_once($lien);
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+        }
         
         $this->sql = null;
         $dbc = new DatabaseConfig();

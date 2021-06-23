@@ -111,28 +111,26 @@
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th>N°</th>
                                                                 <th>Titre</th>
                                                                 <th>Description</th>
                                                                 <th>Image</th>
                                                             </tr>
                                                         </thead>
-                                                        <!-- <tbody>
+                                                        <tbody>
                                                         <?php 
-                                                            // include_once('../../../Controllers/getServices.php');
-                                                            //     $resultServices = getServices('admin');
-                                                            //     while($resServ = mysqli_fetch_assoc($resultServices)){
-                                                            //         echo "<tr>";
-                                                            //         echo "<th scope=\"row\">".$resServ["id"]."</th>";
-                                                            //         echo "<td>".$resServ["title"]."</td>";
-                                                            //         echo "<td>".$resServ["description"]."</td>";
-                                                            //         echo "<td>".$resServ["image"]."</td>";
-                                                            //         echo "</tr>";
+                                                            include_once('../../../Controllers/getServices.php');
+                                                                $resultServices = getServices('admin');
+                                                                while($resServ = mysqli_fetch_assoc($resultServices)){
+                                                                    echo "<tr>";
+                                                                    echo "<td>".$resServ["title"]."</td>";
+                                                                    echo "<td>".$resServ["description"]."</td>";
+                                                                    echo "<td>".$resServ["image"]."</td>";
+                                                                    echo "</tr>";
                                                             
-                                                            // }
+                                                            }
 					                                    ?> 
                                                           
-                                                        </tbody> -->
+                                                        </tbody> 
                                                     </table>
                                                 </div>
                                             </div>

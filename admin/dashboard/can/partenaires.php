@@ -116,11 +116,20 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                            </tr>
+                                                        <?php 
+                                                            include_once('../../../Controllers/getPartenaires.php');
+                                                                    
+                                                                $resultPartenaires = getPartenaires('admin');
+                                                                // var_dump($resultMembres);
+                                                                while($resPar = mysqli_fetch_assoc($resultPartenaires)){
+                                                                    echo "<tr>";
+                                                                    echo "<th scope=\"row\">".$resPar["id"]."</th>";
+                                                                    echo "<td>".$resPar["nom"]."</td>";
+                                                                    echo "<td>".$resPar["logo"]."</td>";
+                                                                    echo "</tr>";
+                                                            
+                                                            }
+					                                    ?>
                                                              
                                                         </tbody>
                                                     </table>
