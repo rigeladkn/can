@@ -70,8 +70,9 @@
 				<div class="row d-flex align-items-stretch">
 					<div class="col-md-12 wrap-about ftco-animate py-md-5 pl-md-5">
 						<div class="heading-section mb-4">
-							
-							<h2>Bienvenue au Conseil de l'Alimentation et de la Nutrition</h2>
+							<center>
+								<h2>Bienvenue au Conseil de l'Alimentation et de la Nutrition</h2>
+							</center>
 						</div>
 						<p>Nous sommes ravis de vous acceuilir sur notre site web officiel ! Vous y trouverez tout le nécessaire. <a href="contact.php">Contactez-nous </a> au besoin</p>
 						<div class="tabulation-2 mt-4">
@@ -148,7 +149,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-				<h2 class="mb-0">You Always Get the Best Guidance</h2>
+				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
 			</div>
 			</div>	
 			</div>
@@ -206,7 +207,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-				<h2 class="mb-0">You Always Get the Best Guidance</h2>
+				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
 			</div>
 			</div>	
 			</div>

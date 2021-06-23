@@ -22,7 +22,7 @@
 						<div class="col-md-7 py-2" style="text-align: right;font-size:16px">
 					    	
 					    	<div class="">
-					    		<span> <strong style="color:#484848;">Replacer la nutrition au coeur du developpement</strong>  </span>
+					    		<span> <strong style="color:#484848;">Replacer la nutrition au cœur  du developpement</strong>  </span>
 						    </div>
 					    </div>
 				    </div>
