@@ -1,5 +1,4 @@
 <?php 
-require '../Configuration/DatabaseConfig.php';
 
 class Message{
 //pour la connexion
@@ -19,14 +18,24 @@ class Message{
    
 //fin
 
-    public function __construct($nom, $email, $sujet, $texte, $from){
+    public function __construct($nom, $email, $sujet, $texte, $from,$op){
         $this->from = $from;
 
-        if($this->from == 'client')
+        if($this->from == 'client'){
             $lien = 'Configuration/DatabaseConfig.php';
-        else
-            $lien = '../Configuration/DatabaseConfig.php';
-        require_once($lien);
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+          
+        }
         
         //$this->sql = null;
         $dbc = new DatabaseConfig();
@@ -73,8 +82,8 @@ class Message{
 
     function getAllMessages(){
      
-        $sql = "SELECT * FROM ".$this->table;
-      
+        $sql = "SELECT * FROM ".$this->table." ORDER BY id DESC";
+    
         if( $result = $this->connect->query($sql)){
 
             return $result;

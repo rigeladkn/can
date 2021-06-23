@@ -31,7 +31,6 @@
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
 						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
-						'<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -58,8 +57,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Nos activités </h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Activités <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Actualités | Nos activités </h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil<i class="ion-ios-arrow-forward"></i></a></span> <span>Actualités | Nos activités<i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -68,51 +67,32 @@
 		<section class="ftco-section">
 			<div class="container">
 				<div class="row">
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_1.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">03</span>
-                  <span class="mos">Mai</span>
-                  <span class="yr">2018</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Rencontres de la plateforme multisectorielle CAN et PTF SUN</a></h3>
-                <p>Visite d’échange d’expérience par une délégation du Bénin ...</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">18</span>
-                  <span class="mos">Juil.</span>
-                  <span class="yr">2018</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">L'élaboration des Cadres Communs de Résultats (CCR) des 77 communes ...</a></h3>
-                <p>Dans le cadre de la réalisation de cette activité, plusieurs ...</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div class="row mt-5">
+        <?php 
+          include_once('Controllers/getActualites.php');
+              $resultActualites = getActualites('client');
+              // var_dump($resultMembres);
+              while($resAct = mysqli_fetch_assoc($resultActualites)){
+                echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
+                  echo "<div class=\"blog-entry\">";
+                    echo "<a href=\"blog-single.php\" class=\"block-20 d-flex align-items-end\" style=\"background-image: url('assets/images/image_2.jpg');\">";
+                      echo "<div class=\"meta-date text-center p-2\">";
+                        echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";
+                      echo "</div>";
+                    echo "</a>";
+                    echo "<div class=\"text border border-top-0 p-4\">";
+                      echo "<h3 class=\"heading\"><a href=\"#\">".$resAct["title"]."</a></h3>";
+                      echo "<p>".$resAct["description"]."</p>";
+                      echo "<div class=\"d-flex align-items-center mt-4\">";
+                        echo "<p class=\"ml-auto mb-0\">";
+                        
+                        echo "</p>";
+                      echo "</div>";
+                    echo "</div>";
+                  echo "</div>";
+                echo "</div>";
+          }
+        ?>
+        <!-- <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
               <ul>
@@ -126,7 +106,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
 			</div>
 		</section>
  

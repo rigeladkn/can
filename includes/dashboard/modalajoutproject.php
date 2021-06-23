@@ -4,7 +4,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ajouter un projet</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Ajouter un partenaire</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -24,8 +24,8 @@
                         <input type="file" class="form-control" name="image">
                 </div> -->
                 <div class="form-group">
-                <label for="statut" class="col-form-label">Statut du projet</label>
-                        <select  name="statut" class="form-control"id="" required">
+                <label for="status" class="col-form-label">Statut du projet</label>
+                        <select  name="status" class="form-control"id="" required">
                             <option value="En cours">En cours</option>;
                             <option value="Clôturé">Clôturé</option>;
                          </select>

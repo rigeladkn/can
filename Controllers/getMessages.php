@@ -2,9 +2,15 @@
 
 function getMessages($from){
 
-    include_once('Models/Message.php');
+    if($from == 'client'){
+         
+        include_once('Models/Message.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Message.php');
+    }
 
-    $messageObj = new Message("", "", "", "", $from);
+    $messageObj = new Message("", "", "", "", $from,"show");
 
     if($messageObj->dbConnect()){
         if($result = $messageObj->getAllMessages()){

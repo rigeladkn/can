@@ -2,9 +2,15 @@
 
 function getPresentation($from){
 
-    include_once('Models/Extra.php');
+    if($from == 'client'){
+         
+        include_once('Models/Extra.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Extra.php');
+    }
 
-    $presentation = new Extra("", "", "", "", $from);
+    $presentation = new Extra("", "", "", "", $from,"show");
 
     if($presentation->dbConnect()){
         if($result = $presentation->getAllExtras("presentation")){

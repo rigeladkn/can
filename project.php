@@ -31,7 +31,6 @@
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
 						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
-						'<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -175,8 +174,8 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="assets/js/google-map.js"></script> -->
   <script src="assets/js/main.js"></script>
     
   </body>

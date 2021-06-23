@@ -28,14 +28,24 @@ class Extra{
     protected $password;
     protected $databasename;
 
-    public function __construct($title, $description, $image, $type, $from){
+    public function __construct($title, $description, $image, $type, $from, $op){
         $this->from = $from;
 
-        if($this->from == 'client')
+        if($this->from == 'client'){
             $lien = 'Configuration/DatabaseConfig.php';
-        else
-            $lien = '../Configuration/DatabaseConfig.php';
-        require_once($lien);
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+          
+        }
 
         $this->sql = null;
         $dbc = new DatabaseConfig();

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard|Customisation| Le CAN</title>
+    <title>Dashboard | Le CAN</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -166,26 +166,69 @@
                                                                 <!-- Tab panes -->
                                                                 <div class="tab-content card-block">
                                                                     <div class="tab-pane active" id="home3" role="tabpanel">
-                                                                        <p class="m-0">1. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-                                                                            bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                                                                            mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                                                        
+                                                                            <?php 
+                                                                            include('../../../Controllers/getPresentation.php');
+                                                                                $resultPresentation = getPresentation('admin');
+                                                                                // var_dump($resultMembres);
+                                                                                 $resPre = mysqli_fetch_assoc($resultPresentation);
+                                                                                  echo "<p class=\"m-0\">". $resPre["description"]."</p>";
+                                                                            
+                                                                            ?>
+                                                                        
+                                                                     
                                                                     </div>
                                                                     <div class="tab-pane" id="profile3" role="tabpanel">
-                                                                        <p class="m-0">2.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
-                                                                            felis amet.</p>
+                                                                            <?php 
+                                                                                include('../../../Controllers/getMotDirecteur.php');
+                                                                                $resultMotDirecteur = getMotDirecteur('admin');
+                                                                                // var_dump($resultMembres);
+                                                                                 $resMot = mysqli_fetch_assoc($resultMotDirecteur );
+                                                                                  echo "<p class=\"m-0\">". $resMot["description"]."</p>";
+                                                                            
+                                                                            ?>
                                                                     </div>
                                                                     <div class="tab-pane" id="messages3" role="tabpanel">
-                                                                        <p class="m-0">3. This is Photoshop's version of Lorem IpThis is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-                                                                            bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
-                                                                            mas Cum sociis natoque penatibus et magnis dis.....</p>
+                                                                        <p class="m-0">
+                                                                            <?php 
+                                                                                include('../../../Controllers/getVisions.php');
+                                                                                $resultVision = getVisions('admin');
+                                                                                // var_dump($resultMembres);
+                                                                                 $resVision = mysqli_fetch_assoc($resultVision );
+                                                                                  echo "<p class=\"m-0\">". $resVision["description"]."</p>";
+                                                                            
+                                                                            ?>
+                                                                        </p>
                                                                     </div>
                                                                     <div class="tab-pane" id="settings3" role="tabpanel">
-                                                                        <p class="m-0">4.Cras consequat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
-                                                                            felis amet.</p>
+                                                                        <p class="m-0">
+                                                                            <?php 
+                                                                                include('../../../Controllers/getMissions.php');
+                                                                                $resultMission = getMissions('admin');
+                                                                                // var_dump($resultMembres);
+                                                                                
+                                                                                 echo "<ul>";
+                                                                                 while($resMission = mysqli_fetch_assoc($resultMission)){
+                                                                                    echo "<li>";
+                                                                                        echo "--". $resMission["description"];
+                                                                                    echo "</li><br><br>";
+                                                                                 }
+                                                                                  echo "</ul>";
+                                                                            
+                                                                            ?>
+                                                                        </p>
                                                                     </div>
                                                                     <div class="tab-pane" id="historique3" role="tabpanel">
-                                                                        <p class="m-0">5.HIstorique equat in enim ut efficitur. Nulla posuere elit quis auctor interdum praesent sit amet nulla vel enim amet. Donec convallis tellus neque, et imperdiet
-                                                                            felis amet.</p>
+                                                                        <p class="m-0">
+                                                                        <?php 
+                                                                                include('../../../Controllers/getHists.php');
+                                                                                $resultHistorique = getHistorique('admin');
+                                                                                // var_dump($resultMembres);
+                                                                                 $resHistorique = mysqli_fetch_assoc($resultHistorique );
+                                                                                  echo "<p class=\"m-0\">". $resHistorique["description"]."</p>";
+                                                                            
+                                                                            ?>
+                                                                        </p>
                                                                     </div>
                                                                     <div class="tab-pane" id="membres3" role="tabpanel">
                                                                     <div class="row">
@@ -217,21 +260,23 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr>
-                                                                    <th scope="row">1</th>
-                                                                    <td>Mark</td>
-                                                                    <td>Otto</td>
-                                                                    <td>@mdo</td>
-                                                                    <td>@mdo</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th scope="row">2</th>
-                                                                    <td>Jacob</td>
-                                                                    <td>Thornton</td>
-                                                                    <td>@fat</td>
-                                                                    <td>@fat</td>
-                                                                </tr>
-                                                                 
+
+                    <?php 
+                    include('../../../Controllers/getMembres.php');
+                        $resultMembres = getMembres('admin');
+                        // var_dump($resultMembres);
+                        while($resMem = mysqli_fetch_assoc($resultMembres)){
+                            echo "<tr>";
+                            echo "<th scope=\"row\">".$resMem["id"]."</th>";
+                            echo "<td>".$resMem["nom"]."</td>";
+                            echo "<td>".$resMem["poste"]."</td>";
+                            echo "<td>".$resMem["description"]."</td>";
+                            echo "<td>".$resMem["image"]."</td>";
+                            echo "</tr>";
+					 
+					}
+					?>
+                                                               
                                                             </tbody>
                                                         </table>
                                                     </div>

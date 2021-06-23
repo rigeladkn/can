@@ -5,13 +5,13 @@ require_once '../Models/Extra.php';
 if(isset($_POST["title"]) && isset($_POST["description"])){
     echo 'reçu';
 
-    $historique = new Extra($_POST["title"], $_POST["description"], "", "historique", "admin");
+    $historique = new Extra($_POST["title"], $_POST["description"], "", "historique", "admin","");
 
     if($historique->dbConnect()){
         echo 'Connecté';
         if($result = $historique->updateExtra()){
             echo 'Succès';
-            header("location: http://localhost/workspace/can/admin/dashboard/can/index.php");
+            header("location: http://localhost/can/admin/dashboard/can/index.php");
             die();
         }
         else{

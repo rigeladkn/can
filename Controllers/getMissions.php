@@ -1,10 +1,16 @@
 <?php
 
-function getmissions($from){
+function getMissions($from){
     
-    include_once('Models/Extra.php');
+    if($from == 'client'){
+         
+        include_once('Models/Extra.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Extra.php');
+    }
 
-    $mission = new Extra("", "", "", "", $from);
+    $mission = new Extra("", "", "", "", $from,"show");
 
     if($mission->dbConnect()){
         if($result = $mission->getAllExtras("mission")){

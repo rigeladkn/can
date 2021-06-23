@@ -12,20 +12,20 @@
             <div class="modal-body">
                 <form>
                 <div class="form-group">
-                    <label for="description" class="col-form-label">Intitulé de l'actualité</label>
-                    <textarea name="description" type="text" cols="12" rows="2"  maxlength="100"  style="max-height:100px" class="form-control" required> </textarea>
+                    <label for="title" class="col-form-label">Intitulé de l'actualité</label>
+                    <textarea name="title" type="text" cols="12" rows="2"  maxlength="100"  style="max-height:100px" class="form-control" required> </textarea>
                 </div>
                 <div class="form-group">
                     <label for="description" class="col-form-label">Description</label>
                     <textarea name="description" type="text"   rows="12"  style="max-height:100px" class="form-control" required> </textarea>
                 </div>
                 <div class="form-group">
-                    <label for="description" class="col-form-label"></label>
+                    <label for="image" class="col-form-label"></label>
                         <input type="file" class="form-control" name="image" required>
                 </div>
                 <div class="form-group">
-                    <label for="ladate" class="col-form-label"></label>
-                        <input type="date" class="form-control" name="ladate" required>
+                    <label for="laDate" class="col-form-label"></label>
+                        <input type="date" class="form-control" name="laDate" required>
                 </div>
                 </form>
                 

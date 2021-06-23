@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard | Projects</title>
+    <title>Dashboard | Partenaires</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -33,6 +33,9 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
+
+    <!-- css for flip card -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/flipcard.css">
 </head>
 
 <body>
@@ -56,7 +59,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Dashboard</h5>
-                                            <p class="m-b-0">Projets</p>
+                                            <p class="m-b-0">Profile</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -64,7 +67,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="projects.php">Projets</a>
+                                            <li class="breadcrumb-item"><a href="profile.php">Profile</a>
                                             </li>
                                           
                                         </ul>
@@ -80,64 +83,26 @@
 
                                 <div class="page-wrapper">
 
-
-                                <div class="row">
-                                        <div class="col-10"></div>
-                                        <div class="col-2">
-                                            <button class="btn waves-effect waves-light btn-primary " data-toggle="modal" data-target="#projectModal" ></i>Ajouter</button><br>
-                                        </div>
-                                </div><br>
-
                                      <!-- Page-body start -->
                                      <div class="page-body">
                                         <!-- Basic table card start -->
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>Liste des projets</h5>
-                                                <!-- <span>use class <code>table</code> inside table element</span> -->
-                                                <div class="card-header-right">
-                                                    <ul class="list-unstyled card-option">
-                                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                                                        <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                        <li><i class="fa fa-minus minimize-card"></i></li>
-                                                        <li><i class="fa fa-refresh reload-card"></i></li>
-                                                        <li><i class="fa fa-trash close-card"></i></li>
-                                                    </ul>
+                                       
+                                          <center> 
+                                                <div class="flip-card" style="width:65%; height:395px">
+                                                    <div class="flip-card-inner ">
+                                                        <div class="flip-card-front">
+                                                        <img src="../../../assets/dashboard/images/avatar3.png" alt="Avatar" style="width:100%;height:100%;">
+                                                        </div>
+                                                        <div class="flip-card-back" style="width:100%;" >
+                                                        <center>
+                                                         <h5  style="margin-top:30%">Nom de l'admin</h5>
+                                                        </center>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="card-block table-border-style">
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>N°</th>
-                                                                <th>Financement</th>
-                                                                <th>Description</th>
-                                                                <th>Statut</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <?php 
-                                                            include_once('../../../Controllers/getProjects.php');
-                                                                $resultProjects = getProjects('admin');
-                                                                // var_dump($resultMembres);
-                                                                while($resPro = mysqli_fetch_assoc($resultProjects)){
-                                                                    echo "<tr>";
-                                                                    echo "<th scope=\"row\">".$resPro["id"]."</th>";
-                                                                    echo "<td>".$resPro["financement"]."</td>";
-                                                                    echo "<td>".$resPro["description"]."</td>";
-                                                                    echo "<td>".$resPro["status"]."</td>";
-                                                                    echo "</tr>";
-                                                            
-                                                            }
-					                                    ?>
-                                                             
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
+                                            
+                                            </center> 
+
                                     </div>
                                     <!-- Page-body end -->                    
                             </div>
@@ -188,8 +153,7 @@
     </script>
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
- <!-- modal ajout project -->
- <?php include("../../../includes/dashboard/modalajoutproject.php")?> 
+ 
  
 
 
@@ -197,3 +161,11 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+

@@ -2,9 +2,16 @@
 
 function getActualites($from){
     
-    include_once('Models/Actualite.php');
+   
+    if($from == 'client'){
+         
+        include_once('Models/Actualite.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Actualite.php');
+    }
 
-    $actualite = new Actualite("", "", "", "", $from);
+    $actualite = new Actualite("", "", "", "", $from,"show");
 
     if($actualite->dbConnect()){
         if($result = $actualite->getAllActualites()){

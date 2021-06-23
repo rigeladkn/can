@@ -31,7 +31,6 @@
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
 						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
-						'<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+

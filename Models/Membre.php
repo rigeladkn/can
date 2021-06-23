@@ -20,14 +20,25 @@ class Membre{
     protected $password;
     protected $databasename;
 
-    public function __construct($nom, $poste, $description, $image, $tweetlink, $facelink, $from){
+    public function __construct($nom, $poste, $description, $image, $tweetlink, $facelink, $from,$op){
         $this->from = $from;
 
-        if($this->from == 'client')
+        if($this->from == 'client'){
             $lien = 'Configuration/DatabaseConfig.php';
-        else
-            $lien = '../Configuration/DatabaseConfig.php';
-        require_once($lien);
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+          
+        }
+            
 
         $this->sql = null;
         $dbc = new DatabaseConfig();

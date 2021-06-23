@@ -117,15 +117,22 @@
                                                                 <th>Image</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th scope="row">1</th>
-                                                                <td>Mark</td>
-                                                                <td>Otto</td>
-                                                                <td>@mdo</td>
-                                                            </tr>
-                                                             
-                                                        </tbody>
+                                                        <!-- <tbody>
+                                                        <?php 
+                                                            // include_once('../../../Controllers/getServices.php');
+                                                            //     $resultServices = getServices('admin');
+                                                            //     while($resServ = mysqli_fetch_assoc($resultServices)){
+                                                            //         echo "<tr>";
+                                                            //         echo "<th scope=\"row\">".$resServ["id"]."</th>";
+                                                            //         echo "<td>".$resServ["title"]."</td>";
+                                                            //         echo "<td>".$resServ["description"]."</td>";
+                                                            //         echo "<td>".$resServ["image"]."</td>";
+                                                            //         echo "</tr>";
+                                                            
+                                                            // }
+					                                    ?> 
+                                                          
+                                                        </tbody> -->
                                                     </table>
                                                 </div>
                                             </div>

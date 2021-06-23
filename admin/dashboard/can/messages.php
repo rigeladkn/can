@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard | Actualités</title>
+    <title>Dashboard | Messages</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -18,7 +18,6 @@
     <meta name="author" content="Codedthemes" />
     <!-- Favicon icon -->
     <link rel="icon" href="../../../assets/dashboard/images/favicon.ico" type="image/x-icon">
-    <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/bootstrap/css/bootstrap.min.css">
@@ -35,8 +34,6 @@
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
 </head>
 
-<!--<body class="fix-menu dark-layout">-->
-
 <body>
     <!-- Pre-loader start -->
   <?php include("../../../includes/dashboard/preloader.php"); ?>
@@ -51,17 +48,14 @@
                 <?php include("../../../includes/dashboard/sidebar.php") ?>
 
                     <div class="pcoded-content">
-
-                    
                         <!-- Page-header start -->
                         <div class="page-header">
                             <div class="page-block">
-                            
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Actualités</h5>
-                                            <p class="m-b-0">Les actualités du CAN</p>
+                                            <h5 class="m-b-10">Messages</h5>
+                                            <p class="m-b-0">Tous les messages reçus</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -69,8 +63,7 @@
                                             <li class="breadcrumb-item">
                                                 <a href="index.php"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="actualites.php">Actualités</a>
-                                            
+                                            <li class="breadcrumb-item"><a href="messages.php">Messages</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -80,71 +73,65 @@
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
                             <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-body start -->
+                                    <div class="page-body">
+                                        <?php 
+                                            include_once('../../../Controllers/getMessages.php');
+                                                $resultMessages = getMessages('admin');
+                                                // var_dump($resultMembres);
+                                                while($resMes = mysqli_fetch_assoc($resultMessages)){
+                                                    echo "<div class=\"row\" >";
+                                                   echo  "<div class=\"col-sm-12\" >";
+                                                        
+                                                        echo "<div class=\"card\" >";
+                                                            echo "<div class=\"card-header\">";
+                                                                echo "<h5>Nom de l'expéditeur : ".$resMes["nom"]."</h5>";
+                                                                echo "<span>Email : ".$resMes["email"]."</span>";
+                                                            echo "</div>";
+                                                            echo "<div class=\"card-block typography\">";
+                                                                echo "<div class=\"row\"  >";
+                                                                    echo "<div class=\"col-sm-12\" style=\"margin-top: 0px;\">";
+                                                                        echo "<div class=\"card\" >";
+                                                                            echo "<div class=\"card-header\">";
+                                                                                echo "<h5>Objet : ".$resMes["sujet"]."</h5>";
+                                                                            echo "</div>";
+                                                                            echo "<div class=\"card-block\">";
+                                                                                echo "<div class=\"row\">";
+                                                                                    echo "<div class=\"col-sm-12 col-xl-12\">";
+                                                                                        echo "<h4 class=\"sub-title\">Message numéro ". $resMes["id"] ." | Corps du message</h4>";
+                                                                                    
+                                                                                        echo "<blockquote class=\"blockquote\">";
+                                                                                            echo "<p class=\"m-b-0\">".$resMes["texte"] ."</p>";
+                                                                                        echo "</blockquote>";
+                                                                                    
+                                                                                        echo "<blockquote class=\"blockquote blockquote-reverse\">";
+                                                                                            echo "<a type=\"button\" href=\"mailto:".$resMes["email"]."\" class=\"btn btn-primary btn-sm m-b-0\">Répondre</a>";
+                                                                                        echo "</blockquote>";
+                                                                                    echo "</div>";
+                                                                                
+                                                                                echo "</div>";
+                                                                            echo "</div>";
+                                                                        echo "</div>";
+                                                                    echo "</div>";
+                                                                echo "</div>";
+                                                            echo "</div>";
+                                                        echo "</div>";
+                                                    echo "</div>";
+                                                echo "</div>";
+                                            
+                                                }
+                                        ?>
 
-                            <div class="row">
-                                        <div class="col-10"></div>
-                                        <div class="col-2">
-                                            <button class="btn waves-effect waves-light btn-primary " data-toggle="modal" data-target="#actualiteModal" ></i>Ajouter</button><br>
-                                        </div>
-                            </div><br>
 
-                             
-                                     <!-- Page-body start -->
-                                     <div class="page-body">
-                                        <!-- Basic table card start -->
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>Liste d'actualités</h5>
-                                                <!-- <span>use class <code>table</code> inside table element</span> -->
-                                                <div class="card-header-right">
-                                                    <ul class="list-unstyled card-option">
-                                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
-                                                        <li><i class="fa fa-window-maximize full-card"></i></li>
-                                                        <li><i class="fa fa-minus minimize-card"></i></li>
-                                                        <li><i class="fa fa-refresh reload-card"></i></li>
-                                                        <li><i class="fa fa-trash close-card"></i></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-block table-border-style">
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>N°</th>
-                                                                <th>Titre</th>
-                                                                <th>Description</th>
-                                                                <th>Date</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <?php 
-                                                            include_once('../../../Controllers/getActualites.php');
-                                                                $resultActualites = getActualites('admin');
-                                                                while($resAct = mysqli_fetch_assoc($resultActualites)){
-                                                                    echo "<tr>";
-                                                                    echo "<th scope=\"row\">".$resAct["id"]."</th>";
-                                                                    echo "<td>".$resAct["title"]."</td>";
-                                                                    echo "<td>".$resAct["description"]."</td>";
-                                                                    echo "<td>".$resAct["Ladate"]."</td>";
-                                                                    echo "</tr>";
-                                                            
-                                                            }
-					                                    ?>
-                                                             
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                
+                                       
                                     </div>
                                     <!-- Page-body end -->
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- Main-body end -->
-
                     <div id="styleSelector">
 
                     </div>
@@ -209,13 +196,11 @@
     <!-- jquery slimscroll js -->
     <script type="text/javascript" src="../../../assets/dashboard/js/jquery-slimscroll/jquery.slimscroll.js"></script>
     <script src="../../../assets/dashboard/js/pcoded.min.js"></script>
-    <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
+    <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
-    <!-- modal pour actualités -->
- <?php include("../../../includes/dashboard/modalajoutactualite.php")?> 
 </body>
 
 </html>
