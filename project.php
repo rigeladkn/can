@@ -40,7 +40,6 @@
 	        	'<li class="nav-item active"><a href="project.php" id="team" class="nav-link">Projets</a></li>'+
 	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-	        	'<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
 	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 	        '</ul>';
 	  }
@@ -48,6 +47,11 @@
 	
   </head>
 <body onload="changeActivePage()">
+	
+	<?php
+      include('Controllers/getProjects.php');
+      $resultProjects = getProjects("client");
+    ?>
 	
 	<?php include('includes/navbar.php')?>
     
@@ -74,6 +78,24 @@
 			</div>
 		</div>
         <div class="row">
+	  		<?php
+			  	$i = 1;
+			  	while($resPro = mysqli_fetch_assoc($resultProjects)){
+					echo "<div class=\"col-md-4\">";
+						echo "<div class=\"project\">";
+							echo "<div class=\"img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></div>";
+							echo "<div class=\"text w-100 text-center\">";
+								echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
+								echo "<h3><a href=\"#\">".utf8_encode($resPro["financement"])."</a></h3>";
+								echo "<p>".utf8_encode($resPro["description"])."</p>";
+							echo "</div>";
+						echo "</div>";
+					echo "</div>";
+				}
+				$i = $i + 1;
+			?>
+
+			<!--
         	<div class="col-md-4">
         		<div class="project">
         			<div class="img rounded mb-4" style="background-image: url(assets/images/project-1.jpg);"></div>
@@ -134,6 +156,7 @@
         			</div>
         		</div>
         	</div>
+			-->
         </div>
         <div class="row mt-5">
           <div class="col text-center">

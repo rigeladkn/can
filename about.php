@@ -40,7 +40,6 @@
               '<li class="nav-item"><a href="team.php" id="team" class="nav-link">Projets</a></li>'+
               '<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
               '<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-              '<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
               '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
             '</ul>';
       }
@@ -74,10 +73,7 @@
     <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
 			<div class="container consult-wrap">
 				<div class="row d-flex align-items-stretch">
-					<div class="col-md-6 wrap-about align-items-stretch d-flex">
-						<div class="img" style="background-image: url(assets/images/about.jpg);"></div>
-					</div>
-					<div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
+					<div class="col-md-12 wrap-about ftco-animate py-md-5 pl-md-5">
 						<div class="heading-section mb-4">
 							<span class="subheading">Bienvenue au Conseil de l'Alimentation</span>
 							<h2>Replacer la nutrition au coeur du développement</h2>
@@ -97,9 +93,11 @@
 							  <div class="tab-pane container p-0 active" id="home1">
                                   <p>
                                       <?php
-                                        while($resMis = mysqli_fetch_assoc($resultMissions)){
-                                          echo $resMis["description"]."<br>";
-                                        }
+                                        echo "<ul>";
+                                          while($resMis = mysqli_fetch_assoc($resultMissions)){
+                                            echo "<li>".utf8_encode($resMis["description"])."</li>";
+                                          }
+                                        echo "<ul>";
                                       ?>
                                   </p>
                               </div>
@@ -107,7 +105,7 @@
                                   <p>
                                     <?php
                                       while($resVis = mysqli_fetch_assoc($resultVisions)){
-                                        echo $resVis["description"]."<br>";
+                                        echo utf8_encode($resVis["description"])."<br>";
                                       }
                                     ?>
                                   </p>
