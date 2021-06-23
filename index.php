@@ -70,17 +70,10 @@
 				<div class="row d-flex align-items-stretch">
 					<div class="col-md-12 wrap-about ftco-animate py-md-5 pl-md-5">
 						<div class="heading-section mb-4">
-<<<<<<< HEAD
 							
-							<h2>Bienvenue au CAN</h2>
+							<h2>Bienvenue au Conseil de l'Alimentation et de la Nutrition</h2>
 						</div>
 						<p>Nous assurons votre destinée</p>
-=======
-							<span class="subheading">Bienvenue au Conseil de l'Alimentation</span>
-							<h2>Replacer la nutrition au coeur du développement</h2>
-						</div>
-
->>>>>>> freddy
 						<div class="tabulation-2 mt-4">
 							<ul class="nav nav-pills nav-fill d-md-flex d-block">
 							  <li class="nav-item">
@@ -148,7 +141,6 @@
 			</div>
 		</section>
 		
-<<<<<<< HEAD
 		 
 	<section class="ftco-section">
 		<div class="container">
@@ -196,80 +188,6 @@
 		</center>
 
 		</div>
-=======
-	<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<!-- <span class="subheading">Blog Posts</span> -->
-            <h2 class="mb-4">Activités récentes</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-				<div class="row">
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_1.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	               
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.php" class="block-20 d-flex align-items-end" style="background-image: url('assets/images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">15</span>
-                  <span class="mos">Oct.</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text border border-top-0 p-4">
-                <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <!-- <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
->>>>>>> freddy
 		</section>
     <!-- <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/bg_1.jpg);">
     	<div class="container">

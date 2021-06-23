@@ -95,84 +95,9 @@
 				$i = $i + 1;
 			?>
 
-			<!--
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-1.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>Projet de Nutrition et du Développement de la Petite Enfance (PNDPE)</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-2.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Pays du G8</a></h3>
-        				<p>La Nouvelle Alliance pour la Sécurité alimentaire et la Nutrition (NASAN) soutenue par les pays du G8 au Bénin</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-3.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Union africaine</a></h3>
-        				<p>L’Alliance Globale pour l’Initiative Résilience au Sahel et en Afrique de l’Ouest (AGIR) soutenue par l’Union Européenne et le CILSS;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-4.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>Le Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) Un crédit IDA de 28 millions de dollars US,  entré en vigueur depuis le 8 avril 2014 et qui couvre la période 2014-2019 en financement du Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) ;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-6.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Clôturé</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>L’IDF, projet d’appui institutionnel financé par la Banque Mondiale pour un montant de 375 mille de dollars US et couvrant la période 2014-2016 ;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/image_4.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Clôturé</span>
-        				<h3><a href="#">Fonds Japonais (Banque mondiale)</a></h3>
-        				<p>Le Projet pédagogique de Nutrition Communautaire (PNC)</p>
-        			</div>
-        		</div>
-        	</div>
-			-->
+		 
         </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+       
 			</div>
 		</section>
 		

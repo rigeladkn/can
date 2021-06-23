@@ -30,7 +30,7 @@
             '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>'+
             '<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
               '<a class="dropdown-item" href="about.php">Présentation</a>'+
-              '<a class="dropdown-item" href="#">Mot du directeur</a>'+
+              '<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
               '<div class="dropdown-divider"></div>'+
               '<a class="dropdown-item" href="team.php">Membres</a>'+
               '<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -70,81 +70,7 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
-			<div class="container consult-wrap">
-				<div class="row d-flex align-items-stretch">
-					<div class="col-md-12 wrap-about ftco-animate py-md-5 pl-md-5">
-						<div class="heading-section mb-4">
-							<span class="subheading">Bienvenue au Conseil de l'Alimentation</span>
-							<h2>Replacer la nutrition au coeur du développement</h2>
-						</div>
-
-						<div class="tabulation-2 mt-4">
-							<ul class="nav nav-pills nav-fill d-md-flex d-block">
-							  <li class="nav-item">
-							    <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Missions</a>
-							  </li>
-							  <li class="nav-item px-lg-2">
-							    <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Notre vision</a>
-							  </li>
-
-							</ul>
-							<div class="tab-content bg-light rounded mt-2">
-							  <div class="tab-pane container p-0 active" id="home1">
-                                  <p>
-                                      <?php
-                                        echo "<ul>";
-                                          while($resMis = mysqli_fetch_assoc($resultMissions)){
-                                            echo "<li>".utf8_encode($resMis["description"])."</li>";
-                                          }
-                                        echo "<ul>";
-                                      ?>
-                                  </p>
-                              </div>
-							  <div class="tab-pane container p-0 fade" id="home2">
-                                  <p>
-                                    <?php
-                                      while($resVis = mysqli_fetch_assoc($resultVisions)){
-                                        echo utf8_encode($resVis["description"])."<br>";
-                                      }
-                                    ?>
-                                  </p>
-							  </div>
-							</div>
-						</div>
-    				<div class="row mt-5">
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="1387">0</strong>
-		                <span>Happy Clients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="310">0</strong>
-		                <span>Success Reports</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="35">0</strong>
-		                <span>Experienced</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-					</div>
-				</div>
-			</div>
-		</section>
+  
 
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">
