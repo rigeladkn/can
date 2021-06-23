@@ -67,157 +67,36 @@
     <section class="ftco-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-1.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>---description---</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-2.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-3.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-4.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-5.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-6.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-7.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff border">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-8.jpg);"></div>
-							</div>
-							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
-								<div class="faded">
-									<p>description</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		       
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
+				<?php 
+					include('Controllers/getMembres.php');
+					$resultMembres = getMembres("client");
+					// var_dump($resultMembres);
+					while($resMem = mysqli_fetch_assoc($resultMembres)){
+										
+						echo "<div class=\"col-md-6 col-lg-3 ftco-animate\">";
+							echo "<div class=\"staff border\">";
+	
+								echo "<div class=\"img-wrap d-flex align-items-stretch\">";
+									echo "<div class=\"img align-self-stretch\" style=\"background-image: url(assets/images/staff-1.jpg);\"></div>";
+								echo "</div>";
+								echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+								
+											echo "<h3>".$resMem["nom"]."</h3>";
+											echo "<span class=\"position mb-2\">".$resMem["poste"]."</span>";
+											echo "<div class=\"faded\">";
+											echo "<p>".$resMem["description"]."</p>";
+											echo "<ul class=\"ftco-social text-center\">";
+													echo "<li class=\"ftco-animate\"><a href=\"".$resMem["tweeterlink"]."\" class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-twitter\"></span></a></li>";
+													echo "<li class=\"ftco-animate\"><a href=\"".$resMem["facebooklink"]."\"class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-facebook\"></span></a></li>";
+												echo "</ul>";
+											echo "</div>";
+									
+								echo "</div>";
+							echo "</div>";
+						echo "</div>";
+					}
+					?>
+	 
 				</div>
 			</div>
 		</section>

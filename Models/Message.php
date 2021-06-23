@@ -7,7 +7,7 @@ class Message{
     private $username;
     private $password;
     private $databasename;
-    private $table = "Message";
+    private $table = "messages";
     private $nom;
     private $email;
     private $sujet;
