@@ -49,6 +49,12 @@
 	
   </head>
   <body  onLoad="changeActivePage()" >
+
+  <?php
+    include('Controllers/getMembres.php');
+    $resultMembres = getMembres("client");
+
+  ?>
 	  
 	<?php include('includes/navbar.php')?>
     
@@ -63,25 +69,32 @@
         </div>
       </div>
     </section>
-
     <section class="ftco-section">
 			<div class="container">
-				<div class="row">
+                <h6>Dix-sept (17) membres représentant les acteurs publics et parapublics, les organisations de la société civile, les acteurs du secteur privé </h6><br>
+
+                <div class="row">
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff border">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-1.jpg);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
+                                <?php
+                                while($resMem = mysqli_fetch_assoc($resultMembres)){
+
+                                    ?>
+
+								<h3><?php echo utf8_encode($resMem["nom"]);?></h3>
+								<span class="position mb-2"><?php echo utf8_encode($resMem["poste"]);?></span>
 								<div class="faded">
-									<p>---description---</p>
+									<p><?php echo utf8_encode($resMem["description"]);?></p>
+
 									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
-		              </ul>
-	              </div>
+                                        <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
+                                        <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>
+                                    </ul>
+	                            </div>
 							</div>
 						</div>
 					</div>
@@ -91,10 +104,13 @@
 								<div class="img align-self-stretch" style="background-image: url(assets/images/staff-2.jpg);"></div>
 							</div>
 							<div class="text pt-3 px-3 pb-4 text-center">
-								<h3>nom du membre </h3>
-								<span class="position mb-2">poste</span>
+								<h3><?php echo utf8_encode($resMem["nom"]);?></h3>
+								<span class="position mb-2"><?php echo utf8_encode($resMem["poste"]);?></span>
 								<div class="faded">
-									<p>description</p>
+									<p><?php echo utf8_encode($resMem["description"]);?></p>
+                                    <?php
+                                    }
+                                    ?>
 									<ul class="ftco-social text-center">
 		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-twitter"></span></a></li>
 		                <li class="ftco-animate"><a href="#" class="d-flex align-items-center justify-content-center"><span class="icon-facebook"></span></a></li>

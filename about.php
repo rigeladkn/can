@@ -53,9 +53,11 @@
     <?php
       include('Controllers/getMissions.php');
       include('Controllers/getVisions.php');
+      include('Controllers/getPresentation.php');
       $resultMissions = getmissions("client");
       $resultVisions = getvisions("client");
-      // var_dump($resultMissions);
+      $resultPresentation =  getPresentation("client");
+
     ?>
 
 
@@ -99,19 +101,26 @@
 							  <div class="tab-pane container p-0 active" id="home1">
                                   <p>
                                       <?php
-                                        while($resMis = mysqli_fetch_assoc($resultMissions)){
-                                          echo $resMis["description"]."<br>";
+                                        while($resMis = mysqli_fetch_assoc($resultMissions)){?>
+
+                                            <ul>
+                                                <li> <?php echo utf8_encode($resMis["description"]);?> </li>
+                                            </ul>
+                                      <?php
                                         }
-                                      ?>
+                                        ?>
                                   </p>
                               </div>
 							  <div class="tab-pane container p-0 fade" id="home2">
                                   <p>
                                     <?php
-                                      while($resVis = mysqli_fetch_assoc($resultVisions)){
-                                        echo $resVis["description"]."<br>";
-                                      }
-                                    ?>
+                                      while($resVis = mysqli_fetch_assoc($resultVisions)){?>
+                                        <ul>
+                                            <li> <?php echo utf8_encode($resVis["description"]);?> </li>
+                                        </ul>
+                                  <?php
+                                  }
+                                  ?>
                                   </p>
 							  </div>
 							</div>
@@ -155,7 +164,12 @@
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<span class="subheading">HISTORIQUES</span>
-            <p>recuperer dans la bd la presentation</p>
+            <p>
+                <?php
+                while($resPre = mysqli_fetch_assoc($resultPresentation)){
+                  echo utf8_encode($resPre["description"]);
+                    }
+              ?></p>
           </div>
         </div>
       </div>

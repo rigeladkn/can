@@ -92,22 +92,21 @@ INSERT INTO Extras (title,description,image,type) VALUES ('VISION DU CAN', "« A
                                                                             PSDAN s’inscrit dans le Partenariat Mondial REACH  (Efforts Renouvelés contre la Malnutrition Infantile)
 ",NULL,'vision')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 1', "Définir la Politique Nationale en matière d'Alimentation et de Nutrition ;")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 1', "Définir la Politique Nationale en matière d'Alimentation et de Nutrition ;",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 2', "Assurer l’élaboration, la mise en œuvre, Ie suivi et l'évaluation du Plan d'Action National pour l'Alimentation et la Nutrition ;")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 2', "Assurer l’élaboration, la mise en œuvre, Ie suivi et l'évaluation du Plan d'Action National pour l'Alimentation et la Nutrition ;",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 3', "Assurer la coordination des actions Iiées à l'Alimentation et à la Nutrition.")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 3', "Assurer la coordination des actions Iiées à l'Alimentation et à la Nutrition.",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 4', "Assurer l'élaboration et I 'adoption des documents de politique, des textes législatifs et des dispositions règlementaires nécessaires a I ‘expression effective de I ‘engagement politique du Gouvernement et des Collectivités Iocales dans Ie domaine de l'Alimentation et de la Nutrition")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 4', "Assurer l'élaboration et I 'adoption des documents de politique, des textes législatifs et des dispositions règlementaires nécessaires a l‘expression effective de l‘engagement politique du Gouvernement et des Collectivités Iocales dans Ie domaine de l'Alimentation et de la Nutrition",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 5',"Assurer Ie développement de programmes multisectorialisés d'alimentation et de nutrition impliquant les différents intervenants notamment l'Etat, les Collectivités locales, Ie Secteur privé et les Organisations Non Gouvernementales:")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 5',"Assurer Ie développement de programmes multisectorialisés d'alimentation et de nutrition impliquant les différents intervenants notamment l'Etat, les Collectivités locales, Ie Secteur privé et les Organisations Non Gouvernementales:",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 6',"Négocier et mobiliser les ressources nécessaires à la mise en œuvre correcte des Programmes d'Alimentation et de Nutrition")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 6',"Négocier et mobiliser les ressources nécessaires à la mise en œuvre correcte des Programmes d'Alimentation et de Nutrition",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 7',"Exploiter les résultats des études ou travaux effectués dans le domaine de l’alimentation et de la nutrition
-")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 7',"Exploiter les résultats des études ou travaux effectués dans le domaine de l’alimentation et de la nutrition",'mission')
 
-INSERT INTO Missions (title,description) VALUES ('Mission 8',"Coordonner les activités de toutes les structures nationales et internationales qui interviennent dans le domaine de l’Alimentation et de la Nutrition au Bénin")
+INSERT INTO Extras (title,description,type) VALUES ('Mission 8',"Coordonner les activités de toutes les structures nationales et internationales qui interviennent dans le domaine de l’Alimentation et de la Nutrition au Bénin",'mission')
 
 INSERT INTO Missions (title,description) VALUES ('Mission 9',"Créer des synergies nécessaires entre les politiques sectorielles, les acteurs et les actions pertinentes devant concourir aux plans local, communal, départemental et national à une alimentation saine et équilibrée des populations")
 
@@ -134,6 +133,9 @@ INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 6',
 
 INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 7', "En session extraordinaire au besoin suivant les circonstances",NULL, 'fonctionnement')
 
+INSERT INTO Membres (nom, poste, description,image) VALUES ('Patrice TALON','President','Président de la Republique','ok')
+
+INSERT INTO Membres (nom, poste, description, image) VALUES ('Rigel ADIKAN','Ministre','Ministre en charge de l’Agriculture ou son Représentant','ok')
 
 
 
