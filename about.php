@@ -49,11 +49,8 @@
   <body  onLoad="changeActivePage()" >
 
     <?php
-      include('Controllers/getMissions.php');
-      include('Controllers/getVisions.php');
-      $resultMissions = getmissions("client");
-      $resultVisions = getvisions("client");
-      // var_dump($resultMissions);
+      include('Controllers/getHists.php');
+      $resultHistorique = getHistorique("client");
     ?>
 
 	  <?php include('includes/navbar.php')?>
@@ -75,9 +72,20 @@
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">HISTORIQUES</span>
-            <p>recuperer dans la bd la presentation</p>
+          <div class="col-md-8 text-center heading-section ftco-animate" style="color:black">
+            <?php
+              while($resHis = mysqli_fetch_assoc($resultHistorique)){
+
+                 echo "<div class=\"col-md-12 col-lg-12\">";
+                      echo "<center><h1>".$resHis["title"]."</h1></center>";
+                      echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+                          echo "<div class=\"lead text-justify\">";
+                              echo "<p>".utf8_encode($resHis["description"])."</p>";
+                          echo "</div>";
+                      echo "</div>";
+                  echo "</div>";
+              }
+            ?>
           </div>
         </div>
       </div>
