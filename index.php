@@ -219,131 +219,38 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Testimonies</span> -->
             <h2 class="mb-4">Nos partenaires</h2>
-            <p>Ils nous font confiance</p>
+            <p>Ils nous ont fait confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
-              <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
+
+				<?php 
+					include_once('Controllers/getPartenaires.php');
 							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-			  <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
-							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-			  <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
-							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-              <!-- <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_2.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Henry Dee</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_3.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Mark Huff</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_4.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Rodel Golez</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_1.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Ken Bosh</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div> 
-              </div>-->
+						$resultPartenaires = getPartenaires('client');
+						// var_dump($resultMembres);
+						while($resPar = mysqli_fetch_assoc($resultPartenaires)){
+							echo "<div class=\"  \">";
+							echo "<center>";
+									echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
+										echo "<div class=\"user-img\" style=\"background-image: url(assets/images/person_1.jpg);height:200px;width:200px\">";
+										echo "</div>";
+										echo "<div class=\"text py-1\">";
+											echo "<p>".$resPar["nom"]."</p>";
+									
+										echo "</div>";
+									 
+									echo "</div>";
+							echo "</center>";
+					        echo "</div>";
+					
+					  }
+				?>
+             
+		 
+        
             </div>
           </div>
         </div>
