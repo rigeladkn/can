@@ -27,7 +27,6 @@
                 <li><a href="team.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Membres</a></li>
                 <li><a href="project.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Projets</a></li>
                 <li><a href="services.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-                <li><a href="partenaires.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Partenaires</a></li>
                 <li><a href="contact.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
               </ul>
             </div>
