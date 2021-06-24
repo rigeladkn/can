@@ -107,7 +107,7 @@
 						 $numero = 1;
 							
                           while($resServ = mysqli_fetch_assoc($resultServices)){
-							if($numero < 2){
+							if($numero == 1){
 								echo "<div class=\"tab-pane container p-0 active\" id=\"services-".$numero."\" >";
 									echo "<div class=\"img\" style=\"background-image: url(assets/images/project-".$numero.".jpg);\"></div>";
 										echo "<h3><a href=\"#\">".$resServ["title"]."</a></h3>";
@@ -116,7 +116,7 @@
 							    $numero++;
 							}
 							else{
-								echo "<div class=\"tab-pane container p-0 active\" id=\"services-".$numero."\" hidden>";
+								echo "<div class=\"tab-pane container p-0 \" id=\"services-".$numero."\" hidden>";
 										echo "<div class=\"img\" style=\"background-image: url(assets/images/project-".$numero.".jpg);\"></div>";
 											echo "<h3><a href=\"#\">".$resServ["title"]."</a></h3>";
 											echo "<p>".$resServ["description"]."</p>";
