@@ -24,7 +24,8 @@ CREATE TABLE membres (
 CREATE TABLE partenaires (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR (50) NOT NULL,
-    logo VARCHAR (500) NOT NULL )
+    logo VARCHAR (500) NOT NULL,
+    lien VARCHAR (500) NULL )
 
 CREATE TABLE actualites (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -47,7 +48,10 @@ CREATE TABLE contacts (
 
 CREATE TABLE carroussel (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    image VARCHAR (500) NOT NULL )
+    title VARCHAR (200) NULL,
+    description TEXT (1000) NULL,
+    image VARCHAR (500) NOT NULL,
+    lien VARCHAR (500) NULL )
 
 CREATE TABLE extras (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -55,6 +59,13 @@ CREATE TABLE extras (
     description TEXT (1000) NOT NULL,
     image VARCHAR (500) NULL,
     type VARCHAR (15) NOT NULL )
+
+CREATE TABLE navbar (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    adresse TEXT (1000) NOT NULL,
+    telephone VARCHAR (20) NOT NULL,
+    email VARCHAR (50) NOT NULL,
+    slogan TEXT (1000) NOT NULL )
 
 INSERT INTO extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
                                                                           Mais avant cette création, le bénin a connu plusieurs étapes dans le domaine de la lutte contre la malnutrition.
@@ -152,4 +163,9 @@ INSERT INTO `membres` (`nom`, `poste`, `description`, `image`, `tweeterlink`, `f
 
 
 
+// Ajout de l'attribut lien dans la table partenaires
+ALTER TABLE `partenaires` ADD `lien` VARCHAR(500) NULL AFTER `logo`;
 
+// Modification de la table carroussel dans la BD
+ALTER TABLE `carroussel` ADD `title` VARCHAR(200) NULL AFTER `id`, ADD `description` TEXT(1000) NULL AFTER `title`;
+ALTER TABLE `carroussel` ADD `lien` VARCHAR(500) NULL AFTER `image`;

@@ -30,7 +30,7 @@
 					'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>'+
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
-						'<a class="dropdown-item" href="#">Mot du directeur</a>'+
+						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -46,10 +46,12 @@
     </script>
 
 </head>
+
 <body  onLoad="changeActivePage()" >
 
 <?php
-
+    include_once('Controllers/getFonctions.php');
+    $resultFonctions = getFonctionnement("client");
 ?>
 
 <?php include('includes/navbar.php')?>
@@ -68,10 +70,19 @@
 
 <section class="ftco-section">
     <div class="container">
-        ZERTYUIOPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccccc
-        ccccccccccccccccccccccccccccccccccccccccccccccc
+        <?php
+            while($resFon = mysqli_fetch_assoc($resultFonctions)){
+
+                echo "<div class=\"col-md-12 col-lg-12\">";
+                    echo "<center><h1>".$resFon["title"]."</h1></center>";
+                    echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+                        echo "<div class=\"lead text-justify\">";
+                            echo "<p>".utf8_encode($resFon["description"])."</p>";
+                        echo "</div>";
+                    echo "</div>";
+                echo "</div>";
+            }
+        ?>
     </div>
 </section>
 

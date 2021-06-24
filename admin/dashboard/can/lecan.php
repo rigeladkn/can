@@ -105,9 +105,10 @@
                                                             <button class="btn btn-primary waves-effect waves-light col-2" data-toggle="modal" data-target="#presentationModal">Présentation</button>
                                                             <button class="btn btn-success waves-effect waves-light col-2" data-toggle="modal" data-target="#directeurModal"></i>Mot du directeur</button>
                                                             <button class="btn waves-effect waves-light col-1" style="background-color: #ff7814; color:white" data-toggle="modal" data-target="#visionModal">Vision</button>
-                                                            <button class="btn btn-info waves-effect waves-light col-2" data-toggle="modal" data-target="#missionModal" >Mission</button>
+                                                            <button class="btn btn-info waves-effect waves-light col-1" data-toggle="modal" data-target="#missionModal" >Mission</button>
+                                                            <button class="btn waves-effect waves-light col-2" style="background-color: #7814ff; color:white" data-toggle="modal" data-target="#fonctionModal">Fonctionnement</button>
                                                             <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#historiqueModal">Historique</button>
-                                                            <button class="btn btn-inverse waves-effect waves-light col-2" data-toggle="modal" data-target="#membreModal">Membre</button>
+                                                            <button class="btn btn-inverse waves-effect waves-light col-1" data-toggle="modal" data-target="#membreModal">Membre</button>
                                                         </div>
                                                     </div>
 
@@ -132,32 +133,36 @@
                                                                 <ul class="nav nav-tabs md-tabs" role="tablist">
                                                                   
                                                                     
-                                                                        <li class="nav-item" style="margin-right: 90px;">
+                                                                        <li class="nav-item" style="margin-right: 80px;">
                                                                             <a class="nav-link active" data-toggle="tab" href="#home3" role="tab">Présentation</a>
                                                                             <div class="slide"></div>
                                                                         </li>
                                                                    
 
-                                                                        <li class="nav-item" style="margin-right: 90px;">
+                                                                        <li class="nav-item" style="margin-right: 80px;">
                                                                             <a class="nav-link" data-toggle="tab" href="#profile3" role="tab"> Mot du directeur </a>
                                                                             <div class="slide"></div>
                                                                         </li>
                                                                    
                                                                 
                                                                 
-                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                    <li class="nav-item" style="margin-right: 80px;">
                                                                         <a class="nav-link" data-toggle="tab" href="#messages3" role="tab">Vision</a>
                                                                         <div class="slide"></div>
                                                                     </li>
-                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                    <li class="nav-item" style="margin-right: 80px;">
                                                                         <a class="nav-link" data-toggle="tab" href="#settings3" role="tab">Missions</a>
                                                                         <div class="slide"></div>
                                                                     </li>
-                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                    <li class="nav-item" style="margin-right: 80px;">
+                                                                        <a class="nav-link" data-toggle="tab" href="#fonctions3" role="tab">Fonctionnement</a>
+                                                                        <div class="slide"></div>
+                                                                    </li>
+                                                                    <li class="nav-item" style="margin-right: 80px;">
                                                                         <a class="nav-link" data-toggle="tab" href="#historique3" role="tab">Historique</a>
                                                                         <div class="slide"></div>
                                                                     </li>
-                                                                    <li class="nav-item" style="margin-right: 90px;">
+                                                                    <li class="nav-item" style="margin-right: 70px;">
                                                                         <a class="nav-link" data-toggle="tab" href="#membres3" role="tab">Membres</a>
                                                                         <div class="slide"></div>
                                                                     </li>
@@ -214,6 +219,17 @@
                                                                                     echo "</li><br><br>";
                                                                                  }
                                                                                   echo "</ul>";
+                                                                            
+                                                                            ?>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="tab-pane" id="fonctions3" role="tabpanel">
+                                                                        <p class="m-0">
+                                                                        <?php 
+                                                                                include('../../../Controllers/getFonctions.php');
+                                                                                $resultFonctions = getFonctionnement('admin');
+                                                                                $resFonctions = mysqli_fetch_assoc($resultFonctions);
+                                                                                echo "<p class=\"m-0\">". $resFonctions["description"]."</p>";
                                                                             
                                                                             ?>
                                                                         </p>
@@ -355,7 +371,9 @@
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
  <!-- modal ajout mission -->
- <?php include("../../../includes/dashboard/modalajoutmission.php")?> 
+ <?php include("../../../includes/dashboard/modalajoutmission.php")?>
+ <!-- modal pour fonctionnement -->
+ <?php include("../../../includes/dashboard/modalmodiffonction.php")?> 
  <!-- modal pour historique -->
  <?php include("../../../includes/dashboard/modalhistorique.php")?>
  <!-- modal pour vivion -->
