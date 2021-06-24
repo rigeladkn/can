@@ -225,6 +225,25 @@
         <div class="row ftco-animate justify-content-center">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
+              <?php
+                include_once('Controllers/getPartenaires.php');
+                $resultPartenaires = getPartenaires('client');
+                
+                while($resPar = mysqli_fetch_assoc($resultPartenaires)){
+                  echo "<div class=\"item\">";
+                    echo "<center>";
+                      echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
+                        echo "<div class=\"user-img\" style=\"background-image: url(assets/images/person_1.jpg);height:200px;width:200px\"></div>";
+                        echo "<div class=\"text py-1\">";
+                          echo "<p>".utf8_encode($resPar["nom"])."</p>";
+                        echo "</div>";
+                      echo "</div>";
+                    echo "</center>";
+                  echo "</div>";
+                }
+
+              ?>
+              <!--
               <div class="item">
 					<center>
 							<div class="testimony-wrap" style="background:none;">
@@ -234,7 +253,8 @@
 							
 							<p>Racky Henderson</p>
 							
-							</div>
+							</div>-->
+
 							<!-- <div class="text pl-4">
 								<span class="quote d-flex align-items-center justify-content-center">
 								<i class="icon-quote-left"></i>
@@ -243,6 +263,7 @@
 								<p class="name">Racky Henderson</p>
 								<span class="position">Father</span>
 							</div> -->
+              <!--
 							</div>
 					</center>
               </div>
@@ -256,6 +277,7 @@
 							<p>Racky Henderson</p>
 							
 							</div>
+              -->
 							<!-- <div class="text pl-4">
 								<span class="quote d-flex align-items-center justify-content-center">
 								<i class="icon-quote-left"></i>
@@ -264,6 +286,7 @@
 								<p class="name">Racky Henderson</p>
 								<span class="position">Father</span>
 							</div> -->
+              <!--
 							</div>
 					</center>
               </div>
@@ -277,6 +300,7 @@
 							<p>Racky Henderson</p>
 							
 							</div>
+              -->
 							<!-- <div class="text pl-4">
 								<span class="quote d-flex align-items-center justify-content-center">
 								<i class="icon-quote-left"></i>
@@ -284,10 +308,10 @@
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 								<p class="name">Racky Henderson</p>
 								<span class="position">Father</span>
-							</div> -->
+							</div> --><!--
 							</div>
 					</center>
-              </div>
+              </div>-->
               <!-- <div class="item">
                 <div class="testimony-wrap d-flex">
                   <div class="user-img" style="background-image: url(assets/images/person_2.jpg)">
