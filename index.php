@@ -41,8 +41,8 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">Negotiate Consulting</span>
-            <h1 class="mb-4">We Are The Best Consulting Agency</h1>
+          	<span class="subheading">Conseil de l'Alimentation et de la Nutrition</span>
+            <h1 class="mb-4">Nous sommes une équipe ardue au travail</h1>
             <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
@@ -54,8 +54,8 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">Negotiate Consulting</span>
-            <h1 class="mb-4">We Help to Grow Your Business</h1>
+          	<span class="subheading">Structure gouvernementale</span>
+            <h1 class="mb-4">Nous oeuvrons pour le bien des béninois</h1>
             <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
@@ -161,7 +161,7 @@
 					<div class="col-md-8 text-center heading-section ftco-animate">
 							<!-- <span class="subheading">Blog Posts</span> -->
 							<h2 class="mb-4">Actualités récentes</h2>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+							<p>Nous menons des activités de part le Bénin. Découvrez les activités récentes du CAN.</p>
 					</div>
           </div> 
 			<div class="row">

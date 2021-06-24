@@ -64,7 +64,7 @@
     </section>
 
     <section class="ftco-section">
-			<div class="container">
+			<div class="container" style="color:black">
 				<?php 
 					include('Controllers/getMotDirecteur.php');
 					$resultMotDirecteur = getMotDirecteur("client");
