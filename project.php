@@ -85,9 +85,9 @@
 						echo "<div class=\"project\">";
 							echo "<div class=\"img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></div>";
 							echo "<div class=\"text w-100 text-center\">";
-								echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
-								echo "<h3><a href=\"#\">".utf8_encode($resPro["financement"])."</a></h3>";
-								echo "<p>".utf8_encode($resPro["description"])."</p>";
+								echo "<span class=\"cat\">". $resPro["status"]."</span>";
+								echo "<h3><a href=\"#\">".$resPro["financement"]."</a></h3>";
+								echo "<p>".$resPro["description"]."</p>";
 							echo "</div>";
 						echo "</div>";
 					echo "</div>";
