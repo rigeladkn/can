@@ -34,7 +34,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Negotiate Consulting</span>
             <h1 class="mb-4">We Are The Best Consulting Agency</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder       <span class="ion-ios-arrow-round-forward"></span></a></p>
+            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services       <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Negotiate Consulting</span>
             <h1 class="mb-4">We Help to Grow Your Business</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder       <span class="ion-ios-arrow-round-forward"></span></a></p>
+            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services       <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
@@ -367,8 +367,9 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Blog Posts</span> -->
             <h2 class="mb-4">Activités récentes</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
+			<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+			<p class="mb-0"><a href="http://localhost/can/actualites.php" class="btn btn-primary">Voir plus <span class="ion-ios-arrow-round-forward"></span></a></p>	
+		 </div>
         </div>
 				<div class="row">
           <div class="col-md-6 col-lg-4 ftco-animate">
@@ -384,7 +385,7 @@
                 <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
 	               
                 </div>
               </div>
@@ -403,7 +404,7 @@
                 <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
 	                
                 </div>
               </div>
@@ -422,7 +423,7 @@
                 <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                 <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p>
 	                <!-- <p class="ml-auto mb-0">
 	                	<a href="#" class="mr-2">Admin</a>
 	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
