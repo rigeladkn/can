@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard | Acceuil</title>
+    <title>Dashboard | Gérer les images</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -72,76 +72,101 @@
                         </div>
                         <!-- Page-header end -->
                         <div class="pcoded-inner-content">
-                            <!-- Main-body start -->
-                            <div class="main-body">
-                                <div class="page-wrapper">
-
-
-                                <div class="row">
-                                        <div class="col-10"></div>
+                        <div class="row">
+                                <div class="col-10"></div>
                                         <div class="col-2">
-                                            <form action="../../../Controllers/gestImages.php" method="post">
-                                                <button type="submit" class="btn waves-effect waves-light btn-primary "></i>Gérer</button><br>
-                                            </form>
+                                                <a href="acceuil.php" class="btn waves-effect waves-light btn-primary "></i>Retour</a><br>
                                         </div>
-                                </div><br>
+                        </div><br>
+                        
 
-                                    <!-- Page-body start -->
-                                    <div class="page-body breadcrumb-page">
-                                    <div class="row">
-                                            <div class="col-sm-12">
-                                                <!-- Basic Form Inputs card start -->
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h5>Carroussel de l'acceuil</h5>
-                                                        <span>Définissez les images qui s'afficheront dans le carroussel<code>(.png, .jpg /.jpeg)</code></span>
-                                 
-                                                    </div>
-                                                    <div class="card-block">
-                                                    <div class="row">
-                                                        <div class="col-4">
-                                                            <h4 class="sub-title">Ajoutez une image</h4>
-                                                        </div>
-                                                        <div class="col-7"></div>
-                                                        <div class="col-1">
-                                                          <button class="btn btn-primary btn-sm"> +1 </button>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                       
-                                                        <form>
-                                                            
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Image </label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="file" class="form-control" name="image">
-                                                                </div>
-                                                            </div>
+                        <div >
+                            <div class="row">
 
-                                                            <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Descriptif</label>
-                                                                <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" maxlength="30" placeholder="Entrez une courte phrase (max characters =  30)">
-                                                                </div>
-                                                            </div>
-                                                           
-                                                        </form>
-                                                      
+                                <!-- Main-body start -->
+                                <div class="main-body">
+                                    <div class="page-wrapper col-5">
+    
+                                        <!-- Page-body start -->
+                                        <div class="page-body breadcrumb-page">
+                                            <div class="">
+                                                    <div class="col-sm-12">
+                                                        <!-- Basic Form Inputs card start -->
+                                                        <!-- Basic Form Inputs card end -->
                                                     </div>
                                                 </div>
-                                                <!-- Basic Form Inputs card end -->
                                             </div>
-                                        </div>
+                                        <!-- Page-body start -->
+                                         </div>
                                     </div>
-                                    <!-- Page-body start -->
-                                </div>
+                                <!-- Main-body start -->  
+                                   </div>
+                                   <div class="row">
+                                       
+                                         <!-- Border button -->
+                                         <div class="col-sm-6">
+                                           <div class="card"  style="height:485px">
+                                               <div class="card-header">
+                                                   <div class="card-header-left">
+                                                       <h5>Titre de l'image</h5>
+                                                   </div>
+                                                   
+                                               </div>
+                                               <div class="card-block">
+                                                   <!-- button Default -->
+                                                   <div class="card-block ">
+                                                                <form>
+                                                                    
+                                                                    <div class="form-group row">
+                                                                        <div class="col-sm-10">
+                                                                            <img src="../../../assets/images/project-1.jpg" alt="" style="height: 80%;width:420px; margin-bottom:35px">
+                                                                            <div class="form-group row" >
+                                                                        <div class="col-sm-10"  >
+                                                                               <center>
+    
+                                                                                   <div class="form-check form-check-inline" >
+                                                                                       <label class="form-check-label" style="margin-right: 50px;">
+                                                                                           <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Visible
+                                                                                       </label>
+                                                                                       </div>
+                                                                                       
+                                                                                       <div class="form-check form-check-inline">
+                                                                                       <label class="form-check-label">
+                                                                                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Non visible
+                                                                                       </label>
+                                                                                       </div>
+                   
+                                                                                   </div>
+                                                                               </center>
+                                                                        </div>
+                                                                        </div>
+                                                                       
+    
+                                                                            
+                                                                    </div>
+                                                                
+                                                                    </div>
+    
+                                                                  
+                                                                </form>
+                                                            
+                                                            </div>      
+                                               </div>
+                                           </div>
+                                       </div>
+                                        
+
+                                   </div>
                             </div>
-                            <!-- Main-body start -->
 
                             <div id="styleSelector">
 
                             </div>
                         </div>
+
+
+                        
+
                     </div>
                 </div>
             </div>
