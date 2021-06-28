@@ -126,7 +126,7 @@
     <!-- <section class="ftco-section ftco-no-pb ftco-no-pt">
     	<div class="container-fluid px-0">
     		<div class="row justify-content-center">
-        	<div class="col-md-12">
+        	<div class="col-md-12">                            
         		<div id="map" class="bg-white"></div>
         	</div>
         </div>
@@ -153,8 +153,8 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="assets/js/google-map.js"></script> -->
   <script src="assets/js/main.js"></script>
     
   </body>
