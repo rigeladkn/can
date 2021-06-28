@@ -38,7 +38,7 @@
         	   '</li>'+
 	        	
 	        	'<li class="nav-item"><a href="project.php" class="nav-link">Projets</a></li>'+
-	        	'<li class="nav-item"><a href="actuualites.php" id="studies" class="nav-link">Actualités</a></li>'+
+	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
 	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 	        '</ul>';
@@ -63,46 +63,48 @@
     </section>
 
     <section class="ftco-section">
-			<div class="container">
-				<div class="row">
-				<?php 
-					include('Controllers/getMembres.php');
-					$resultMembres = getMembres("client");
-					// var_dump($resultMembres);
-					while($resMem = mysqli_fetch_assoc($resultMembres)){
-										
-						echo "<div class=\"col-md-6 col-lg-3 ftco-animate\">";
-							echo "<div class=\"staff border\">";
-	
-								echo "<div class=\"img-wrap d-flex align-items-stretch\">";
-									echo "<div class=\"img align-self-stretch\" style=\"background-image: url(assets/images/staff-1.jpg);\"></div>";
-								echo "</div>";
-								echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
-								
-											echo "<h3>".$resMem["nom"]."</h3>";
-											echo "<span class=\"position mb-2\">".$resMem["poste"]."</span>";
-											echo "<div class=\"faded\">";
-											echo "<p>".$resMem["description"]."</p>";
-											echo "<ul class=\"ftco-social text-center\">";
-													echo "<li class=\"ftco-animate\"><a href=\"".$resMem["tweeterlink"]."\" class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-twitter\"></span></a></li>";
-													echo "<li class=\"ftco-animate\"><a href=\"".$resMem["facebooklink"]."\"class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-facebook\"></span></a></li>";
-												echo "</ul>";
-											echo "</div>";
-									
-								echo "</div>";
-							echo "</div>";
-						echo "</div>";
-					}
-					?>
-	 
-				</div>
-			</div>
-		</section>
+        <div class="container">
+            <h6>Dix-sept (17) membres représentant les acteurs publics et parapublics, les organisations de la société
+                civile, les acteurs du secteur privé </h6><br>
+            <div class="row">
+                <?php
+                include('Controllers/getMembres.php');
+                $resultMembres = getMembres("client");
+                // var_dump($resultMembres);
+                while ($resMem = mysqli_fetch_assoc($resultMembres)) {
+
+                    echo "<div class=\"col-md-6 col-lg-3 ftco-animate\">";
+                    echo "<div class=\"staff border\">";
+
+                    echo "<div class=\"img-wrap d-flex align-items-stretch\">";
+                    echo "<div class=\"img align-self-stretch\" style=\"background-image: url(assets/images/staff-1.jpg);\"></div>";
+                    echo "</div>";
+                    echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+                    echo "<style type=\"text/css\">div.text.pt-3.px-3.pb-4.text-center{height: 160px;}</style>";
+
+                    echo "<h3>" . $resMem["nom"] . "</h3>";
+                    echo "<span class=\"position mb-2\">" . $resMem["poste"] . "</span>";
+                    echo "<div class=\"faded\">";
+                    echo "<h10>" . utf8_encode($resMem["description"]) . "</h10>";
+                    echo "<ul class=\"ftco-social text-center\">";
+                    echo "<li class=\"ftco-animate\"><a href=\"" . $resMem["tweeterlink"] . "\" class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-twitter\"></span></a></li>";
+                    echo "<li class=\"ftco-animate\"><a href=\"" . $resMem["facebooklink"] . "\"class=\"d-flex align-items-center justify-content-center\"><span class=\"icon-facebook\"></span></a></li>";
+                    echo "</ul>";
+                    echo "</div>";
+
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+                ?>
+            </div>
+        </div>
+    </section>
 
 
 
-		
-	<?php include("includes/footer.php") ?>
+
+    <?php include("includes/footer.php") ?>
     
   
 

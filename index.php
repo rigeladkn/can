@@ -173,7 +173,7 @@
               while($resAct = mysqli_fetch_assoc($resultActualites) and $i <3){
                 echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
                   echo "<div class=\"blog-entry\">";
-                    echo "<a href=\"blog-single.php\" class=\"block-20 d-flex align-items-end\" style=\"background-image: url('assets/images/image_2.jpg');\">";
+                    echo ">";
                       echo "<div class=\"meta-date text-center p-2\">";
                         echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";
                       echo "</div>";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CAN | Actualités</title>
+    <title>Negotiate - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/icomoon.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script>
-	  	  	function changeActivePage(){
+		  	function changeActivePage(){
         document.getElementById("ftco-nav").innerHTML = 	  '<a class="navbar-brand" href="index.php"><img style="height:64px" src="assets/images/can.png"></a>'+
 	        '<ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">'+
 	        	'<li class="nav-item " id="home"><a href="index.php" class="nav-link">Accueil</a></li>'+
@@ -38,15 +38,14 @@
         	   '</li>'+
 	        	
 	        	'<li class="nav-item"><a href="project.php" id="team" class="nav-link">Projets</a></li>'+
-	        	'<li class="nav-item active"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
+	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
+	          '<li class="nav-item active"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 	        '</ul>';
 	  }
   </script>
 	
   </head>
-
   <body  onLoad="changeActivePage()" >
     
     <?php include('includes/navbar.php')?>
@@ -56,8 +55,13 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Actualités | Nos activités </h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Acceuil<i class="ion-ios-arrow-forward"></i></a></span> <span>Actualités | Nos activités<i class="ion-ios-arrow-forward"></i></span></p>
+              <?php
+                include('Controllers/getActualites.php');
+                $resultActivity = getActivity("client",$_GET["title"]);
+                $resAct = mysqli_fetch_assoc($resultActivity);
+                echo "<h1 class=\"mb-2 bread\">".utf8_encode($resAct["title"])."</h1>";
+                echo "<p class=\"breadcrumbs\"><span class=\"mr-2\"><a href=\"index.php\">Home <i class=\"ion-ios-arrow-forward\"></i></a></span> <span class=\"mr-2\"><a href=\"index.php\">Blog <i class=\"ion-ios-arrow-forward\"></i></a></span> <span>Blog Single <i class=\"ion-ios-arrow-forward\"></i></span></p>";
+          ?>
           </div>
         </div>
       </div>
@@ -65,36 +69,31 @@
 		
 		<section class="ftco-section">
 			<div class="container">
-				<div class="row">
-        <?php 
-          include_once('Controllers/getActualites.php');
-              $resultActualites = getActualites('client');
-              // var_dump($resultMembres);
-              while($resAct = mysqli_fetch_assoc($resultActualites)){
-                echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
-                  echo "<div class=\"blog-entry\">";
+                <?php
 
-                      echo "<div class=\"meta-date text-center p-2\">";
-                        echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";
-                      echo "</div>";
-                    echo "</a>";
-                    echo "<div class=\"text border border-top-0 p-4\">";
-                      echo "<h3 class=\"heading\"><a href=\"actualite_single.php?title=".$resAct["title"]."\">".$resAct["title"]."</a></h3>";
-                      echo "<p>".$resAct["description"]."</p>";
-                      echo "<div class=\"d-flex align-items-center mt-4\">";
-                        echo "<p class=\"ml-auto mb-0\">";
-                        
-                        echo "</p>";
-                      echo "</div>";
-                    echo "</div>";
-                  echo "</div>";
+
+
+                    echo "<div class=\"row\">";
+                    echo "<div class=\"col-lg-12 ftco-animate\">";
+//                    echo "<h2 class=\"mb-3\">" .utf8_encode($resAct["title"]). "</h2>";
+                echo "<div class=\"tag-widget post-tag-container mb-5 mt-5\">";
+                echo "<div class=\"tagcloud\">";
+                echo "<a href=\"#\" class=\"tag-cloud-link\" style='color: #0b3bff'><strong style='color: #0b0b0b'>Date de l'évènement : </strong>".$resAct["Ladate"]. "</a>";
                 echo "</div>";
-          }
-        ?>
-        <!--  -->
+                echo "</div>";
+                    echo "<p>";
+                      echo "<img src=\"assets/images/image_2.jpg\" alt=\"\" class=\"img-fluid\">";
+                    echo "</p>";
+                    echo "<p style='text-align: justify'>".utf8_encode($resAct["description"])."</p>";
+
+
+                ?>
+
+          </div><!-- END COL -->
+        </div>
 			</div>
 		</section>
- 
+		
     <?php include("includes/footer.php") ?>
     
   
@@ -115,8 +114,7 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
-  <!-- <script src="assets/js/google-map.js"></script> -->
+
   <script src="assets/js/main.js"></script>
     
   </body>

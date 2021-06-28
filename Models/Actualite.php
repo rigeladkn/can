@@ -90,4 +90,17 @@ class Actualite{
         }
     }
 
+    function getActivity($title){
+
+        $this->sql = "SELECT * FROM ".$this->table." WHERE title= '" .$title."'";
+
+
+        if($result = $this->connect->query($this->sql)){
+            return $result;
+        }
+        else{
+            return false;
+        }
+    }
+
 }
