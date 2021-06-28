@@ -87,14 +87,14 @@
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
-                                        <!-- <li class=" ">
-                                            <a href="tooltip.php" class="waves-effect waves-dark">
+                                        <li class=" ">
+                                            <a href="navbar.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                <span class="pcoded-mtext">Tooltip And Popover</span>
+                                                <span class="pcoded-mtext">Navbar</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
-                                        <li class=" ">
+                                        <!-- <li class=" ">
                                             <a href="typography.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">Typography</span>
@@ -107,7 +107,7 @@
                                                 <span class="pcoded-mtext">Notifications</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
-                                        </li> -->
+                                        </li>  -->
                                     </ul>
                                 </li>
                             </ul>
