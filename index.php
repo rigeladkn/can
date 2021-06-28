@@ -28,7 +28,7 @@
   	<?php
       include('Controllers/getMissions.php');
       include('Controllers/getVisions.php');
-      include_once('Controllers/getImage.php');
+      include_once('Controllers/getImages.php');
       $resultMissions = getmissions("client");
       $resultVisions = getvisions("client");
       $resultCarrousel = getVisibleImages("client");
@@ -36,17 +36,18 @@
     ?>
 
 	<?php include('includes/navbar.php')?>
+  <section class="home-slider owl-carousel">
   <?php 
 				
 						// var_dump($resultMembres);
 					
-    <section class="home-slider owl-carousel">
+    
     while($resCarr = mysqli_fetch_assoc($resultCarrousel)){
-      echo "<div class=\"slider-item\" style=\"background-image:url(\"".$resCarr["image"]."\");>";
-          echo "<div class="overlay"></div>";
-          echo "<div class="container">";
-              echo "<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">";
-                    echo "<div class="col-md-7 ftco-animate mb-md-5">";
+      echo "<div class=\"slider-item\" style=\"background-image:url("."admin/dashboard/can/uploads/".$resCarr["image"]."\");>";
+          echo "<div class=\"overlay\"></div>";
+          echo "<div class=\"container\">";
+              echo "<div class=\"row no-gutters slider-text align-items-center justify-content-start\" data-scrollax-parent=\"true\">";
+                    echo "<div class=\"col-md-7 ftco-animate mb-md-5\">";
           	          echo "<span class=\"subheading\">".$resCarr["title"]."</span>";
                               echo "<h1 class=\"mb-4\">".$resCarr["description"]."</h1>";
                                     echo "<p><a href=\"actualite-single.php?".$resCarr["title"]." class=\"btn btn-primary px-4 py-3 mt-3\">Accéder<span class=\"ion-ios-arrow-round-forward\"></span></a></p>";
