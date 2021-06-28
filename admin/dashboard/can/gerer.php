@@ -75,98 +75,71 @@
                         <div class="row">
                                 <div class="col-10"></div>
                                         <div class="col-2">
-                                                <a href="acceuil.php" class="btn waves-effect waves-light btn-primary "></i>Retour</a><br>
+                                                <a href="acceuil.php" class="btn waves-effect waves-light btn-danger "></i>Retour</a><br>
                                         </div>
                         </div><br>
                         
+                        <?php 
 
-                        <div >
-                            <div class="row">
+                            include_once('../../../Controllers/getImages.php');
+                            $resultImages = getImages('admin');
 
-                                <!-- Main-body start -->
-                                <div class="main-body">
-                                    <div class="page-wrapper col-5">
-    
-                                        <!-- Page-body start -->
-                                        <div class="page-body breadcrumb-page">
-                                            <div class="">
-                                                    <div class="col-sm-12">
-                                                        <!-- Basic Form Inputs card start -->
-                                                        <!-- Basic Form Inputs card end -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <!-- Page-body start -->
-                                         </div>
-                                    </div>
-                                <!-- Main-body start -->  
-                                   </div>
-                                   <div class="row">
-                                       
-                                         <!-- Border button -->
-                                         <div class="col-sm-6">
-                                           <div class="card"  style="height:485px">
-                                               <div class="card-header">
-                                                   <div class="card-header-left">
-                                                       <h5>Titre de l'image</h5>
-                                                   </div>
-                                                   
-                                               </div>
-                                               <div class="card-block">
-                                                   <!-- button Default -->
-                                                   <div class="card-block ">
-                                                                <form>
-                                                                    
-                                                                    <div class="form-group row">
-                                                                        <div class="col-sm-10">
-                                                                            <img src="../../../assets/images/project-1.jpg" alt="" style="height: 80%;width:420px; margin-bottom:35px">
-                                                                            <div class="form-group row" >
-                                                                        <div class="col-sm-10"  >
-                                                                               <center>
-    
-                                                                                   <div class="form-check form-check-inline" >
-                                                                                       <label class="form-check-label" style="margin-right: 50px;">
-                                                                                           <input class="form-check-input " type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Visible
-                                                                                       </label>
-                                                                                       </div>
-                                                                                       
-                                                                                       <div class="form-check form-check-inline">
-                                                                                       <label class="form-check-label">
-                                                                                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Non visible
-                                                                                       </label>
-                                                                                       </div>
-                   
-                                                                                   </div>
-                                                                               </center>
-                                                                        </div>
-                                                                        </div>
-                                                                       
-    
+                            // var_dump($resultMembres);
+                            while($resIm = mysqli_fetch_assoc($resultImages)){
+                       echo "<div>";
+                                                echo "<form method=\"post\" action=\"../../../Controllers/updateVisibility.php?id=".$resIm["title"]."\">";
+                                                //une première image ici
+                                                echo "<div class=\"col-md-6\">";
+                                                echo "<div class=\"card\"  style=\"height:485px\">";
+                                                    echo "<div class=\"card-header\">";
+                                                        echo "<div class=\"card-header-left\">";
+                                                        echo "<h5>Titre : ".$resIm["title"]."</h5>";
+                                                        echo "</div>";
+                                                    echo "</div>";
+                                                 
+                                                        //<!-- button Default -->
+                                                        echo "<div class=\"card-block sd-6\">";
+                                                                         
+                                                            echo "<div class=\"form-group row\">";
+                                                                echo "<div class=\"col-sm-10\">";
+                                                                    echo "<img src=\"uploads/".$resIm["image"]."\" alt=\"".$resIm["image"]."\" style=\"height: 80%;width:420px; margin-bottom:35px\">";
+                                                                    echo "<div class=\"form-group row\" >";
+                                                                echo "<div class=\"col-sm-10\"  >";
+                                                                    echo "<center>";
+
                                                                             
-                                                                    </div>
-                                                                
-                                                                    </div>
-    
-                                                                  
-                                                                </form>
-                                                            
-                                                            </div>      
-                                               </div>
-                                           </div>
-                                       </div>
-                                        
+                                                                            echo "<center>";
+                    
+                                                                            echo "<div class=\"col-2\">";
+                                                                                if($resIm["status"]=="visible" or $resIm["status"]=="Visible"){
+                                                                                    $color = 'primary';
+                                                                                }
+                                                                                else{
+                                                                                    $color = 'danger';
+                                                                                }
+                                                                            echo "<input type=\"text\" value=\"".$resIm["image"]."\" hidden name =\"but\" >";
+                                                                            echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"".$resIm["id"]."\" >";
+                                                                            echo "<button  class=\"btn waves-effect waves-light btn-sm btn-".$color."\" value=\"".$resIm["image"]."\"></i>".$resIm["status"]."</button><br>";
+                                                                            echo "</div>"; 
 
-                                   </div>
-                            </div>
-
-                            <div id="styleSelector">
-
-                            </div>
-                        </div>
-
-
-                        
-
+                                                                            echo "</center>"; 
+        
+                                                                    echo "</center>";
+                                                                echo "</div>";
+                                                                echo "</div>";
+                                                                echo "</div>";
+                                                                echo "</div>";
+                                                                echo "</div>";     
+                                                                            
+                                                            echo "</div>";
+                                                        echo "<form>";  
+                                                    //autre image débute ici
+                                                    echo "</div>";
+                                                    
+                                            // }
+                
+                                        }
+                                    ?> 
                     </div>
                 </div>
             </div>
@@ -175,49 +148,7 @@
 
 
 
-    <!-- Warning Section Starts -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 10]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="../../../assets/dashboard/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../../../assets/dashboard/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="../../../assets/dashboard/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="../../../assets/dashboard/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../../../assets/dashboard/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
+ 
 <!-- Warning Section Ends -->
 <!-- Required Jquery -->
 <script type="text/javascript" src="../../../assets/dashboard/js/jquery/jquery.min.js "></script>
@@ -233,6 +164,27 @@
 <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
 <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
+<!-- 
+<script>
+    function changeVisibility(name,visibility){
+        // alert(name);
+  
+        new Ajax.Request('../../../Controllers/updateVisibility.php',
+        {
+            method:'post',
+            parameters:{q_input: ok,old_vivibility : visibility},
+            cache: false,
+            onSuccess: function(transport)
+            {
+                jQuery('.debug').html(transport.responseText);
+                alert(document.getElementByName(name).innerHTML = "Changé");
+            }
+        });
+}
+
+    
+</script> -->
+
 </body>
 
 </html>
