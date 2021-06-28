@@ -27,7 +27,6 @@
                 <li><a href="team.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Membres</a></li>
                 <li><a href="project.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Projets</a></li>
                 <li><a href="services.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-                <li><a href="partenaires.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Partenaires</a></li>
                 <li><a href="contact.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
               </ul>
             </div>
@@ -75,7 +74,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tous droits réservés | Powered with <i class="icon-heart" aria-hidden="true"></i> par <a href="#" target="_blank" style="color: #3e64ff">JFRH</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tous droits réservés | Réalisé par <a href="#" target="_blank" style="color: white">JFRH</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

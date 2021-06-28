@@ -18,21 +18,21 @@
       <meta name="author" content="Codedthemes" />
       <!-- Favicon icon -->
 
-      <link rel="icon" href="../../../assets/dashboard/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="../assets/dashboard/images/favicon.ico" type="image/x-icon">
       <!-- Google font-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
       <!-- Required Fremwork -->
-      <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../assets/dashboard/css/bootstrap/css/bootstrap.min.css">
       <!-- waves.css -->
-      <link rel="stylesheet" href="../../../assets/dashboard/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <link rel="stylesheet" href="../assets/dashboard/pages/waves/css/waves.min.css" type="text/css" media="all">
       <!-- themify-icons line icon -->
-      <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/icon/themify-icons/themify-icons.css">
+      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/themify-icons/themify-icons.css">
       <!-- ico font -->
-      <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/icon/icofont/css/icofont.css">
+      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/icofont/css/icofont.css">
       <!-- Font Awesome -->
-      <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/icon/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/font-awesome/css/font-awesome.min.css">
       <!-- Style.css -->
-      <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
+      <link rel="stylesheet" type="text/css" href="../assets/dashboard/css/style.css">
   </head>
 
   <body themebg-pattern="theme1">
@@ -98,28 +98,28 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
 
-                        <form class="md-float-material form-material">
+                        <form class="md-float-material form-material" action="../Controllers/login.php" method="post">
                             <div class="text-center">
-                                <img src="../../../assets/dashboard/images/logo.png" alt="logo.png">
+                                <img src="../assets/dashboard/images/logo.png" alt="logo.png">
                             </div>
                             <div class="auth-box card">
                                 <div class="card-block">
                                     <div class="row m-b-20">
                                         <div class="col-md-12">
-                                            <h3 class="text-center">Sign In</h3>
+                                            <h3 class="text-center">Connexion</h3>
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
                                         <input type="text" name="email" class="form-control">
                                         <span class="form-bar"></span>
-                                        <label class="float-label">Your Email Address</label>
+                                        <label class="float-label">Mail de connexion</label>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" name="password" class="form-control">
+                                        <input type="password" name="motdepasse" class="form-control">
                                         <span class="form-bar"></span>
-                                        <label class="float-label">Password</label>
+                                        <label class="float-label">Mot de passe</label>
                                     </div>
-                                    <div class="row m-t-25 text-left">
+                                    <!-- <div class="row m-t-25 text-left">
                                         <div class="col-12">
                                             <div class="checkbox-fade fade-in-primary d-">
                                                 <label>
@@ -132,21 +132,24 @@
                                                 <a href="auth-reset-password.php" class="text-right f-w-600"> Forgot Password?</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
+                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
                                         </div>
                                     </div>
                                     <hr/>
                                     <div class="row">
                                         <div class="col-md-10">
-                                            <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                            <p class="text-inverse text-left"><a href="index.php"><b>Back to website</b></a></p>
+                                            <center>
+                                                <!-- <p class="text-inverse text-left m-b-0">Bienvenu(e) sur le panel d'administration</p> -->
+                                                <p class="text-inverse text-left"><a href="../"><b>Retour</b></a></p>
+                                            </center>
+                                                
                                         </div>
-                                        <div class="col-md-2">
-                                            <img src="../../../assets/dashboard/images/auth/Logo-small-bottom.png" alt="small-logo.png">
-                                        </div>
+                                        <!-- <div class="col-md-2">
+                                            <img src="../assets/dashboard/images/auth/Logo-small-bottom.png" alt="small-logo.png">
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -169,31 +172,31 @@
         <ul class="iew-download">
             <li>
                 <a href="http://www.google.com/chrome/">
-                    <img src="../../../assets/dashboard/images/browser/chrome.png" alt="Chrome">
+                    <img src="../assets/dashboard/images/browser/chrome.png" alt="Chrome">
                     <div>Chrome</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="../../../assets/dashboard/images/browser/firefox.png" alt="Firefox">
+                    <img src="../assets/dashboard/images/browser/firefox.png" alt="Firefox">
                     <div>Firefox</div>
                 </a>
             </li>
             <li>
                 <a href="http://www.opera.com">
-                    <img src="../../../assets/dashboard/images/browser/opera.png" alt="Opera">
+                    <img src="../assets/dashboard/images/browser/opera.png" alt="Opera">
                     <div>Opera</div>
                 </a>
             </li>
             <li>
                 <a href="https://www.apple.com/safari/">
-                    <img src="../../../assets/dashboard/images/browser/safari.png" alt="Safari">
+                    <img src="../assets/dashboard/images/browser/safari.png" alt="Safari">
                     <div>Safari</div>
                 </a>
             </li>
             <li>
                 <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="../../../assets/dashboard/images/browser/ie.png" alt="">
+                    <img src="../assets/dashboard/images/browser/ie.png" alt="">
                     <div>IE (9 & above)</div>
                 </a>
             </li>
@@ -204,15 +207,15 @@
 <![endif]-->
 <!-- Warning Section Ends -->
 <!-- Required Jquery -->
-<script type="text/javascript" src="../../../assets/dashboard/js/jquery/jquery.min.js "></script>
-<script type="text/javascript" src="../../../assets/dashboard/js/jquery-ui/jquery-ui.min.js "></script>
-<script type="text/javascript" src="../../../assets/dashboard/js/popper.js/popper.min.js"></script>
-<script type="text/javascript" src="../../../assets/dashboard/js/bootstrap/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../assets/dashboard/js/jquery/jquery.min.js "></script>
+<script type="text/javascript" src="../assets/dashboard/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="../assets/dashboard/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="../assets/dashboard/js/bootstrap/js/bootstrap.min.js "></script>
 <!-- waves js -->
-<script src="../../../assets/dashboard/pages/waves/js/waves.min.js"></script>
+<script src="../assets/dashboard/pages/waves/js/waves.min.js"></script>
 <!-- jquery slimscroll js -->
-<script type="text/javascript" src="../../../assets/dashboard/js/jquery-slimscroll/jquery.slimscroll.js"></script>
-<script type="text/javascript" src="../../../assets/dashboard/js/common-pages.js"></script>
+<script type="text/javascript" src="../assets/dashboard/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../assets/dashboard/js/common-pages.js"></script>
 </body>
 
 </html>

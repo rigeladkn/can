@@ -1,21 +1,41 @@
 <?php
-require '../Configuration/DatabaseConfig.php';
 
 class Project{
 
     private $connect;
     private $data;
     private $sql;
+    private $from;
+
     private $table;
     private $status;
     private $financement;
     private $description;
+
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($status, $financement, $description){
+    public function __construct($status, $financement, $description, $from, $op){
+        $this->from = $from;
+
+        if($this->from == 'client'){
+            $lien = 'Configuration/DatabaseConfig.php';
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+          
+        }
+        
         $this->sql = null;
         $dbc = new DatabaseConfig();
         $this->servername = $dbc->servername;
@@ -30,7 +50,7 @@ class Project{
 
     function dbConnect()
     {
-        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename,);
+        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename);
         return $this->connect;
     }
 
@@ -58,7 +78,6 @@ class Project{
 
     function getAllProjects(){
         $this->sql = "SELECT * FROM ".$this->table;
-        $output = [];
 
         if($result=$this->connect->query($this->sql)){
             return $result;

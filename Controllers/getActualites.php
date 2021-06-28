@@ -1,13 +1,29 @@
 <?php
 
-require_once '../Models/Actualite.php';
+function getActualites($from){
+    
+   
+    if($from == 'client'){
+         
+        include_once('Models/Actualite.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Actualite.php');
+    }
 
-function getActualites(){
-    $actualite = new Actualite("", "", "");
+    $actualite = new Actualite("", "", "", "", $from,"show");
 
-    $result = $actualite->getAllActualites();
-
-    return $result;
+    if($actualite->dbConnect()){
+        if($result = $actualite->getAllActualites()){
+            return $result;
+        }
+        else{
+            echo 'Echec';
+        }
+    }
+    else{
+        echo 'Connexion impossible';
+    }
 }
 
 ?>

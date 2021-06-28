@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-    |
+
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -22,36 +22,52 @@
     <link rel="stylesheet" href="assets/css/icomoon.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
+
   <body>
 	
+  	<?php
+      include('Controllers/getMissions.php');
+      include('Controllers/getVisions.php');
+      include_once('Controllers/getImage.php');
+      $resultMissions = getmissions("client");
+      $resultVisions = getvisions("client");
+      $resultCarrousel = getVisibleImages("client");
+      // var_dump($resultMissions);
+    ?>
+
 	<?php include('includes/navbar.php')?>
-
+  <?php 
+				
+						// var_dump($resultMembres);
+					
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(assets/images/bg_1.jpg);">
+    while($resCarr = mysqli_fetch_assoc($resultCarrousel)){
+      echo "<div class=\"slider-item\" style=\"background-image:url(\"".$resCarr["image"]."\");>";
+          echo "<div class="overlay"></div>";
+          echo "<div class="container">";
+              echo "<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">";
+                    echo "<div class="col-md-7 ftco-animate mb-md-5">";
+          	          echo "<span class=\"subheading\">".$resCarr["title"]."</span>";
+                              echo "<h1 class=\"mb-4\">".$resCarr["description"]."</h1>";
+                                    echo "<p><a href=\"actualite-single.php?".$resCarr["title"]." class=\"btn btn-primary px-4 py-3 mt-3\">Accéder<span class=\"ion-ios-arrow-round-forward\"></span></a></p>";
+                    echo "</div>";
+              echo "</div>";
+          echo "</div>";
+      echo "</div>";
+    };
+    ?>
+      <!-- <div class="slider-item" style="background-image:url(assets/images/bg_2.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">Negotiate Consulting</span>
-            <h1 class="mb-4">We Are The Best Consulting Agency</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services       <span class="ion-ios-arrow-round-forward"></span></a></p>
+          	<span class="subheading">Structure gouvernementale</span>
+            <h1 class="mb-4">Nous oeuvrons pour le bien des béninois</h1>
+            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
-      </div>
-
-      <div class="slider-item" style="background-image:url(assets/images/bg_2.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-7 ftco-animate mb-md-5">
-          	<span class="subheading">Negotiate Consulting</span>
-            <h1 class="mb-4">We Help to Grow Your Business</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services       <span class="ion-ios-arrow-round-forward"></span></a></p>
-          </div>
-        </div>
-        </div>
-      </div>
+      </div> -->
 	
 	
     </section>
@@ -59,308 +75,94 @@
 	<section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
 			<div class="container consult-wrap">
 				<div class="row d-flex align-items-stretch">
-					<div class="col-md-6 wrap-about align-items-stretch d-flex">
-						<div class="img" style="background-image: url(assets/images/about.jpg);"></div>
-					</div>
-					<div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
+					<div class="col-md-12 wrap-about ftco-animate py-md-5 pl-md-5">
 						<div class="heading-section mb-4">
-							
-							<h2>Bienvenue sur CAN</h2>
+							<center>
+								<h2>Bienvenue au Conseil de l'Alimentation et de la Nutrition</h2>
+							</center>
 						</div>
-						<p>Nous vous assurons votre destinee</p>
+						<p>Nous sommes ravis de vous acceuilir sur notre site web officiel ! Vous y trouverez tout le nécessaire. <a href="contact.php">Contactez-nous </a> au besoin</p>
 						<div class="tabulation-2 mt-4">
 							<ul class="nav nav-pills nav-fill d-md-flex d-block">
-							  <li class="nav-item">
-							    <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Notre vision</a>
+                <li class="nav-item px-lg-2">
+							    <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Notre vision</a>
 							  </li>
-							  <li class="nav-item px-lg-2">
-							    <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Notre mission</a>
+							  <li class="nav-item">
+							    <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Nos missions</a>
 							  </li>
 							  
+
 							</ul>
-							<div class="tab-content bg-light rounded mt-2">
+							<div class="tab-content bg-light rounded mt-2" style="color:black">
 							  <div class="tab-pane container p-0 active" id="home1">
-							  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							  </div>
+                                  <p>
+                                      <?php
+                                        echo "<ul>";
+                                          while($resMis = mysqli_fetch_assoc($resultMissions)){
+                                            echo "<li>".utf8_encode($resMis["description"])."</li>";
+                                          }
+                                        echo "<ul>";
+                                      ?>
+                                  </p>
+                              </div>
 							  <div class="tab-pane container p-0 fade" id="home2">
-							  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                  <p>
+                                    <?php
+                                      while($resVis = mysqli_fetch_assoc($resultVisions)){
+                                        echo utf8_encode($resVis["description"])."<br>";
+                                      }
+                                    ?>
+                                  </p>
 							  </div>
-							
 							</div>
 						</div>
-    				<div class="row mt-5">
-		          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="1387">0</strong>
-		                <span>Happy Clients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="310">0</strong>
-		                <span>Success Reports</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="35">0</strong>
-		                <span>Experienced</span>
-		              </div>
-		            </div>
-		          </div> -->
-	          </div>
+    			<center>
+				<div class="row mt-5">
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="10">0</strong>
+								<span>années d'expériences</span>
+							</div>
+							</div>
+						</div>
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="310">0</strong>
+								<span>Projets</span>
+							</div>
+							</div>
+						</div>
+						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon"><span class="flaticon-doctor"></span></div>
+							<div class="text">
+								<strong class="number" data-number="835">0</strong>
+								<span>Bénéficiaires</span>
+							</div>
+							</div>
+						</div>
+	          		</div>
+				
+				</center>
 					</div>
 				</div>
 			</div>
 		</section>
 		
-		<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-consult" style="padding: 7em 0;" >
+		<!-- <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/kandi5.jpg);">
 			<div class="container">
-				<div class="row d-flex no-gutters align-items-stretch	consult-wrap">
-					<div class="col-md-5 wrap-about align-items-stretch d-flex">
-						<div class="ftco-animate bg-primary align-self-stretch px-4 py-5 w-100">
-							<h2 class="heading-white mb-4">Free Consulting</h2>
-							<form action="#" class="appointment-form ftco-animate">
-		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="First Name">
-		    				</div>
-		    				<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="Last Name">
-		    				</div>
-	    					<div class="form-group">
-		    					<div class="form-field">
-	        					<div class="select-wrap">
-	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control">
-	                    	<option value="">Select Guidance</option>
-	                      <option value="">Finance</option>
-	                      <option value="">Business</option>
-	                      <option value="">Auto Loan</option>
-	                      <option value="">Real Estate</option>
-	                      <option value="">Other Services</option>
-	                    </select>
-	                  </div>
-		              </div>
-		    				</div>
-	    					<div class="form-group">
-		    					<input type="text" class="form-control" placeholder="Phone">
-		    				</div>
-	    					<div class="form-group">
-		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-		            </div>
-		            <div class="form-group">
-		              <input type="submit" value="Request A Quote" class="btn btn-secondary py-3 px-4">
-		            </div>
-		    			</form>
-						</div>
-					</div>
-					<div class="col-md-7 wrap-about ftco-animate align-items-stretch d-flex">
-						<div class="bg-white p-5">
-							<h2 class="mb-4">Negotiate <br>A Consulting Agency</h2>
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="services">
-										<div class="icon mt-2 d-flex align-items-center"><span class="flaticon-collaboration"></span></div>
-										<div class="text media-body">
-											<h3>Business Solution</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-										</div>
-									</div>
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-analysis"></span></div>
-										<div class="text media-body">
-											<h3>Financial Analysis</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-search-engine"></span></div>
-										<div class="text media-body">
-											<h3>Marketing Strategy</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-										</div>
-									</div>
-									<div class="services">
-										<div class="icon mt-2"><span class="flaticon-handshake"></span></div>
-										<div class="text media-body">
-											<h3>Investment Planning</h3>
-											<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="row justify-content-center">
+			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
 			</div>
-		</section> -->
-		
-		<!-- <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/bg_3.jpg);">
-    	<div class="container">
-    		<div class="row justify-content-center">
-          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-0">You Always Get the Best Guidance</h2>
-          </div>
-        </div>	
-    	</div>
-    	</section> -->
-
-
-
-		<!-- <section class="ftco-section">
-			<div class="container">
-				<div class="row no-gutters justify-content-center mb-5">
-          <div class="col-md-6 text-center heading-section ftco-animate">
-          	<!-- <span class="subheading">Projects Done</span> 
-            <h2 class="mb-4">Activités récentes</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-            <p></p>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-1.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Consulting</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-2.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Marketing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-3.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Financing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-4.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Audit &amp; Taxes</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-5.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Financing</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-6.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Real Estate</span>
-        				<h3><a href="#">Consultacy Solutions</a></h3>
-        				<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-        			</div>
-        		</div>
-        	</div>
-        </div>
+			</div>	
 			</div>
-		</section> -->
-
-    <!-- <section class="ftco-section ftco-no-pt">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Services</span>
-            <h2 class="mb-4">Why Choose Us?</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-  			<div class="row tabulation mt-4 ftco-animate">
-  				<div class="col-md-4">
-						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
-						  <li class="nav-item text-left">
-						    <a class="nav-link active py-4" data-toggle="tab" href="#services-1"><span class="flaticon-analysis mr-2"></span> Business Analysis</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-2"><span class="flaticon-business mr-2"></span> Business Consulting</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-3"><span class="flaticon-insurance mr-2"></span> Business Insurance</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-4"><span class="flaticon-money mr-2"></span> Global Investigation</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-5"><span class="flaticon-rating mr-2"></span> Audit &amp; Evaluation</a>
-						  </li>
-						  <li class="nav-item text-left">
-						    <a class="nav-link py-4" data-toggle="tab" href="#services-6"><span class="flaticon-search-engine mr-2"></span> Marketing Strategy</a>
-						  </li>
-						</ul>
-					</div>
-					<div class="col-md-8">
-						<div class="tab-content">
-						  <div class="tab-pane container p-0 active" id="services-1">
-						  	<div class="img" style="background-image: url(assets/images/project-2.jpg);"></div>
-						  	<h3><a href="#">Business Analysis</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-2">
-						  	<div class="img" style="background-image: url(assets/images/project-3.jpg);"></div>
-						  	<h3><a href="#">Business Consulting</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-3">
-						  	<div class="img" style="background-image: url(assets/images/project-4.jpg);"></div>
-						  	<h3><a href="#">Business Insurance</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-4">
-						  	<div class="img" style="background-image: url(assets/images/project-5.jpg);"></div>
-						  	<h3><a href="#">Global Investigation</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-5">
-						  	<div class="img" style="background-image: url(assets/images/project-6.jpg);"></div>
-						  	<h3><a href="#">Audit &amp; Evaluation</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						  <div class="tab-pane container p-0 fade" id="services-6">
-						  	<div class="img" style="background-image: url(assets/images/project-1.jpg);"></div>
-						  	<h3><a href="#">Marketing Strategy</a></h3>
-						  	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-    	</div>
-    </section> -->
+       </section>	 -->
+		 
 	<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-2">
@@ -368,8 +170,10 @@
           	<!-- <span class="subheading">Blog Posts</span> -->
             <h2 class="mb-4">Activités récentes</h2>
 			<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-			<p class="mb-0"><a href="http://localhost/can/actualites.php" class="btn btn-primary">Voir plus <span class="ion-ios-arrow-round-forward"></span></a></p>	
-		 </div>
+			<center>
+			<p class="mb-0"><a href="actualites.php" class="btn btn-primary">Voir plus .. <span class="ion-ios-arrow-round-forward"></span></a></p>
+		</center>
+      </div>
         </div>
 				<div class="row">
           <div class="col-md-6 col-lg-4 ftco-animate">
@@ -434,19 +238,23 @@
           </div>
         </div>
 			</div>
+		 
+          
+        </div>
+		
+
+		</div>
 		</section>
-    <!-- <section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/bg_1.jpg);">
-    	<div class="container">
-    		<div class="row justify-content-center">
-          <div class="col-lg-9 col-md-8 d-flex align-items-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3 mb-md-0">Replacer la nutrition au coeur du développement</h2>
-          </div>
-          <div class="col-lg-3 col-md-4 ftco-animate">
-          	<p class="mb-0"><a href="#" class="btn btn-secondary py-3 px-4">Contactez-nous</a></p>
-          </div>
-        </div>	
-    	</div>
-    </section> -->
+   
+		<section class="ftco-intro ftco-no-pb img" style="background-image: url(assets/images/kandi5.jpg);">
+			<div class="container">
+				<div class="row justify-content-center">
+			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
+			</div>
+			</div>	
+			</div>
+       </section>	
 
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">
@@ -454,131 +262,43 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Testimonies</span> -->
             <h2 class="mb-4">Nos partenaires</h2>
-            <p>Ils nous font confiance</p>
+            <p>Ils nous ont fait confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
-              <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
+
+				<?php 
+					include_once('Controllers/getPartenaires.php');
 							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-			  <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
-							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-			  <div class="item">
-					<center>
-							<div class="testimony-wrap" style="background:none;">
-							<div class="user-img" style="background-image: url(assets/images/person_1.jpg);height:200px;width:200px">
-							</div>
-							<div class="text py-1">
-							
-							<p>Racky Henderson</p>
-							
-							</div>
-							<!-- <div class="text pl-4">
-								<span class="quote d-flex align-items-center justify-content-center">
-								<i class="icon-quote-left"></i>
-								</span>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								<p class="name">Racky Henderson</p>
-								<span class="position">Father</span>
-							</div> -->
-							</div>
-					</center>
-              </div>
-              <!-- <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_2.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Henry Dee</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_3.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Mark Huff</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_4.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Rodel Golez</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div class="user-img" style="background-image: url(assets/images/person_1.jpg)">
-                  </div>
-                  <div class="text pl-4">
-                  	<span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Ken Bosh</p>
-                    <span class="position">Businesswoman</span>
-                  </div>
-                </div> 
-              </div>-->
+						$resultPartenaires = getPartenaires('client');
+						// var_dump($resultMembres);
+						while($resPar = mysqli_fetch_assoc($resultPartenaires)){
+							echo "<div class=\"  \">";
+							echo "<center>";
+									echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
+										echo "<div class=\"user-img\" style=\"background-image: url(assets/images/person_1.jpg);height:200px;width:200px\">";
+										echo "</div>";
+										echo "<div class=\"text py-1\">";
+											echo "<p>".utf8_encode($resPar["nom"])."</p>";
+                      if ($resPar["lien"] != NULL){
+                        echo "<p class=\"mb-0\"><a href=".$resPar["lien"]." class=\"btn btn-primary\"><span class=\"ion-md-planet\"></span> Visitez le site </a></p>";
+                      }
+                      else{
+                        echo "<p class=\"mb-0\"><a href=\"\" class=\"btn btn-primary\"><span class=\"ion-md-planet\"></span> Visitez le site </a></p>";
+                      }
+										echo "</div>";
+									 
+									echo "</div>";
+							echo "</center>";
+					        echo "</div>";
+					
+					  }
+				?>
+             <!-- <p class="mb-0"><a href="#" class="btn btn-primary">Lire plus <span class="ion-ios-arrow-round-forward"></span></a></p> -->
+		 
+        
             </div>
           </div>
         </div>
@@ -609,8 +329,8 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="assets/js/google-map.js"></script> -->
   <script src="assets/js/main.js"></script>
     
   </body>

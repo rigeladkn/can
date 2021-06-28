@@ -22,7 +22,7 @@ class User{
 
     function dbConnect()
     {
-        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename,);
+        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename);
         return $this->connect;
     }
 
@@ -54,17 +54,17 @@ class User{
         }
     }
 
-    function logIn($table, $matricule, $password)
+    function logIn($table, $email, $password)
     {
-        $matricule = $this->prepareData($matricule);
+        $email = $this->prepareData($email);
         $password = $this->prepareData($password);
-        $this->sql = "select * from " . $table . " where matricule = '" . $matricule . "'";
+        $this->sql = "select * from " . $table . " where email = '" . $email . "'";
         $result = mysqli_query($this->connect, $this->sql);
         $row = mysqli_fetch_assoc($result);
         if (mysqli_num_rows($result) != 0) {
-            $dbmatricule = $row['matricule'];
-            $dbpassword = $row['password'];
-            if ($dbmatricule == $matricule && password_verify($password, $dbpassword)) {
+            $dbemail = $row['email'];
+            $dbpassword = $row['motdepasse'];
+            if ($dbemail == $email && $password == $dbpassword) {
                 $login = true;
             } else $login = false;
         } else $login = false;

@@ -31,7 +31,6 @@
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
 						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
-						'<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -41,7 +40,6 @@
 	        	'<li class="nav-item active"><a href="project.php" id="team" class="nav-link">Projets</a></li>'+
 	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-	        	'<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
 	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 	        '</ul>';
 	  }
@@ -49,6 +47,11 @@
 	
   </head>
 <body onload="changeActivePage()">
+	
+	<?php
+      include('Controllers/getProjects.php');
+      $resultProjects = getProjects("client");
+    ?>
 	
 	<?php include('includes/navbar.php')?>
     
@@ -75,82 +78,26 @@
 			</div>
 		</div>
         <div class="row">
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-1.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>Projet de Nutrition et du Développement de la Petite Enfance (PNDPE)</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-2.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Pays du G8</a></h3>
-        				<p>La Nouvelle Alliance pour la Sécurité alimentaire et la Nutrition (NASAN) soutenue par les pays du G8 au Bénin</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-3.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Union africaine</a></h3>
-        				<p>L’Alliance Globale pour l’Initiative Résilience au Sahel et en Afrique de l’Ouest (AGIR) soutenue par l’Union Européenne et le CILSS;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-4.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">En cours</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>Le Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) Un crédit IDA de 28 millions de dollars US,  entré en vigueur depuis le 8 avril 2014 et qui couvre la période 2014-2019 en financement du Projet Multisectoriel de l‘Alimentation, de la Santé et de la Nutrition (PMASN) ;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/project-6.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Clôturé</span>
-        				<h3><a href="#">Banque mondiale</a></h3>
-        				<p>L’IDF, projet d’appui institutionnel financé par la Banque Mondiale pour un montant de 375 mille de dollars US et couvrant la période 2014-2016 ;</p>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="project">
-        			<div class="img rounded mb-4" style="background-image: url(assets/images/image_4.jpg);"></div>
-        			<div class="text w-100 text-center">
-        				<span class="cat">Clôturé</span>
-        				<h3><a href="#">Fonds Japonais (Banque mondiale)</a></h3>
-        				<p>Le Projet pédagogique de Nutrition Communautaire (PNC)</p>
-        			</div>
-        		</div>
-        	</div>
+	  		<?php
+			  	$i = 1;
+			  	while($resPro = mysqli_fetch_assoc($resultProjects)){
+					echo "<div class=\"col-md-4\">";
+						echo "<div class=\"project\">";
+							echo "<div class=\"img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></div>";
+							echo "<div class=\"text w-100 text-center\">";
+								echo "<span class=\"cat\">". $resPro["status"]."</span>";
+								echo "<h3><a href=\"#\">".$resPro["financement"]."</a></h3>";
+								echo "<p>".$resPro["description"]."</p>";
+							echo "</div>";
+						echo "</div>";
+					echo "</div>";
+				}
+				$i = $i + 1;
+			?>
+
+		 
         </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+       
 			</div>
 		</section>
 		
@@ -175,8 +122,8 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="assets/js/google-map.js"></script> -->
   <script src="assets/js/main.js"></script>
     
   </body>

@@ -31,7 +31,6 @@
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
 						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
-						'<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -41,7 +40,6 @@
 	        	'<li class="nav-item"><a href="project.php" id="team" class="nav-link">Projets</a></li>'+
 	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-	        	'<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
 	          '<li class="nav-item active"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
 	        '</ul>';
 	  }

@@ -1,5 +1,4 @@
 <?php 
-require '../Configuration/DatabaseConfig.php';
 
 class Message{
 //pour la connexion
@@ -7,17 +6,37 @@ class Message{
     private $username;
     private $password;
     private $databasename;
-    private $table = "Message";
+    private $table = "messages";
     private $nom;
     private $email;
     private $sujet;
     private $texte;
+
+    private $from;
 //fin
 //Attributs propres
    
 //fin
 
-    public function __construct($nom,$email,$sujet,$texte){
+    public function __construct($nom, $email, $sujet, $texte, $from,$op){
+        $this->from = $from;
+
+        if($this->from == 'client'){
+            $lien = 'Configuration/DatabaseConfig.php';
+            require_once($lien);
+        }
+        else if ($this->from == 'admin'){
+            if($op == 'show'){
+                $lien = '../../../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+            else{
+                $lien = '../Configuration/DatabaseConfig.php';
+                require_once($lien);
+            }
+          
+        }
+        
         //$this->sql = null;
         $dbc = new DatabaseConfig();
         $this->servername = $dbc->servername;
@@ -34,7 +53,7 @@ class Message{
 
     function dbConnect()
     {
-        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename,);
+        $this->connect = mysqli_connect($this->servername, $this->username, $this->password,$this->databasename);
         return $this->connect;
     }
 
@@ -63,8 +82,8 @@ class Message{
 
     function getAllMessages(){
      
-        $sql = "SELECT * FROM ".$this->table;
-      
+        $sql = "SELECT * FROM ".$this->table." ORDER BY id DESC";
+    
         if( $result = $this->connect->query($sql)){
 
             return $result;

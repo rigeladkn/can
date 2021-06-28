@@ -6,7 +6,7 @@ require_once '../Models/Message.php';
 if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["sujet"])&& isset($_POST["texte"])){
 
         echo 'reçu ';
-    $messageObj = new Message($_POST["nom"],$_POST["email"],$_POST["sujet"],$_POST["texte"]);
+    $messageObj = new Message($_POST["nom"],$_POST["email"],$_POST["sujet"],$_POST["texte"], "admin","");
 
  
     if($messageObj->dbConnect()){

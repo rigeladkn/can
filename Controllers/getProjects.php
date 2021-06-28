@@ -1,13 +1,28 @@
 <?php
 
-require_once '../Models/Project.php';
+function getProjects($from){
 
-function getProjects(){
-    $project = new Project("", "", "");
+    if($from == 'client'){
+         
+        include_once('Models/Project.php');
+    }
+    else if ($from == 'admin'){
+        include_once('../../../Models/Project.php');
+    }
 
-    $result = $project->getAllProjects();
+    $project = new Project("", "", "", $from ,"show");
 
-    return $result;
+    if($project->dbConnect()){
+        if($result = $project->getAllProjects()){
+            return $result;
+        }
+        else{
+            echo 'Echec';
+        }
+    }
+    else{
+        echo 'Connexion impossible';
+    }
 }
 
 ?>

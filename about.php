@@ -30,8 +30,7 @@
             '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>'+
             '<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
               '<a class="dropdown-item" href="about.php">Présentation</a>'+
-              '<a class="dropdown-item" href="#">Mot du directeur</a>'+
-              '<a class="dropdown-item" href="visionMissions.php">Vision et misions</a>'+
+              '<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
               '<div class="dropdown-divider"></div>'+
               '<a class="dropdown-item" href="team.php">Membres</a>'+
               '<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -41,7 +40,6 @@
               '<li class="nav-item"><a href="team.php" id="team" class="nav-link">Projets</a></li>'+
               '<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
               '<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
-              '<li class="nav-item"><a href="partenaires.php" id="blog" class="nav-link">Partenaires</a></li>'+
               '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
             '</ul>';
       }
@@ -49,6 +47,12 @@
 	
   </head>
   <body  onLoad="changeActivePage()" >
+
+    <?php
+      include('Controllers/getHists.php');
+      $resultHistorique = getHistorique("client");
+    ?>
+
 	  <?php include('includes/navbar.php')?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">
@@ -56,87 +60,32 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">About</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.php"> Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About<i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">A propos</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php"> Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>A propos<i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ftco-section ftco-about ftco-no-pt ftco-no-pb ftco-counter" id="section-counter">
-			<div class="container consult-wrap">
-				<div class="row d-flex align-items-stretch">
-					<div class="col-md-6 wrap-about align-items-stretch d-flex">
-						<div class="img" style="background-image: url(assets/images/about.jpg);"></div>
-					</div>
-					<div class="col-md-6 wrap-about ftco-animate py-md-5 pl-md-5">
-						<div class="heading-section mb-4">
-							<span class="subheading">Bienvenue au Conseil de l'Alimentation</span>
-							<h2>Replacer la nutrition au coeur du développement</h2>
-						</div>
-
-						<div class="tabulation-2 mt-4">
-							<ul class="nav nav-pills nav-fill d-md-flex d-block">
-							  <li class="nav-item">
-							    <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Missions</a>
-							  </li>
-							  <li class="nav-item px-lg-2">
-							    <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Notre vision</a>
-							  </li>
-
-							</ul>
-							<div class="tab-content bg-light rounded mt-2">
-							  <div class="tab-pane container p-0 active" id="home1">
-                                  <p>
-                                      mission
-                                  </p>
-                              </div>
-							  <div class="tab-pane container p-0 fade" id="home2">
-							  	<p>
-                                    valeur
-							  </div>
-							</div>
-						</div>
-    				<div class="row mt-5">
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="1387">0</strong>
-		                <span>Happy Clients</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="310">0</strong>
-		                <span>Success Reports</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		            	<div class="icon"><span class="flaticon-doctor"></span></div>
-		              <div class="text">
-		                <strong class="number" data-number="35">0</strong>
-		                <span>Experienced</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-					</div>
-				</div>
-			</div>
-		</section>
+  
 
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">HISTORIQUES</span>
-            <p>recuperer dans la bd la presentation</p>
+          <div class="col-md-8 text-center heading-section ftco-animate" style="color:black">
+            <?php
+              while($resHis = mysqli_fetch_assoc($resultHistorique)){
+
+                 echo "<div class=\"col-md-12 col-lg-12\">";
+                      echo "<center><h1>".$resHis["title"]."</h1></center>";
+                      echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+                          echo "<div class=\"lead text-justify\">";
+                              echo "<p>".utf8_encode($resHis["description"])."</p>";
+                          echo "</div>";
+                      echo "</div>";
+                  echo "</div>";
+              }
+            ?>
           </div>
         </div>
       </div>

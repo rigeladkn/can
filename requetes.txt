@@ -1,18 +1,18 @@
 CREATE DATABASE can
-CREATE TABLE Users (
+CREATE TABLE users (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR (50) NOT NULL,
     motdepasse VARCHAR (50) NOT NULL,
     UNIQUE (email) )
 
-CREATE TABLE Message (
+CREATE TABLE messages (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR (50) NOT NULL,
     email VARCHAR (50) NOT NULL,
     sujet VARCHAR (50) NOT NULL,
     texte TEXT (1000) NOT NULL )
 
-CREATE TABLE Membres (
+CREATE TABLE membres (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR (50) NOT NULL,
     poste VARCHAR (50) NOT NULL,
@@ -21,47 +21,47 @@ CREATE TABLE Membres (
     tweeterlink VARCHAR(500) NULL,
     facebooklink VARCHAR (500) NULL )
 
-CREATE TABLE Partenaires (
+CREATE TABLE partenaires (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR (50) NOT NULL,
     logo VARCHAR (500) NOT NULL )
 
-CREATE TABLE Actualites (
+CREATE TABLE actualites (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR (200) NOT NULL,
     description TEXT (1000) NOT NULL,
     image VARCHAR (500) NOT NULL,
     Ladate DATE NOT NULL )
 
-CREATE TABLE Missions (
-    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR (200) NOT NULL,
-    description TEXT (1000) NOT NULL )
-
-CREATE TABLE Projects (
+CREATE TABLE projects (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     status VARCHAR (50) NOT NULL,
     financement TEXT (1000) NOT NULL,
     description TEXT (1000) NOT NULL )
 
-CREATE TABLE Contact (
+CREATE TABLE contacts (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     adresse VARCHAR (50) NOT NULL,
     phone VARCHAR (20) NOT NULL,
     email VARCHAR (50) NOT NULL )
 
-CREATE TABLE Carroussel (
+CREATE TABLE carroussel (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     image VARCHAR (500) NOT NULL )
 
-CREATE TABLE Extras (
+CREATE TABLE extras (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR (200) NOT NULL,
     description TEXT (1000) NOT NULL,
     image VARCHAR (500) NULL,
     type VARCHAR (15) NOT NULL )
 
-INSERT INTO Extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
+INSERT INTO extras (title,description,image,type) VALUES ('VISION DU CAN', "« A l’horizon 2030, le Bénin est un pays où chaque personne jouit d’un état nutritionnel optimal pour son bien-être, lui permettant de participer activement à la création de richesse nationale et au développement durable »
+
+
+                                                                            Ralliement du Bénin au « Défi Zéro faim »",NULL,'vision')
+
+   INSERT INTO extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
                                                                           Mais avant cette création, le bénin a connu plusieurs étapes dans le domaine de la lutte contre la malnutrition.
 
                                                                           Le Bénin jouit d’une longue expérience d’interventions en matière d’alimentation, de nutrition et de sécurité alimentaire. Ses premières actions remontent au début des années 60, mais pour des raisons diverses, la politique et les actions de lutte contre la sous-alimentation et la malnutrition, de même que leurs résultats ont évolué en dents de scie, malgré la volonté affichée et les efforts déployés par les gouvernements successifs et les Partenaires au développement. Face à ce tableau peu reluisant et les risques de non atteinte des OMD qui y sont associés, le pays s’est engagé depuis 2007 dans un processus de politique économique de réformes dans le secteur de l’alimentation et de la nutrition. Ainsi, les acteurs du secteur de l’alimentation et de la nutrition se sont dotés d’une vision suite à un diagnostic plurifactoriel à l’issue de l’atelier de consensus de Guédévy (Abomey) en novembre 2007. Deux consensus se sont dégagés au terme de la rencontre de Guédévy à savoir :
@@ -82,59 +82,73 @@ INSERT INTO Extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN
 
 
 
-                                                                          Le présent document présente successivement la composition du CAN, ses attributions et missions, son fonctionnement, ses chantiers, ses acquis et perspectives",NULL, 'presentation')
+                                                                          Le présent document présente successivement la composition du CAN, ses attributions et extras, son fonctionnement, ses chantiers, ses acquis et perspectives",NULL, 'presentation')
 
-INSERT INTO Extras (title,description,image,type) VALUES ('VISION DU CAN', "« A l’horizon 2030, le Bénin est un pays où chaque personne jouit d’un état nutritionnel optimal pour son bien-être, lui permettant de participer activement à la création de richesse nationale et au développement durable »
-
-
-                                                                            Ralliement du Bénin au « Défi Zéro faim »
-
-                                                                            PSDAN s’inscrit dans le Partenariat Mondial REACH  (Efforts Renouvelés contre la Malnutrition Infantile)
-",NULL,'vision')
-
-INSERT INTO Missions (title,description) VALUES ('Mission 1', "Définir la Politique Nationale en matière d'Alimentation et de Nutrition ;")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 2', "Assurer l’élaboration, la mise en œuvre, Ie suivi et l'évaluation du Plan d'Action National pour l'Alimentation et la Nutrition ;")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 3', "Assurer la coordination des actions Iiées à l'Alimentation et à la Nutrition.")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 4', "Assurer l'élaboration et I 'adoption des documents de politique, des textes législatifs et des dispositions règlementaires nécessaires a I ‘expression effective de I ‘engagement politique du Gouvernement et des Collectivités Iocales dans Ie domaine de l'Alimentation et de la Nutrition")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 5',"Assurer Ie développement de programmes multisectorialisés d'alimentation et de nutrition impliquant les différents intervenants notamment l'Etat, les Collectivités locales, Ie Secteur privé et les Organisations Non Gouvernementales:")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 6',"Négocier et mobiliser les ressources nécessaires à la mise en œuvre correcte des Programmes d'Alimentation et de Nutrition")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 7',"Exploiter les résultats des études ou travaux effectués dans le domaine de l’alimentation et de la nutrition
-")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 8',"Coordonner les activités de toutes les structures nationales et internationales qui interviennent dans le domaine de l’Alimentation et de la Nutrition au Bénin")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 9',"Créer des synergies nécessaires entre les politiques sectorielles, les acteurs et les actions pertinentes devant concourir aux plans local, communal, départemental et national à une alimentation saine et équilibrée des populations")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 10',"Assurer l’élaboration des normes standards en matière d’Alimentation et de Nutrition")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 11',"Harmoniser les indicateurs de suivi-évaluation des activités et conseiller les différents intervenants impliqués dans la mise en œuvre de la politique nationale en matière d’Alimentation et de Nutrition")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 12',"Identifier, évaluer et recommander de façon systématique aux autorités compétentes, les mesures urgentes qui pourraient être adoptées pour assurer une bonne alimentation et une bonne nutrition des populations")
-
-INSERT INTO Missions (title,description) VALUES ('Mission 13',"Développer un partenariat avec les institutions régionales et internationales qui poursuivent les mêmes buts")
+                                                                         
 
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 1', "Est doté d’une autonomie administrative et financière ;",NULL, 'fonctionnement')
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 2', "Moyens financiers mis à sa disposition par le Gouvernement,",NULL, 'fonctionnement')
+/* Missions */
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 3', "Organe Exécutif dénommé ‘’Secrétariat Permanent’’ dirigé par un Secrétaire Permanent, entouré d’un personnel compétent adéquatement avec les attributions du CAN. Le Secrétaire Permanent a un mandat de 3 ans renouvelable une seule fois,",NULL, 'fonctionnement')
+INSERT INTO extras (title,description,type) VALUES ('Mission 1', "Définir la Politique Nationale en matière d'Alimentation et de Nutrition ;", "mission")
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 4', "S’appuie sur les intervenants du secteur de l’Alimentation et de la Nutrition au Bénin ;",NULL, 'fonctionnement')
+INSERT INTO extras (title,description,type) VALUES ('Mission 2', "Assurer l’élaboration, la mise en œuvre, Ie suivi et l'évaluation du Plan d'Action National pour l'Alimentation et la Nutrition ;", "mission")
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 5', "Peut solliciter la création d’un Fonds de soutien à la promotion de l’Alimentation et de la Nutrition",NULL, 'fonctionnement')
+INSERT INTO extras (title,description,type) VALUES ('Mission 3', "Assurer la coordination des actions Iiées à l'Alimentation et à la Nutrition.", "mission")
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 6', "En session ordinaire : deux fois par an, pour approuver le rapport annuel et le plan de travail annuel",NULL, 'fonctionnement')
+INSERT INTO extras (title,description,type) VALUES ('Mission 4', "Assurer l'élaboration et I 'adoption des documents de politique, des textes législatifs et des dispositions règlementaires nécessaires a I ‘expression effective de I ‘engagement politique du Gouvernement et des Collectivités Iocales dans Ie domaine de l'Alimentation et de la Nutrition", "mission")
 
-INSERT INTO Extras (title, description, image, type) VALUES ('fonctionnement 7', "En session extraordinaire au besoin suivant les circonstances",NULL, 'fonctionnement')
+INSERT INTO extras (title,description,type) VALUES ('Mission 5',"Assurer Ie développement de programmes multisectorialisés d'alimentation et de nutrition impliquant les différents intervenants notamment l'Etat, les Collectivités locales, Ie Secteur privé et les Organisations Non Gouvernementales:", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 6',"Négocier et mobiliser les ressources nécessaires à la mise en œuvre correcte des Programmes d'Alimentation et de Nutrition", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 7',"Exploiter les résultats des études ou travaux effectués dans le domaine de l’alimentation et de la nutrition", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 8',"Coordonner les activités de toutes les structures nationales et internationales qui interviennent dans le domaine de l’Alimentation et de la Nutrition au Bénin", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 9',"Créer des synergies nécessaires entre les politiques sectorielles, les acteurs et les actions pertinentes devant concourir aux plans local, communal, départemental et national à une alimentation saine et équilibrée des populations", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 10',"Assurer l’élaboration des normes standards en matière d’Alimentation et de Nutrition", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 11',"Harmoniser les indicateurs de suivi-évaluation des activités et conseiller les différents intervenants impliqués dans la mise en œuvre de la politique nationale en matière d’Alimentation et de Nutrition", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 12',"Identifier, évaluer et recommander de façon systématique aux autorités compétentes, les mesures urgentes qui pourraient être adoptées pour assurer une bonne alimentation et une bonne nutrition des populations", "mission")
+
+INSERT INTO extras (title,description,type) VALUES ('Mission 13',"Développer un partenariat avec les institutions régionales et internationales qui poursuivent les mêmes buts", "mission")
 
 
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 1', "Est doté d’une autonomie administrative et financière ;",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 2', "Moyens financiers mis à sa disposition par le Gouvernement,",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 3', "Organe Exécutif dénommé ‘’Secrétariat Permanent’’ dirigé par un Secrétaire Permanent, entouré d’un personnel compétent adéquatement avec les attributions du CAN. Le Secrétaire Permanent a un mandat de 3 ans renouvelable une seule fois,",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 4', "S’appuie sur les intervenants du secteur de l’Alimentation et de la Nutrition au Bénin ;",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 5', "Peut solliciter la création d’un Fonds de soutien à la promotion de l’Alimentation et de la Nutrition",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 6', "En session ordinaire : deux fois par an, pour approuver le rapport annuel et le plan de travail annuel",NULL, 'fonctionnement')
+
+INSERT INTO extras (title, description, image, type) VALUES ('fonctionnement 7', "En session extraordinaire au besoin suivant les circonstances",NULL, 'fonctionnement')
+
+
+INSERT INTO extras (title,description,type) VALUES ('Service 1', "Voici le service 1", "service")
+
+INSERT INTO extras (title,description,type) VALUES ('Service 2', "Voici le service 2", "service")
+
+INSERT INTO extras (title,description,type) VALUES ('Service 3', "Voici le service 3", "service")
+
+INSERT INTO extras (title,description,type) VALUES ('Service 4', "Voici le service 4", "service")
+
+INSERT INTO extras (title,description,type) VALUES ('Service 5', "Voici le service 5", "service")
+
+INSERT INTO extras (title,description,type) VALUES ('Service 6', "Voici le service 6", "service")
+
+
+
+INSERT INTO `membres` (`nom`, `poste`, `description`, `image`, `tweeterlink`, `facebooklink`) VALUES ('Membre 1', 'CTO',"Un membre du CAN",'iiii','tweeter.com','facebook.com')
+
+INSERT INTO `membres` (`nom`, `poste`, `description`, `image`, `tweeterlink`, `facebooklink`) VALUES ('Membre 2', 'Sécrétaire Générale',"Un autre membre du CAN. La plus belle",'iiii','tweeter.com','facebook.com')
 
 
 
