@@ -1,4 +1,13 @@
-		
+<?php
+    include_once("Controllers/getNavbar.php");
+    $resultNavbar = getNavbar("client");
+    while($resNav = mysqli_fetch_assoc($resultNavbar)){
+      $adresse = $resNav["adresse"];
+      $telephone = $resNav["telephone"];
+      $email = $resNav["email"];
+    }
+?>
+
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -7,9 +16,9 @@
             	<h2 class="ftco-heading-2">Avez-vous des questions ?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Cotonou, premier carrefour à gauche avant l'étoile rouge en quittant le stade M.K BENIN</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+229 21 32 13 98 / 67 67 35 24</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">contact@can-benin.bj</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text"><?php echo utf8_encode($adresse); ?></span></li>
+	                <li><?php echo "<a href=\"tel://".utf8_encode($telephone)."\"><span class=\"icon icon-phone\"></span><span class=\"text\"> ".utf8_encode($telephone)." </span></a>"; ?></li>
+	                <li><?php echo "<a href=\"mailto:".utf8_encode($email)."\"><span class=\"icon icon-envelope\"></span><span class=\"text\"> ".utf8_encode($email)." </span></a>"; ?></li>
 	              </ul>
 	            </div>
 	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">

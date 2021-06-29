@@ -30,7 +30,7 @@
 					'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>'+
 					'<div class="dropdown-menu" aria-labelledby="navbarDropdown2">'+
 						'<a class="dropdown-item" href="about.php">Présentation</a>'+
-						'<a class="dropdown-item" href="#">Mot du directeur</a>'+
+						'<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>'+
 						'<div class="dropdown-divider"></div>'+
 						'<a class="dropdown-item" href="team.php">Membres</a>'+
 						'<a class="dropdown-item" href="fonctionnement.php">Fonctionnement</a>'+
@@ -47,10 +47,12 @@
     </script>
 
 </head>
+
 <body  onLoad="changeActivePage()" >
 
 <?php
-
+    include_once('Controllers/getFonctions.php');
+    $resultFonctions = getFonctionnement("client");
 ?>
 
 <?php include('includes/navbar.php')?>
@@ -61,7 +63,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">FONCTIONNEMENT DU CAN</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Fonctionnement<i class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Fonctionnement<i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -69,10 +71,19 @@
 
 <section class="ftco-section">
     <div class="container">
-        ZERTYUIOPaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaacccccccccccccccccccccccccccccccccccccccccccc
-        ccccccccccccccccccccccccccccccccccccccccccccccc
+        <?php
+            while($resFon = mysqli_fetch_assoc($resultFonctions)){
+
+                echo "<div class=\"col-md-12 col-lg-12\">";
+                    echo "<center><h1>".utf8_encode($resFon["title"])."</h1></center>";
+                    echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
+                        echo "<div class=\"lead text-justify\">";
+                            echo "<p>".utf8_encode($resFon["description"])."</p>";
+                        echo "</div>";
+                    echo "</div>";
+                echo "</div>";
+            }
+        ?>
     </div>
 </section>
 
@@ -96,8 +107,8 @@
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/jquery.animateNumber.min.js"></script>
 <script src="assets/js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="assets/js/google-map.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="assets/js/google-map.js"></script>-->
 <script src="assets/js/main.js"></script>
 
 </body>

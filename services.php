@@ -51,7 +51,7 @@
   <body  onLoad="changeActivePage()" >
 
   	<?php
-      include('Controllers/getServices.php');
+      include_once('Controllers/getServices.php');
       $resultServices = getServices("client");
 	  $rServices = [];
 	  while($ligne = mysqli_fetch_assoc($resultServices)){
@@ -86,9 +86,10 @@
   				<div class="col-md-4">
 						<ul class="nav nav-pills nav-fill d-md-flex d-block flex-column">
 							<?php
+								$icones = ["flaticon-collaboration", "flaticon-search-engine", "flaticon-analysis", "flaticon-handshake", "flaticon-business", "flaticon-insurance", "flaticon-money", "flaticon-rating"];
 								for($i = 1; $i <= sizeof($rServices); $i++){
 									echo "<li class=\"nav-item text-left\" onClick=\"removeHidden(".$i.")\">";
-										echo "<a class=\"nav-link py-4\" data-toggle=\"tab\" href=\"#services-".$i."\"><span class=\"flaticon-analysis mr-2\" ></span>Service ".$i."</a>";
+										echo "<a class=\"nav-link py-4\" data-toggle=\"tab\" href=\"#services-".$i."\"><span class=\"".$icones[$i]." mr-2\" ></span>Service ".$i."</a>";
 									echo "</li>";
 								 
 								}
@@ -109,7 +110,7 @@
                           while($resServ = mysqli_fetch_assoc($resultServices)){
 							if($numero == 1){
 								echo "<div class=\"tab-pane container p-0 active\" id=\"services-".$numero."\" >";
-									echo "<div class=\"img\" style=\"background-image: url(assets/images/project-".$numero.".jpg);\"></div>";
+									echo "<div class=\"img\" style=\"background-image: url(assets/images/service-".$numero.".jpg);\"></div>";
 										echo "<h3><a href=\"#\">".$resServ["title"]."</a></h3>";
 										echo "<p>".$resServ["description"]."</p>";
 							    echo "</div>";
@@ -117,9 +118,9 @@
 							}
 							else{
 								echo "<div class=\"tab-pane container p-0 \" id=\"services-".$numero."\" hidden>";
-										echo "<div class=\"img\" style=\"background-image: url(assets/images/project-".$numero.".jpg);\"></div>";
-											echo "<h3><a href=\"#\">".$resServ["title"]."</a></h3>";
-											echo "<p>".$resServ["description"]."</p>";
+									echo "<div class=\"img\" style=\"background-image: url(assets/images/service-".$numero.".jpg);\"></div>";
+										echo "<h3><a href=\"#\">".$resServ["title"]."</a></h3>";
+										echo "<p>".$resServ["description"]."</p>";
 								echo "</div>";
 								$numero++;
 							}

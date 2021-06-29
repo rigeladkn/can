@@ -37,12 +37,13 @@ class Navbar{
           
         }
         
-        //$this->sql = null;
+        $this->sql = null;
         $dbc = new DatabaseConfig();
         $this->servername = $dbc->servername;
         $this->username  = $dbc->username;
         $this->password = $dbc->password;
         $this->databasename = $dbc->databasename;
+        $this->table = "navbar";
         $this->adresse = $adresse;
         $this->telephone = $telephone;
         $this->email = $email;

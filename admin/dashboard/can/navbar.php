@@ -96,9 +96,9 @@
 
                                                         <?php 
                                                         include_once('../../../Controllers/getNavbar.php');
-                                                            $resNav = getNavbar('admin');
+                                                            $resultatNavbar = getNavbar('admin');
                                                         
-                                                            $resNav = mysqli_fetch_assoc($resNav);
+                                                            $resNav = mysqli_fetch_assoc($resultatNavbar);
 
                                                             echo "<div class=\"form-group row\">";
                                                                 echo "<label class=\"col-sm-2 col-form-label\">Adresse</label>";

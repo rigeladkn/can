@@ -16,6 +16,7 @@
 
     <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
     <meta name="author" content="Codedthemes" />
+    
     <!-- Favicon icon -->
     <link rel="icon" href="../../../assets/dashboard/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
@@ -116,7 +117,7 @@
                                                             <tr>
                                                                 <th>Titre</th>
                                                                 <th>Description</th>
-                                                                <th>Image</th>
+                                                                <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -127,7 +128,13 @@
                                                                     echo "<tr>";
                                                                     echo "<td>".$resServ["title"]."</td>";
                                                                     echo "<td>".$resServ["description"]."</td>";
-                                                                    echo "<td>".$resServ["image"]."</td>";
+                                                                    echo "<td>";
+                                                                        echo "<form id=\"form".$resServ["id"]."\" action=\"../../../Controllers/deleteService.php\" method=\"POST\">";
+                                                                            echo "<input type=\"hidden\" name=\"id\" value=\"".$resServ["id"]."\">";
+                                                                            echo "<input type=\"hidden\" name=\"type\" value=\"".$resServ["type"]."\">";
+                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resServ["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                        echo "</form>";
+                                                                    echo "</td>";
                                                                     echo "</tr>";
                                                             
                                                             }

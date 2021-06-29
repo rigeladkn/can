@@ -1,5 +1,5 @@
 <?php
-require '../Configuration/DatabaseConfig.php';
+require_once '../Configuration/DatabaseConfig.php';
 
 class User{
 
@@ -75,14 +75,13 @@ class User{
 
     function liste($table){
         $this->sql = "SELECT * FROM ".$table;
-        $output = [];
 
-        if($result=$this->connect->query($this->sql)){
-                while($ligne = mysqli_fetch_assoc($result)) {
-                    array_push($output,$ligne);
-                }
+        if($result = $this->connect->query($this->sql)){
+            return $result;
         }
-        return $output;
+        else{
+            return false;
+        }
     }
 
     function insertNote($table,$user_id, $matiere_id,$date, $note){
