@@ -117,7 +117,7 @@
 							  </div>
 							</div>
 						</div>
-    			<center>
+    			<div style="text-align: center;">
 				<div class="row mt-5">
 						<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 							<div class="block-18">
@@ -148,7 +148,7 @@
 						</div>
 	          		</div>
 				
-				</center>
+				</div>
 					</div>
 				</div>
 			</div>

@@ -59,7 +59,7 @@
                 include('Controllers/getActualites.php');
                 $resultActivity = getActivity("client",$_GET["title"]);
                 $resAct = mysqli_fetch_assoc($resultActivity);
-                echo "<h1 class=\"mb-2 bread\">".utf8_encode($resAct["title"])."</h1>";
+                echo "<h1 class=\"mb-2 bread\">".$resAct["title"]."</h1>";
                 echo "<p class=\"breadcrumbs\"><span class=\"mr-2\"><a href=\"index.php\">Home <i class=\"ion-ios-arrow-forward\"></i></a></span> <span class=\"mr-2\"><a href=\"index.php\">Blog <i class=\"ion-ios-arrow-forward\"></i></a></span> <span>Blog Single <i class=\"ion-ios-arrow-forward\"></i></span></p>";
           ?>
           </div>
@@ -70,9 +70,6 @@
 		<section class="ftco-section">
 			<div class="container">
                 <?php
-
-
-
                     echo "<div class=\"row\">";
                     echo "<div class=\"col-lg-12 ftco-animate\">";
 //                    echo "<h2 class=\"mb-3\">" .utf8_encode($resAct["title"]). "</h2>";
@@ -82,9 +79,10 @@
                 echo "</div>";
                 echo "</div>";
                     echo "<p>";
-                      echo "<img src=\"assets/images/image_2.jpg\" alt=\"\" class=\"img-fluid\">";
-                    echo "</p>";
-                    echo "<p style='text-align: justify'>".utf8_encode($resAct["description"])."</p>";
+                      echo "<img src=admin/dashboard/can/uploads/".$resAct["image"]." alt=\"\" class=\"img-fluid\">";
+
+                echo "</p>";
+                    echo "<p style='text-align: justify'>".$resAct["description"]."</p>";
 
 
                 ?>
