@@ -31,6 +31,12 @@
       $resultMissions = getmissions("client");
       $resultVisions = getvisions("client");
       // var_dump($resultMissions);
+
+      include_once("Controllers/getNavbar.php");
+      $resultNavbar = getNavbar("client");
+      while($resNav = mysqli_fetch_assoc($resultNavbar)){
+        $slogan = $resNav["slogan"];
+      }
     ?>
 
 	<?php include('includes/navbar.php')?>
@@ -148,12 +154,12 @@
 		<section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
 			<div class="container">
 				<div class="row justify-content-center">
-			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0"><?php echo utf8_encode($slogan); ?></h2>
+          </div>
+        </div>	
 			</div>
-			</div>	
-			</div>
-       </section>	
+    </section>	
 		 
 	<section class="ftco-section">
 		<div class="container">
@@ -206,12 +212,12 @@
 		<section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
 			<div class="container">
 				<div class="row justify-content-center">
-			<div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-				<h2 class="mb-0">Replacer la nutrition au cœur  du développement </h2>
+          <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-0"><?php echo utf8_encode($slogan); ?></h2>
+          </div>
+        </div>	
 			</div>
-			</div>	
-			</div>
-       </section>
+    </section>
 
     <section class="ftco-section testimony-section">
       <div class="container-fluid px-md-5">

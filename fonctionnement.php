@@ -62,7 +62,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">FONCTIONNEMENT DU CAN</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Fonctionnement<i class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Fonctionnement<i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
             while($resFon = mysqli_fetch_assoc($resultFonctions)){
 
                 echo "<div class=\"col-md-12 col-lg-12\">";
-                    echo "<center><h1>".$resFon["title"]."</h1></center>";
+                    echo "<center><h1>".utf8_encode($resFon["title"])."</h1></center>";
                     echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
                         echo "<div class=\"lead text-justify\">";
                             echo "<p>".utf8_encode($resFon["description"])."</p>";
@@ -106,8 +106,8 @@
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/jquery.animateNumber.min.js"></script>
 <script src="assets/js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="assets/js/google-map.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="assets/js/google-map.js"></script>-->
 <script src="assets/js/main.js"></script>
 
 </body>

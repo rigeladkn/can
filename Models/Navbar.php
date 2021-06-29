@@ -1,7 +1,6 @@
 <?php
 
-
-class Extra{
+class Navbar{
 
     private $connect;
     private $data;
@@ -9,17 +8,17 @@ class Extra{
     private $from;
 
     private $table;
-    private $title;
-    private $description;
-    private $image;
-    private $type;
+    private $adresse;
+    private $telephone;
+    private $email;
+    private $slogan;
 
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($title, $description, $image, $type, $from, $op){
+    public function __construct($adresse, $telephone, $email, $slogan, $from, $op){
         $this->from = $from;
 
         if($this->from == 'client'){
@@ -37,6 +36,7 @@ class Extra{
             }
           
         }
+            
 
         $this->sql = null;
         $dbc = new DatabaseConfig();
@@ -44,12 +44,11 @@ class Extra{
         $this->username  = $dbc->username;
         $this->password = $dbc->password;
         $this->databasename = $dbc->databasename;
-        $this->table = "extras";
-        $this->title = $title;
-        $this->description = $description;
-        $this->image = $image;
-        $this->type = $type;
-        
+        $this->table = "navbar";
+        $this->adresse = $adresse;
+        $this->telephone = $telephone;
+        $this->email = $email;
+        $this->slogan = $slogan;
     }
 
     function dbConnect()
@@ -62,16 +61,16 @@ class Extra{
     {
         return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
-  
-    function insertExtra(){
-        $title = $this->prepareData($this->title);
-        $description = $this->prepareData($this->description);
-        $image = $this->prepareData($this->image);
-        $type = $this->prepareData($this->type);
+    
+    function insertNavbar(){
+        $adresse = $this->prepareData($this->adresse);
+        $telephone = $this->prepareData($this->telephone);
+        $email = $this->prepareData($this->email);
+        $slogan = $this->prepareData($this->slogan);
         $table = $this->table;
 
-        $this->sql = "INSERT INTO ".$table." (title, description, image, type)
-         VALUES ('".$title."', '".$description."', '".$image."', '".$type."')";
+        $this->sql = "INSERT INTO ".$table." (adresse, telephone, email, slogan)
+         VALUES ('".$adresse."', '".$telephone."', '".$email."', '".$slogan."')";
 
         if($this->connect->query($this->sql)){
             return true;
@@ -81,14 +80,16 @@ class Extra{
         }
     }
 
-    function updateExtra(){
-        $title = $this->prepareData($this->title);
-        $description = $this->prepareData($this->description);
-        $image = $this->prepareData($this->image);
-        $type = $this->prepareData($this->type);
+    function updateNavbar(){
+        $adresse = $this->prepareData($this->adresse);
+        $telephone = $this->prepareData($this->telephone);
+        $email = $this->prepareData($this->email);
+        $slogan = $this->prepareData($this->slogan);
         $table = $this->table;
 
-        $this->sql = "UPDATE ".$table." SET title = '".$title."', description = '".$description."', image = '".$image."', type = '".$type."' WHERE type = '".$type."' ";
+        $this->sql = "UPDATE ".$table." SET adresse = '".$adresse."', 
+        telephone = '".$telephone."', email = '".$email."', slogan = '".$slogan."' 
+        WHERE id = '1' ";
 
         if($this->connect->query($this->sql)){
             return true;
@@ -98,22 +99,11 @@ class Extra{
         }
     }
 
-    function getAllExtras($typeParam){
-        $this->sql = "SELECT * FROM ".$this->table." WHERE type = '".$typeParam."' ";
-        $output = [];
+    function getNavbar(){
+        $this->sql = "SELECT * FROM ".$this->table;
 
         if($result = $this->connect->query($this->sql)){
             return $result;
-        }
-        else{
-            return false;
-        }
-    }
-
-    function deleteExtra($typeParam, $id){
-        $this->sql = "DELETE FROM ".$this->table." WHERE id = '".$id."' AND type = '".$typeParam."' ";
-        if($result = $this->connect->query($this->sql)){
-            return true;
         }
         else{
             return false;

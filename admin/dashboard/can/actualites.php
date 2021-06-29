@@ -115,6 +115,7 @@
                                                                 <th>Titre</th>
                                                                 <th>Description</th>
                                                                 <th>Date</th>
+                                                                <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -123,10 +124,16 @@
                                                                 $resultActualites = getActualites('admin');
                                                                 while($resAct = mysqli_fetch_assoc($resultActualites)){
                                                                     echo "<tr>";
-                                                                    echo "<th scope=\"row\">".$resAct["id"]."</th>";
-                                                                    echo "<td>".$resAct["title"]."</td>";
-                                                                    echo "<td>".$resAct["description"]."</td>";
-                                                                    echo "<td>".$resAct["Ladate"]."</td>";
+                                                                        echo "<th scope=\"row\">".$resAct["id"]."</th>";
+                                                                        echo "<td>".$resAct["title"]."</td>";
+                                                                        echo "<td>".$resAct["description"]."</td>";
+                                                                        echo "<td>".$resAct["Ladate"]."</td>";
+                                                                        echo "<td>";
+                                                                                echo "<form id=\"form".$resAct["id"]."\" action=\"../../../Controllers/deleteActualite.php\" method=\"POST\">";
+                                                                                    echo "<input type=\"hidden\" name=\"id\" value=\"".$resAct["id"]."\">";
+                                                                                    echo "<a href=\"#\" onClick=\"document.getElementById('form".$resAct["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                echo "</form>";
+                                                                            echo "</td>";
                                                                     echo "</tr>";
                                                             
                                                             }

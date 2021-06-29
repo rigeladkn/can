@@ -105,4 +105,14 @@ class Message{
         }
     }
 
+    function deleteMessage($id){
+        $this->sql = "DELETE FROM ".$this->table." WHERE id = '".$id."' ";
+        if($result = $this->connect->query($this->sql)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

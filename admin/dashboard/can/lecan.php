@@ -212,13 +212,27 @@
                                                                                 $resultMission = getMissions('admin');
                                                                                 // var_dump($resultMembres);
                                                                                 
-                                                                                 echo "<ul>";
-                                                                                 while($resMission = mysqli_fetch_assoc($resultMission)){
-                                                                                    echo "<li>";
-                                                                                        echo "--". $resMission["description"];
-                                                                                    echo "</li><br><br>";
-                                                                                 }
-                                                                                  echo "</ul>";
+                                                                                echo "<ul>";
+                                                                                    echo "<table>";
+                                                                                    while($resMission = mysqli_fetch_assoc($resultMission)){
+                                                                                        echo "<tr>";
+                                                                                            echo "<td>";
+                                                                                                echo "<li>";
+                                                                                                    echo "--". $resMission["description"];
+                                                                                                echo "</li>";
+                                                                                            echo "</td>";
+                                                                                            echo "<td>";
+                                                                                                echo "<form id=\"form".$resMission["id"]."\" action=\"../../../Controllers/deleteMission.php\" method=\"POST\">";
+                                                                                                    echo "<input type=\"hidden\" name=\"id\" value=\"".$resMission["id"]."\">";
+                                                                                                    echo "<input type=\"hidden\" name=\"type\" value=\"".$resMission["type"]."\">";
+                                                                                                    echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMission["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                                echo "</form>";
+                                                                                                echo "<br><br>";
+                                                                                            echo "</td>";
+                                                                                        echo "</tr>";
+                                                                                    }
+                                                                                    echo "</table>";
+                                                                                echo "</ul>";
                                                                             
                                                                             ?>
                                                                         </p>
@@ -283,11 +297,18 @@
                         // var_dump($resultMembres);
                         while($resMem = mysqli_fetch_assoc($resultMembres)){
                             echo "<tr>";
-                            echo "<th scope=\"row\">".$resMem["id"]."</th>";
-                            echo "<td>".$resMem["nom"]."</td>";
-                            echo "<td>".$resMem["poste"]."</td>";
-                            echo "<td>".$resMem["description"]."</td>";
-                            echo "<td>".$resMem["image"]."</td>";
+                                echo "<th scope=\"row\">".$resMem["id"]."</th>";
+                                echo "<td>".$resMem["nom"]."</td>";
+                                echo "<td>".$resMem["poste"]."</td>";
+                                echo "<td>".$resMem["description"]."</td>";
+                                echo "<td>".$resMem["image"]."</td>";
+                                echo "<td>";
+                                    echo "<form id=\"form".$resMem["id"]."\" action=\"../../../Controllers/deleteMembre.php\" method=\"POST\">";
+                                        echo "<input type=\"hidden\" name=\"id\" value=\"".$resMem["id"]."\">";
+                                        echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMem["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                    echo "</form>";
+                                    echo "<br><br>";
+                                echo "</td>";
                             echo "</tr>";
 					 
 					}

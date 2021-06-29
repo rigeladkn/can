@@ -1,3 +1,13 @@
+<?php
+    include_once("Controllers/getNavbar.php");
+    $resultNavbar = getNavbar("client");
+    while($resNav = mysqli_fetch_assoc($resultNavbar)){
+      $slogan = $resNav["slogan"];
+      $telephone = $resNav["telephone"];
+      $email = $resNav["email"];
+    }
+?>
+
 <div class="bg-top navbar-light d-flex flex-column-reverse" style="background:#e8e8e8">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
@@ -8,21 +18,21 @@
 					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
-						    	<span> contact@can-benin.bj</span>
+						    	<span> <?php echo utf8_encode($email); ?></span>
 						    </div>
 					    </div>
 					    <div class="col-md-2 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px">
 					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-call" style="font-size:17px"></span></div>
 						    <div class="text">
 						    	<span>Télephone</span>
-						    	<span>+229 21 32 13 98</span>
+						    	<span><?php echo utf8_encode($telephone); ?></span>
 						    </div>
 					    </div>
 					    
 						<div class="col-md-7 py-2" style="text-align: right;font-size:16px">
 					    	
 					    	<div class="">
-					    		<span> <strong style="color:#484848;">Replacer la nutrition au cœur  du developpement</strong>  </span>
+					    		<span> <strong style="color:#484848;"><?php echo utf8_encode($slogan); ?></strong>  </span>
 						    </div>
 					    </div>
 				    </div>

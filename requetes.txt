@@ -63,7 +63,7 @@ CREATE TABLE extras (
 CREATE TABLE navbar (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     adresse TEXT (1000) NOT NULL,
-    telephone VARCHAR (20) NOT NULL,
+    telephone VARCHAR (50) NOT NULL,
     email VARCHAR (50) NOT NULL,
     slogan TEXT (1000) NOT NULL )
 
