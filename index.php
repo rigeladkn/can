@@ -123,7 +123,7 @@
 							<div class="block-18">
 								<div class="icon"><span class="flaticon-doctor"></span></div>
 							<div class="text">
-								<strong class="number" data-number="10">0</strong>
+								<strong class="number" ><script>document.write(new Date().getFullYear()-2011);</script></strong>
 								<span>années d'expériences</span>
 							</div>
 							</div>
