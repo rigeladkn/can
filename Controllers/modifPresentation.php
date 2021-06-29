@@ -10,20 +10,24 @@ if(isset($_POST["title"]) && isset($_POST["description"])){
     if($presentation->dbConnect()){
         echo 'Connecté';
         if($result = $presentation->updateExtra()){
-            echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
+            // echo 'Succès';
+            header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=true");
             die();
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=false");
+            die();
         }
     }
     else{
-        echo 'Connexion impossible !';
+        // echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=lostconn");
+            die();
     }
 }
 else{
-    echo 'Tous les champs sont requis';
+    // echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=requis");
+    die();
 }
-
 ?>

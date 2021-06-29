@@ -48,11 +48,6 @@
   </head>
 <body onload="changeActivePage()">
 	
-	<?php
-      include('Controllers/getProjects.php');
-      $resultProjects = getProjects("client");
-    ?>
-	
 	<?php include('includes/navbar.php')?>
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('assets/images/bg_1.jpg');">
@@ -70,36 +65,104 @@
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row no-gutters justify-content-center mb-5">
-          		<div class="col-md-6 text-center heading-section ftco-animate">
+        <div class="col-md-6 text-center heading-section ftco-animate">
 					<span class="subheading">Projets réalisés</span>
 					<h2 class="mb-4">Nos Projets</h2>
 					<p>Voici une liste de quelques projets réalisés par le Conseil de l'Alimentation et de la Nutrition (CAN) : </p>
-					<p></p>
-			</div>
-		</div>
-        <div class="row">
-	  		<?php
-			  	$i = 1;
-			  	while($resPro = mysqli_fetch_assoc($resultProjects)){
-					echo "<div class=\"col-md-4\">";
-						echo "<div class=\"project\">";
-							echo "<div class=\"img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></div>";
-							echo "<div class=\"text w-100 text-center\">";
-								echo "<span class=\"cat\">". $resPro["status"]."</span>";
-								echo "<h3><a href=\"#\">".$resPro["financement"]."</a></h3>";
-								echo "<p>".$resPro["description"]."</p>";
-							echo "</div>";
-						echo "</div>";
-					echo "</div>";
-				}
-				$i = $i + 1;
-			?>
-
-		 
+          <p></p>
         </div>
-       
 			</div>
-		</section>
+
+      <div class="tabulation-2 mt-4">
+        <ul class="nav nav-pills nav-fill d-md-flex d-block">
+          <li class="nav-item" style="margin-left:10px; margin-right:10px">
+            <a class="nav-link active py-2" data-toggle="tab" href="#home1"><span class="ion-ios-home mr-2"></span> Tous</a>
+          </li>
+          <li class="nav-item px-lg-2" style="margin-left:10px; margin-right:10px">
+            <a class="nav-link py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> En cours</a>
+          </li>
+          <li class="nav-item px-lg-2" style="margin-left:10px; margin-right:10px">
+            <a class="nav-link py-2" data-toggle="tab" href="#home3"><span class="ion-ios-person mr-2"></span> Clôturé</a>
+          </li>
+        </ul>
+
+        <div class="tab-content bg-light rounded mt-2">
+          <div class="tab-pane container p-0 active" id="home1">
+            <div class="row">
+              <?php
+                include_once('Controllers/getProjects.php');
+                $resultProjects = getProjects("client");
+                $i = 1;
+                while($resPro = mysqli_fetch_assoc($resultProjects)){
+                  echo "<div class=\"col-md-4\">";
+                    echo "<div class=\"project\">";
+                      echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
+                      echo "<div class=\"text w-100 text-center\">";
+                        echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
+                        echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
+                        echo "<p>".utf8_encode($resPro["description"])."</p>";
+                      echo "</div>";
+                    echo "</div>";
+                  echo "</div>";
+                  $i = $i + 1;
+                }
+              ?>
+            </div>
+          </div>
+          <div class="tab-pane container p-0 fade" id="home2">
+            <div class="row">
+              <?php
+                include_once('Controllers/getProjects.php');
+                $resultProjects = getProjects("client");
+                $i = 1;
+                while($resPro = mysqli_fetch_assoc($resultProjects)){
+                  if(utf8_encode($resPro["status"]) == "En cours"){
+                    echo "<div class=\"col-md-4\">";
+                      echo "<div class=\"project\">";
+                        echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
+                        echo "<div class=\"text w-100 text-center\">";
+                          echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
+                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
+                          echo "<p>".utf8_encode($resPro["description"])."</p>";
+                        echo "</div>";
+                      echo "</div>";
+                    echo "</div>";
+                  }
+                  $i = $i + 1;
+                }
+              ?>
+            </div>
+          </div>
+          <div class="tab-pane container p-0 fade" id="home3">
+            <div class="row">
+              <?php
+                include_once('Controllers/getProjects.php');
+                $resultProjects = getProjects("client");
+                $i = 1;
+                while($resPro = mysqli_fetch_assoc($resultProjects)){
+                  if(utf8_encode($resPro["status"]) == "Clôturé"){
+                    echo "<div class=\"col-md-4\">";
+                      echo "<div class=\"project\">";
+                        echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
+                        echo "<div class=\"text w-100 text-center\">";
+                          echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
+                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
+                          echo "<p>".utf8_encode($resPro["description"])."</p>";
+                        echo "</div>";
+                      echo "</div>";
+                    echo "</div>";
+                  }
+                  $i = $i + 1;
+                }
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+      
+	</section>
 		
     
     <?php include("includes/footer.php") ?>

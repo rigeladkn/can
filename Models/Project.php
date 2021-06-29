@@ -87,4 +87,25 @@ class Project{
         }
     }
 
+    function getProject($id){
+        $this->sql = "SELECT * FROM ".$this->table." WHERE id = ".$id;
+
+        if($result=$this->connect->query($this->sql)){
+            return $result;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function deleteProject($id){
+        $this->sql = "DELETE FROM ".$this->table." WHERE id = '".$id."' ";
+        if($result = $this->connect->query($this->sql)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

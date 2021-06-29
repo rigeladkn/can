@@ -90,4 +90,25 @@ class Actualite{
         }
     }
 
+    function getActivity($title){
+
+        $this->sql = "SELECT * FROM ".$this->table." WHERE title= '" .$title."'";
+
+
+        if($result = $this->connect->query($this->sql)){
+            return $result;
+    
+        }
+    }
+
+    function deleteActualite($id){
+        $this->sql = "DELETE FROM ".$this->table." WHERE id = '".$id."' ";
+        if($result = $this->connect->query($this->sql)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }

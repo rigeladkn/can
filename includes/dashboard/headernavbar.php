@@ -15,9 +15,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div style="width: 190px">
                         <a href="index.php">
                             <img class="img-fluid" src="../../../assets/dashboard/images/logo.png" alt="Theme-Logo" />
                         </a>
+                        </div>
                         <a class="mobile-options waves-effect waves-light">
                             <i class="ti-more"></i>
                         </a>

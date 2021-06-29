@@ -10,20 +10,21 @@ if(isset($_POST["status"]) && isset($_POST["financement"]) && isset($_POST["desc
     if($project->dbConnect()){
         echo 'Connecté';
         if($result = $project->insertProject()){
-            echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
-            die();
+            // echo 'Succès';
+            header("location: http://localhost/can/admin/dashboard/can/projects.php?success=true");
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/projects.php?success=false");
+
         }
     }
     else{
-        echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/projects.php?success=lostconn");
     }
 }
 else{
-    echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/projects.php?success=requis");
+
 }
 
 ?>

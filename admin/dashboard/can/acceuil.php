@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Dashboard|Customisation|Acceuil</title>
+    <title>Dashboard | Acceuil</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -75,6 +75,17 @@
                             <!-- Main-body start -->
                             <div class="main-body">
                                 <div class="page-wrapper">
+
+
+                                <div class="row">
+                                        <div class="col-10"></div>
+                                        <div class="col-2">
+                                            <form action="../../../Controllers/gestImages.php" method="post">
+                                                <button type="submit" class="btn waves-effect waves-light btn-primary "></i>Gérer</button><br>
+                                            </form>
+                                        </div>
+                                </div><br>
+
                                     <!-- Page-body start -->
                                     <div class="page-body breadcrumb-page">
                                     <div class="row">
@@ -83,11 +94,11 @@
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Carroussel de l'acceuil</h5>
-                                                        <span>Définissez les images qui s'afficheront dans le carroussel<code>(.png, .jpg /.jpeg)</code></span>
+                                                        <span>Ajoutez une image qui s'affichera dans le carroussel<code>(.png, .jpg /.jpeg)</code></span>
                                  
                                                     </div>
                                                     <div class="card-block">
-                                                    <div class="row">
+                                                    <!-- <div class="row">
                                                         <div class="col-4">
                                                             <h4 class="sub-title">Ajoutez une image</h4>
                                                         </div>
@@ -96,23 +107,34 @@
                                                           <button class="btn btn-primary btn-sm"> +1 </button>
                                                         </div>
                                                         
-                                                    </div>
+                                                    </div> -->
                                                        
-                                                        <form>
+                                                        <form action="../../../Controllers/upload.php" method="post" enctype="multipart/form-data">
                                                             
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Image </label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="file" class="form-control" name="image">
+                                                                    <input type="file" class="form-control" name="image" required>
                                                                 </div>
                                                             </div>
 
                                                             <div class="form-group row">
-                                                                <label class="col-sm-2 col-form-label">Descriptif</label>
+                                                                <label class="col-sm-2 col-form-label">Titre</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" maxlength="30" placeholder="Entrez une courte phrase (max characters =  30)">
+                                                                    <input type="text" class="form-control" maxlength="100" placeholder="Entrez une courte phrase (max characters =  100)" required name="title">
+                                                                </div>
+                                                            </div>  
+                                                            
+                                                             <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Description</label>
+                                                                <div class="col-sm-10">
+                                                                     <textarea class="form-control" placeholder="Description" required name="description"id="" cols="30" rows="10"></textarea>
                                                                 </div>
                                                             </div>
+                                                                <center>
+                                                                        <button type="submit" class="btn waves-effect waves-light btn-primary " name="submit"></i>Ajouter</button><br>
+                                                                </center>
+
                                                            
                                                         </form>
                                                       
@@ -197,6 +219,12 @@
 <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
 <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
+
+
+<!-- script pour modals et redirections -->
+   
+<?php include("../../../includes/dashboard/scriptacceuil.php");?>
+
 </body>
 
 </html>

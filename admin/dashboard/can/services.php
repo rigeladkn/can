@@ -16,6 +16,7 @@
 
     <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
     <meta name="author" content="Codedthemes" />
+    
     <!-- Favicon icon -->
     <link rel="icon" href="../../../assets/dashboard/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
@@ -33,11 +34,14 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
+
+
 </head>
 
 <!--<body class="fix-menu dark-layout">-->
 
 <body>
+
     <!-- Pre-loader start -->
   <?php include("../../../includes/dashboard/preloader.php"); ?>
     <!-- Pre-loader end -->
@@ -113,7 +117,7 @@
                                                             <tr>
                                                                 <th>Titre</th>
                                                                 <th>Description</th>
-                                                                <th>Image</th>
+                                                                <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -124,7 +128,13 @@
                                                                     echo "<tr>";
                                                                     echo "<td>".$resServ["title"]."</td>";
                                                                     echo "<td>".$resServ["description"]."</td>";
-                                                                    echo "<td>".$resServ["image"]."</td>";
+                                                                    echo "<td>";
+                                                                        echo "<form id=\"form".$resServ["id"]."\" action=\"../../../Controllers/deleteService.php\" method=\"POST\">";
+                                                                            echo "<input type=\"hidden\" name=\"id\" value=\"".$resServ["id"]."\">";
+                                                                            echo "<input type=\"hidden\" name=\"type\" value=\"".$resServ["type"]."\">";
+                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resServ["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                        echo "</form>";
+                                                                    echo "</td>";
                                                                     echo "</tr>";
                                                             
                                                             }
@@ -212,8 +222,14 @@
     <!-- Custom js -->
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
-    <!-- modal pour actualités -->
- <?php include("../../../includes/dashboard/modalajoutservice.php")?> 
+ <?php include("../../../includes/dashboard/modalajoutservice.php");?>
+
+
+<!-- script pour modals et redirections -->
+   
+ <?php include("../../../includes/dashboard/scriptservices.php");?>
+
+
 </body>
 
 </html>

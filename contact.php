@@ -48,6 +48,16 @@
 	
   </head>
   <body  onLoad="changeActivePage()">
+
+  <?php
+    include_once("Controllers/getNavbar.php");
+    $resultNavbar = getNavbar("client");
+    while($resNav = mysqli_fetch_assoc($resultNavbar)){
+      $adresse = $resNav["adresse"];
+      $telephone = $resNav["telephone"];
+      $email = $resNav["email"];
+    }
+  ?>
     
     <?php include('includes/navbar.php')?>
     
@@ -73,7 +83,7 @@
 			          	<div class="icon">
 			          		<span class="icon-map-o"></span>
 			          	</div>
-			            <p><span>Adresse :</span>Cotonou, premier carrefour à gauche avant l'étoile rouge en quittant le stade M.K BENIN </p>
+			            <p><span>Adresse :</span><?php echo utf8_encode($adresse); ?></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -81,7 +91,8 @@
 			          	<div class="icon">
 			          		<span class="icon-tablet"></span>
 			          	</div>
-			            <p><span>Téléphone : </span> <a href="tel://67673524">+229 21 32 13 98 / 67 67 35 24</a></p>
+                  <!-- +229 21 32 13 98 / 67 67 35 24 -->
+			            <p><span>Téléphone : </span> <?php echo "<a href=\"tel://".utf8_encode($telephone)."\"> ".utf8_encode($telephone)."</a>"; ?></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -89,7 +100,7 @@
 			          	<div class="icon">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			            <p><span>Email:</span> <a href="mailto:contact@can-benin.bj">contact@can-benin.bj</a></p>
+			            <p><span>Email:</span> <?php echo "<a href=\"mailto:".utf8_encode($email)."\"> ".utf8_encode($email)." </a>"; ?></p>
 			          </div>
 		          </div>
 		        </div>
@@ -112,9 +123,9 @@
                 <textarea id="" cols="30" rows="7" class="form-control" name ="texte" placeholder="Message"></textarea>
               </div>
               <center>
-              <div class="form-group">
-                <input type="submit" value="Envoyer le message" class="btn btn-primary btn-sm py-3 px-5">
-              </div>
+                <div class="form-group">
+                  <input type="submit" value="Envoyer le message" class="btn btn-primary btn-sm py-3 px-5">
+                </div>
               </center>
             </form>
           
@@ -126,7 +137,7 @@
     <!-- <section class="ftco-section ftco-no-pb ftco-no-pt">
     	<div class="container-fluid px-0">
     		<div class="row justify-content-center">
-        	<div class="col-md-12">
+        	<div class="col-md-12">                            
         		<div id="map" class="bg-white"></div>
         	</div>
         </div>
@@ -153,8 +164,8 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
+  <!-- <script src="assets/js/google-map.js"></script> -->
   <script src="assets/js/main.js"></script>
     
   </body>

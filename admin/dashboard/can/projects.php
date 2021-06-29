@@ -114,6 +114,7 @@
                                                                 <th>Financement</th>
                                                                 <th>Description</th>
                                                                 <th>Statut</th>
+                                                                <th>Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -127,6 +128,12 @@
                                                                     echo "<td>".$resPro["financement"]."</td>";
                                                                     echo "<td>".$resPro["description"]."</td>";
                                                                     echo "<td>".$resPro["status"]."</td>";
+                                                                    echo "<td>";
+                                                                        echo "<form id=\"form".$resPro["id"]."\" action=\"../../../Controllers/deleteProject.php\" method=\"POST\">";
+                                                                            echo "<input type=\"hidden\" name=\"id\" value=\"".$resPro["id"]."\">";
+                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resPro["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                        echo "</form>";
+                                                                    echo "</td>";
                                                                     echo "</tr>";
                                                             
                                                             }
@@ -190,7 +197,11 @@
 
  <!-- modal ajout project -->
  <?php include("../../../includes/dashboard/modalajoutproject.php")?> 
- 
+
+
+ <!-- script pour modals et redirections -->
+   
+ <?php include("../../../includes/dashboard/scriptprojects.php");?>
 
 
 

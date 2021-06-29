@@ -4,26 +4,27 @@ require_once '../Models/Extra.php';
 
 if(isset($_POST["title"]) && isset($_POST["description"])){
     echo 'reçu';
-
+    
     $service = new Extra($_POST["title"], $_POST["description"], "", "service", "admin","");
-
+    
     if($service->dbConnect()){
-        echo 'Connecté';
+        // echo 'Connecté';
         if($result = $service->insertExtra()){
-            echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
-            die();
+            
+            header("location: http://localhost/can/admin/dashboard/can/services.php?success=true");
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/services.php?success=false");
+
         }
     }
     else{
-        echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/services.php?success=lostconn");
     }
 }
 else{
-    echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/services.php?success=requis");
+
 }
 
 ?>
