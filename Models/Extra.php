@@ -88,14 +88,33 @@ class Extra{
         $type = $this->prepareData($this->type);
         $table = $this->table;
 
-        $this->sql = "UPDATE ".$table." SET title = '".$title."', description = '".$description."', image = '".$image."', type = '".$type."' WHERE type = '".$type."' ";
+        
+        $sqlexists = "SELECT COUNT(1) FROM ".$this->table." WHERE type = '".$this->type."'";
+        $ifsqlexists = mysqli_fetch_assoc($this->connect->query($sqlexists));
+        if ( $ifsqlexists["COUNT(1)"] != 0) {
+            
+            $this->sql = "UPDATE ".$table." SET title = '".$title."', description = '".$description."', image = '".$image."', type = '".$type."' WHERE type = '".$type."' ";
 
-        if($this->connect->query($this->sql)){
-            return true;
+            if($this->connect->query($this->sql)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
-            return false;
+            $this->sql = "INSERT INTO ".$table." (title, description, image, type)
+            VALUES ('".$title."', '".$description."', '".$image."', '".$type."')";
+   
+           if($this->connect->query($this->sql)){
+               return true;
+           }
+           else{
+               return false;
+           }
         }
+
+        
     }
 
     function getAllExtras($typeParam){

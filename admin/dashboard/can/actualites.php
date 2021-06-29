@@ -216,6 +216,11 @@
 
     <!-- modal pour actualités -->
  <?php include("../../../includes/dashboard/modalajoutactualite.php")?> 
+
+<!-- script pour modals et redirections -->
+   
+<?php include("../../../includes/dashboard/scriptactualites.php");?>
+
 </body>
 
 </html>

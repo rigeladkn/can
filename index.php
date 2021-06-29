@@ -43,7 +43,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Conseil de l'Alimentation et de la Nutrition</span>
             <h1 class="mb-4">Nous sommes une équipe ardue au travail</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Services <span class="ion-ios-arrow-round-forward"></span></a></p>
+            <p><a href="services.php" class="btn btn-primary px-4 py-3 mt-3">Services <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>
@@ -56,7 +56,7 @@
           <div class="col-md-7 ftco-animate mb-md-5">
           	<span class="subheading">Structure gouvernementale</span>
             <h1 class="mb-4">Nous oeuvrons pour le bien des béninois</h1>
-            <p><a href="http://localhost/can/services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder <span class="ion-ios-arrow-round-forward"></span></a></p>
+            <p><a href="services.php" class="btn btn-primary px-4 py-3 mt-3">Accéder <span class="ion-ios-arrow-round-forward"></span></a></p>
           </div>
         </div>
         </div>

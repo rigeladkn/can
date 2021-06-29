@@ -33,11 +33,14 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
+
+
 </head>
 
 <!--<body class="fix-menu dark-layout">-->
 
 <body>
+
     <!-- Pre-loader start -->
   <?php include("../../../includes/dashboard/preloader.php"); ?>
     <!-- Pre-loader end -->
@@ -212,8 +215,14 @@
     <!-- Custom js -->
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
-    <!-- modal pour actualités -->
- <?php include("../../../includes/dashboard/modalajoutservice.php")?> 
+ <?php include("../../../includes/dashboard/modalajoutservice.php");?>
+
+
+<!-- script pour modals et redirections -->
+   
+ <?php include("../../../includes/dashboard/scriptservices.php");?>
+
+
 </body>
 
 </html>

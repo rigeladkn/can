@@ -11,19 +11,23 @@ if(isset($_POST["adresse"]) && isset($_POST["telephone"]) && isset($_POST["email
         echo 'Connecté';
         if($result = $navbar->updateNavbar()){
             echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
+            header("location: http://localhost/can/admin/dashboard/can/navbar.php?success=true");
             die();
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/navbar.php?success=false");
+            die();
         }
     }
     else{
-        echo 'Connexion impossible !';
+        // echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/navbar.php?success=lostconn");
+            die();
     }
 }
 else{
-    echo 'Tous les champs sont requis';
+    // echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/navbar.php?success=requis");
+    die();
 }
-
 ?>

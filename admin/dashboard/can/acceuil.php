@@ -219,6 +219,12 @@
 <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
 <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
+
+
+<!-- script pour modals et redirections -->
+   
+<?php include("../../../includes/dashboard/scriptacceuil.php");?>
+
 </body>
 
 </html>

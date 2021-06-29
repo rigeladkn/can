@@ -51,24 +51,27 @@ if(isset($_POST["submit"]) && isset($_POST["title"]) && isset($_POST["descriptio
         echo 'Connecté';
         if($result = $carrousel->insertNewImage()){
             echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
+            header("location: http://localhost/can/admin/dashboard/can/acceuil.php?success=true");
             die();
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/acceuil.php?success=false");
+            die();
         }
     }
     else{
-        echo 'Connexion impossible !';
+        // echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/acceuil.php?success=lostconn");
+            die();
     }
+}
+else{
+    // echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/acceuil.php?success=requis");
+    die();
+}
 
     //end insert
-
-
-
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
     }
 
 }

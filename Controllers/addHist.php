@@ -8,22 +8,26 @@ if(isset($_POST["title"]) && isset($_POST["description"])){
     $historique = new Extra($_POST["title"], $_POST["description"], "", "historique", "admin","");
 
     if($historique->dbConnect()){
-        echo 'Connecté';
+        // echo 'Connecté';
         if($result = $historique->insertExtra()){
-            echo 'Succès';
-            header("location: http://localhost/can/admin/dashboard/can/index.php");
+            header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=true");
             die();
         }
         else{
-            echo 'Echec !';
+            header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=false");
+            die();
         }
     }
     else{
-        echo 'Connexion impossible !';
+        // echo 'Connexion impossible !';
+        header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=lostconn");
+            die();
     }
 }
 else{
-    echo 'Tous les champs sont requis';
+    // echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/lecan.php?success=requis");
+    die();
 }
 
 ?>

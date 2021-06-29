@@ -190,7 +190,11 @@
 
  <!-- modal ajout project -->
  <?php include("../../../includes/dashboard/modalajoutproject.php")?> 
- 
+
+
+ <!-- script pour modals et redirections -->
+   
+ <?php include("../../../includes/dashboard/scriptprojects.php");?>
 
 
 

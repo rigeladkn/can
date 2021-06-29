@@ -367,6 +367,10 @@
   <!-- modal pour mot directeur -->
  <?php include("../../../includes/dashboard/modalmotdirecteur.php")?>
 
+ <!-- script pour modals et redirections -->
+   
+ <?php include("../../../includes/dashboard/scriptlecan.php");?>
+
 
 
 </body>

@@ -32,6 +32,9 @@
       <!-- Style.css -->
       <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
       <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
   </head>
   <body>
     <!-- Pre-loader start -->
@@ -78,68 +81,63 @@
                                                 <a href="acceuil.php" class="btn waves-effect waves-light btn-danger "></i>Retour</a><br>
                                         </div>
                         </div><br>
+                        </div>
                         
                         <?php 
 
                             include_once('../../../Controllers/getImages.php');
                             $resultImages = getImages('admin');
 
+                            //echo "<div>";
                             // var_dump($resultMembres);
-                            while($resIm = mysqli_fetch_assoc($resultImages)){
-                       echo "<div>";
-                                                echo "<form method=\"post\" action=\"../../../Controllers/updateVisibility.php?id=".$resIm["title"]."\">";
-                                                //une première image ici
-                                                echo "<div class=\"col-md-6\">";
-                                                echo "<div class=\"card\"  style=\"height:485px\">";
-                                                    echo "<div class=\"card-header\">";
-                                                        echo "<div class=\"card-header-left\">";
-                                                        echo "<h5>Titre : ".$resIm["title"]."</h5>";
-                                                        echo "</div>";
-                                                    echo "</div>";
-                                                 
-                                                        //<!-- button Default -->
-                                                        echo "<div class=\"card-block sd-6\">";
-                                                                         
-                                                            echo "<div class=\"form-group row\">";
-                                                                echo "<div class=\"col-sm-10\">";
-                                                                    echo "<img src=\"uploads/".$resIm["image"]."\" alt=\"".$resIm["image"]."\" style=\"height: 80%;width:420px; margin-bottom:35px\">";
-                                                                    echo "<div class=\"form-group row\" >";
-                                                                echo "<div class=\"col-sm-10\"  >";
-                                                                    echo "<center>";
-
-                                                                            
-                                                                            echo "<center>";
-                    
-                                                                            echo "<div class=\"col-2\">";
-                                                                                if($resIm["status"]=="visible" or $resIm["status"]=="Visible"){
-                                                                                    $color = 'primary';
-                                                                                }
-                                                                                else{
-                                                                                    $color = 'danger';
-                                                                                }
-                                                                            echo "<input type=\"text\" value=\"".$resIm["image"]."\" hidden name =\"but\" >";
-                                                                            echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"".$resIm["id"]."\" >";
-                                                                            echo "<button  class=\"btn waves-effect waves-light btn-sm btn-".$color."\" value=\"".$resIm["image"]."\"></i>".$resIm["status"]."</button><br>";
-                                                                            echo "</div>"; 
-
-                                                                            echo "</center>"; 
-        
-                                                                    echo "</center>";
-                                                                echo "</div>";
-                                                                echo "</div>";
-                                                                echo "</div>";
-                                                                echo "</div>";
-                                                                echo "</div>";     
-                                                                            
-                                                            echo "</div>";
-                                                        echo "<form>";  
-                                                    //autre image débute ici
-                                                    echo "</div>";
-                                                    
-                                            // }
-                
+                            while($resIm =   mysqli_fetch_assoc($resultImages)){
+                                //une première image ici
+                                echo "<div class=\"col-md-6\">";
+                                echo "<div class=\"card\"  style=\"height:485px\">";
+                                    echo "<div class=\"card-header\">";
+                                        echo "<div class=\"card-header-left\">";
+                                            echo "<h5>Titre : ".$resIm["title"]."</h5>";
+                                        echo "</div>";
+                                    echo "</div>";
+                                
+                                //<!-- button Default -->
+                                echo "<div class=\" \">";
+                                
+                                echo "<div class=\" \">";
+                                echo "<div class=\"col-sm-10\">";
+                                echo "<img src=\"uploads/".$resIm["image"]."\" alt=\"".$resIm["image"]."\" style=\"height: 80%;width:420px; margin-bottom:35px\">";
+                                echo "<div class=\"row\" >";
+                                echo "<div class=\"col-sm-10\"  >";
+                                    echo "<center>";
+                                        echo "<form method=\"post\" action=\"updateVisibility.php\" id=\"".$resIm["id"]."\">";
+                                        echo "<input type=\"text\" value=\"".$resIm["image"]."\" hidden name =\"".$resIm["id"]."\" >";
+                                        echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"".$resIm["id"]."\" >";
+                                        
+                                        echo "<div class=\"col-2\">";
+                                        if($resIm["status"]=="visible" or $resIm["status"]=="Visible"){
+                                            $color = 'primary';
                                         }
-                                    ?> 
+                                        else{
+                                            $color = 'danger';
+                                        }
+                                        echo "<button  class=\"btn waves-effect waves-light btn-sm btn-".$color."\"onClick=\"sendId(".$resIm["id"].")\"></i>".$resIm["status"]."</button><br>";
+                                        echo "</div>"; 
+                                        echo "<form>";  
+                                    echo "</center>"; 
+                                echo "</div>";
+                                echo "</div>";
+                                echo "</div>";
+                                echo "</div>";
+                                echo "</div>";     
+                                                                    
+                                echo "</div>";
+                                            //autre image débute ici
+                                            
+                                            // }
+                                            
+                                echo "</div>";
+                            }
+                        ?> 
                     </div>
                 </div>
             </div>
@@ -164,26 +162,29 @@
 <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
 <script src="../../../assets/dashboard/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
-<!-- 
+
 <script>
-    function changeVisibility(name,visibility){
-        // alert(name);
-  
-        new Ajax.Request('../../../Controllers/updateVisibility.php',
-        {
-            method:'post',
-            parameters:{q_input: ok,old_vivibility : visibility},
-            cache: false,
-            onSuccess: function(transport)
-            {
-                jQuery('.debug').html(transport.responseText);
-                alert(document.getElementByName(name).innerHTML = "Changé");
+    function sendId(idToSend){
+      
+        $.ajax({
+            type : 'post',
+            url : "updateVisibility.php",
+            // dataType : json,
+            data : json_encode({
+                id : idToSend
+            },),
+            success : function(response){
+                alert(this.data);
+            },
+            error: function(){
+                alert("error");
             }
         });
-}
+    }
 
-    
-</script> -->
+</script>
+ 
+ 
 
 </body>
 
