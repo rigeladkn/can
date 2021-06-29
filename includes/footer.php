@@ -74,7 +74,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tous droits réservés | Réalisé par <a href="#" target="_blank" style="color: #3e64ff">JFRH</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tous droits réservés | Réalisé par <a href="#" target="_blank" style="color: white">JFRH</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

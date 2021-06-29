@@ -73,22 +73,28 @@
               while($resAct = mysqli_fetch_assoc($resultActualites)){
                 echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
                   echo "<div class=\"blog-entry\">";
-                    echo "<a href=\"blog-single.php\" class=\"block-20 d-flex align-items-end\" style=\"background-image: url('assets/images/image_2.jpg');\">";
-                      echo "<div class=\"meta-date text-center p-2\">";
+                  echo "<a href=\"actualite_single.php?title=".$resAct["title"]."\" class=\"block-20 d-flex align-items-end\" style=\"background-image:url(admin/dashboard/can/uploads/".$resAct["image"]."\");>";
+
+                  echo "<div class=\"meta-date text-center p-2\">";
                         echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";
                       echo "</div>";
                     echo "</a>";
                     echo "<div class=\"text border border-top-0 p-4\">";
-                      echo "<h3 class=\"heading\"><a href=\"#\">".$resAct["title"]."</a></h3>";
-                      echo "<p>".$resAct["description"]."</p>";
+                    echo "<style type=\"text/css\">div.text.border.border-top-0.p-4{height: 300px;}</style>";
+
+                  echo "<h3 class=\"heading\"><a href=\"actualite_single.php?title=".$resAct["title"]."\">".$resAct["title"]."</a></h3>";
+                  echo "<p >".substr($resAct["description"],0,89)."...</p>";
+                      echo "<p ><a href=\"actualite_single.php?title=".$resAct["title"]."\">Détails...</a></p>";
                       echo "<div class=\"d-flex align-items-center mt-4\">";
                         echo "<p class=\"ml-auto mb-0\">";
-                        
+
                         echo "</p>";
                       echo "</div>";
                     echo "</div>";
                   echo "</div>";
                 echo "</div>";
+
+
           }
         ?>
         <!--  -->

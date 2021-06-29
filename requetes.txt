@@ -56,7 +56,12 @@ CREATE TABLE extras (
     image VARCHAR (500) NULL,
     type VARCHAR (15) NOT NULL )
 
-INSERT INTO extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
+INSERT INTO extras (title,description,image,type) VALUES ('VISION DU CAN', "« A l’horizon 2030, le Bénin est un pays où chaque personne jouit d’un état nutritionnel optimal pour son bien-être, lui permettant de participer activement à la création de richesse nationale et au développement durable »
+
+
+                                                                            Ralliement du Bénin au « Défi Zéro faim »",NULL,'vision')
+
+   INSERT INTO extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN est né de l'Atelier de consensus de Guédévy 1.
                                                                           Mais avant cette création, le bénin a connu plusieurs étapes dans le domaine de la lutte contre la malnutrition.
 
                                                                           Le Bénin jouit d’une longue expérience d’interventions en matière d’alimentation, de nutrition et de sécurité alimentaire. Ses premières actions remontent au début des années 60, mais pour des raisons diverses, la politique et les actions de lutte contre la sous-alimentation et la malnutrition, de même que leurs résultats ont évolué en dents de scie, malgré la volonté affichée et les efforts déployés par les gouvernements successifs et les Partenaires au développement. Face à ce tableau peu reluisant et les risques de non atteinte des OMD qui y sont associés, le pays s’est engagé depuis 2007 dans un processus de politique économique de réformes dans le secteur de l’alimentation et de la nutrition. Ainsi, les acteurs du secteur de l’alimentation et de la nutrition se sont dotés d’une vision suite à un diagnostic plurifactoriel à l’issue de l’atelier de consensus de Guédévy (Abomey) en novembre 2007. Deux consensus se sont dégagés au terme de la rencontre de Guédévy à savoir :
@@ -79,13 +84,8 @@ INSERT INTO extras (title,description,image,type) VALUES ('PRESENTATION',"Le CAN
 
                                                                           Le présent document présente successivement la composition du CAN, ses attributions et extras, son fonctionnement, ses chantiers, ses acquis et perspectives",NULL, 'presentation')
 
-INSERT INTO extras (title,description,image,type) VALUES ('VISION DU CAN', "« A l’horizon 2030, le Bénin est un pays où chaque personne jouit d’un état nutritionnel optimal pour son bien-être, lui permettant de participer activement à la création de richesse nationale et au développement durable »
+                                                                         
 
-
-                                                                            Ralliement du Bénin au « Défi Zéro faim »
-
-                                                                            PSDAN s’inscrit dans le Partenariat Mondial REACH  (Efforts Renouvelés contre la Malnutrition Infantile)
-",NULL,'vision')
 
 
 /* Missions */
