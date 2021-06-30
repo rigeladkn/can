@@ -64,8 +64,7 @@
 
     <section class="ftco-section">
         <div class="container">
-            <h6>Dix-sept (17) membres représentant les acteurs publics et parapublics, les organisations de la société
-                civile, les acteurs du secteur privé </h6><br>
+            <center><h6>Voici les membres du <strong>C</strong>onseil de l'<strong>A</strong>limentation et de la <strong>N</strong>utrition</h6></center><br>
             <div class="row">
                 <?php
                 include('Controllers/getMembres.php');

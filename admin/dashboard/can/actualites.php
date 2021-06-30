@@ -131,7 +131,7 @@
                                                                         echo "<td>";
                                                                                 echo "<form id=\"form".$resAct["id"]."\" action=\"../../../Controllers/deleteActualite.php\" method=\"POST\">";
                                                                                     echo "<input type=\"hidden\" name=\"id\" value=\"".$resAct["id"]."\">";
-                                                                                    echo "<a href=\"#\" onClick=\"document.getElementById('form".$resAct["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                    echo "<a href=\"#\" onClick=\"document.getElementById('form".$resAct["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"15px\" height=\"15px\"/></a>";
                                                                                 echo "</form>";
                                                                             echo "</td>";
                                                                     echo "</tr>";
