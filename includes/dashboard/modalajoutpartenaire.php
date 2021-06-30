@@ -1,5 +1,5 @@
  
- <form action="../../../Controllers/addPartenaire.php" method="POST"> 
+ <form action="../../../Controllers/addPartenaire.php" method="POST" enctype="multipart/form-data"> 
  <div class="modal fade" id="partenaireModal" tabindex="-1" role="dialog" aria-labelledby="partenaireModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -13,13 +13,19 @@
                 <form>
                 <div class="form-group">
                     <label for="nom" class="col-form-label">Nom du partenaire</label>
-                    <input name="nom" type="text" maxlength="50" class="form-control" required> </input>
+                    <input name="nom" type="text" maxlength="60" class="form-control" required> </input>
                 </div>
                
                 <div class="form-group">
                     <label for="logo" class="col-form-label">Logo de la structure</label>
                         <input type="file" class="form-control" name="logo" required>
                 </div>
+
+                <div class="form-group">
+                    <label for="lien" class="col-form-label">Lien du site du partenaire</label>
+                    <input name="lien" type="text"  class="form-control">  
+                </div>
+
                 </form>
                 
             </div>

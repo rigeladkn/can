@@ -11,13 +11,14 @@ class Partenaire{
     private $table;
     private $nom;
     private $logo;
+    private $lien;
 
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($nom, $logo, $from,$op){
+    public function __construct($nom, $logo, $lien,$from,$op){
         $this->from = $from;
 
         if($this->from == 'client'){
@@ -44,6 +45,7 @@ class Partenaire{
         $this->table = "partenaires";
         $this->nom = $nom;
         $this->logo = $logo;
+        $this->lien = $lien;
     }
 
     function dbConnect()
@@ -60,10 +62,11 @@ class Partenaire{
     function insertPartenaire(){
         $nom = $this->prepareData($this->nom);
         $logo = $this->prepareData($this->logo);
+        $lien = $this->prepareData($this->lien);
         $table = $this->table;
 
-        $this->sql = "INSERT INTO ".$table." (nom, logo)
-         VALUES ('".$nom."', '".$logo."')";
+        $this->sql = "INSERT INTO ".$table." (nom, logo, lien)
+         VALUES ('".$nom."', '".$logo."', '".$lien."')";
 
         if($this->connect->query($this->sql)){
             return true;
