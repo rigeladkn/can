@@ -79,7 +79,7 @@
                 echo "</div>";
                 echo "</div>";
                     echo "<p>";
-                      echo "<img src=admin/dashboard/can/uploads/".$resAct["image"]." alt=\"\" class=\"img-fluid\">";
+                      echo "<img src=admin/dashboard/can/uploads/actualites".$resAct["image"]." alt=\"\" class=\"img-fluid\">";
 
                 echo "</p>";
                     echo "<p style='text-align: justify'>".$resAct["description"]."</p>";
