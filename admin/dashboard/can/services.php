@@ -35,6 +35,8 @@
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
     <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
 
+    <!-- style-confirm.css -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style-confirm.css">
 
 </head>
 
@@ -126,19 +128,31 @@
                                                                 $resultServices = getServices('admin');
                                                                 while($resServ = mysqli_fetch_assoc($resultServices)){
                                                                     echo "<tr>";
-                                                                    echo "<td>".$resServ["title"]."</td>";
-                                                                    echo "<td>".$resServ["description"]."</td>";
-                                                                    echo "<td>";
-                                                                        echo "<form id=\"form".$resServ["id"]."\" action=\"../../../Controllers/deleteService.php\" method=\"POST\">";
-                                                                            echo "<input type=\"hidden\" name=\"id\" value=\"".$resServ["id"]."\">";
-                                                                            echo "<input type=\"hidden\" name=\"type\" value=\"".$resServ["type"]."\">";
-                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resServ["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
-                                                                        echo "</form>";
-                                                                    echo "</td>";
+                                                                        echo "<td>".$resServ["title"]."</td>";
+                                                                        echo "<td>".$resServ["description"]."</td>";
+                                                                        echo "<td>";
+                                                                            echo "<form id=\"form".$resServ["id"]."\" action=\"../../../Controllers/deleteService.php\" method=\"POST\">";
+                                                                                echo "<input type=\"hidden\" name=\"id\" value=\"".$resServ["id"]."\">";
+                                                                                echo "<input type=\"hidden\" name=\"type\" value=\"".$resServ["type"]."\">";
+                                                                                echo "<a href=\"#\" onClick=\"if(confirm('Êtes-vous sûr de vouloir supprimer ce ".$resServ["type"]." ?')) document.getElementById('form".$resServ["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                /*
+                                                                                echo "<a id=\"custom-confirm-box-button\" href=\"#\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                echo "<script>";
+                                                                                    echo "function onClickDelete(){";
+                                                                                        echo "document.getElementById(\"form".$resServ["id"]."\").submit()";
+                                                                                    echo "}";
+                                                                                echo "</script>";
+                                                                                */
+                                                                                // echo "<a href=\"#\" onClick=\"onClickDelete(id);\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                // echo "<a href=\"#\" data-toggle=\"modal\" data-target=\"#verificationModal\" onClick=\"document.getElementById('form".$resServ["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                            echo "</form>";
+                                                                        echo "</td>";
                                                                     echo "</tr>";
                                                             
-                                                            }
-					                                    ?> 
+                                                                }
+                                                                // echo "<button id=\"custom-confirm-box-button\"> Action </button>";
+
+					                                    ?>
                                                           
                                                         </tbody> 
                                                     </table>
@@ -221,8 +235,12 @@
     <script src="../../../assets/dashboard/js/vertical/vertical-layout.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
+    
+    <!-- confirmation js -->
+    <script type="text/javascript" src="../../../assets/dashboard/js/confirmation.js"></script>
 
  <?php include("../../../includes/dashboard/modalajoutservice.php");?>
+
 
 
 <!-- script pour modals et redirections -->
