@@ -242,7 +242,7 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Testimonies</span> -->
             <h2 class="mb-4">Nos partenaires</h2>
-            <p>Ils nous ont fait confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
+            <p>Ils nous ont fait la confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
