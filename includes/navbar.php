@@ -18,21 +18,21 @@
 					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
-						    	<span> <?php echo utf8_encode($email); ?></span>
+						    	<span> <?php echo $email; ?></span>
 						    </div>
 					    </div>
 					    <div class="col-md-2 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px">
 					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-call" style="font-size:17px"></span></div>
 						    <div class="text">
 						    	<span>Télephone</span>
-						    	<span><?php echo utf8_encode($telephone); ?></span>
+						    	<span><?php echo $telephone; ?></span>
 						    </div>
 					    </div>
 					    
 						<div class="col-md-7 py-2" style="text-align: right;font-size:16px">
 					    	
 					    	<div class="">
-					    		<span> <strong style="color:#484848;"><?php echo utf8_encode($slogan); ?></strong>  </span>
+					    		<span> <strong style="color:#484848;"><?php echo $slogan; ?></strong>  </span>
 						    </div>
 					    </div>
 				    </div>

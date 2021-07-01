@@ -83,16 +83,16 @@
               <?php echo "<img src=\"assets/images/project-".$id.".jpg\" alt=\"\" class=\"img-fluid\">" ?>
             </p>
             <?php
-            if(utf8_encode($status) == "En cours")
+            if($status == "En cours")
               $color_status = 'red';
             else
               $color_status = '#28f745';
-            echo "<center><span style=\"color:".$color_status."; font-weight:bold\">".utf8_encode($status)."</span></center>"; ?>
+            echo "<center><span style=\"color:".$color_status."; font-weight:bold\">".$status."</span></center>"; ?>
 
           </div> <!-- .col-md-4 -->
 
           <div class="col-lg-7 sidebar ftco-animate text-justify">
-            <p><?php echo utf8_encode($description); ?></p>
+            <p><?php echo $description; ?></p>
             <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
             <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
             <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>

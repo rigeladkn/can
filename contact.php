@@ -83,7 +83,7 @@
 			          	<div class="icon">
 			          		<span class="icon-map-o"></span>
 			          	</div>
-			            <p><span>Adresse :</span><?php echo utf8_encode($adresse); ?></p>
+			            <p><span>Adresse :</span><?php echo $adresse; ?></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -92,7 +92,7 @@
 			          		<span class="icon-tablet"></span>
 			          	</div>
                   <!-- +229 21 32 13 98 / 67 67 35 24 -->
-			            <p><span>Téléphone : </span> <?php echo "<a href=\"tel://".utf8_encode($telephone)."\"> ".utf8_encode($telephone)."</a>"; ?></p>
+			            <p><span>Téléphone : </span> <?php echo "<a href=\"tel://".$telephone."\"> ".$telephone."</a>"; ?></p>
 			          </div>
 		          </div>
 		          <div class="col-md-4 text-center d-flex">
@@ -100,7 +100,7 @@
 			          	<div class="icon">
 			          		<span class="icon-envelope-o"></span>
 			          	</div>
-			            <p><span>Email:</span> <?php echo "<a href=\"mailto:".utf8_encode($email)."\"> ".utf8_encode($email)." </a>"; ?></p>
+			            <p><span>Email:</span> <?php echo "<a href=\"mailto:".$email."\"> ".$email." </a>"; ?></p>
 			          </div>
 		          </div>
 		        </div>

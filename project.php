@@ -98,9 +98,9 @@
                     echo "<div class=\"project\">";
                       echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
                       echo "<div class=\"text w-100 text-center\">";
-                        echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
-                        echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
-                        echo "<p>".utf8_encode($resPro["description"])."</p>";
+                        echo "<span class=\"cat\">".$resPro["status"]."</span>";
+                        echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".$resPro["financement"]."</a></h3>";
+                        echo "<p>".$resPro["description"]."</p>";
                       echo "</div>";
                     echo "</div>";
                   echo "</div>";
@@ -116,14 +116,14 @@
                 $resultProjects = getProjects("client");
                 $i = 1;
                 while($resPro = mysqli_fetch_assoc($resultProjects)){
-                  if(utf8_encode($resPro["status"]) == "En cours"){
+                  if($resPro["status"] == "En cours"){
                     echo "<div class=\"col-md-4\">";
                       echo "<div class=\"project\">";
                         echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
                         echo "<div class=\"text w-100 text-center\">";
-                          echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
-                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
-                          echo "<p>".utf8_encode($resPro["description"])."</p>";
+                          echo "<span class=\"cat\">".$resPro["status"]."</span>";
+                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".$resPro["financement"]."</a></h3>";
+                          echo "<p>".$resPro["description"]."</p>";
                         echo "</div>";
                       echo "</div>";
                     echo "</div>";
@@ -140,14 +140,14 @@
                 $resultProjects = getProjects("client");
                 $i = 1;
                 while($resPro = mysqli_fetch_assoc($resultProjects)){
-                  if(utf8_encode($resPro["status"]) == "Clôturé"){
+                  if($resPro["status"] == "Clôturé"){
                     echo "<div class=\"col-md-4\">";
                       echo "<div class=\"project\">";
                         echo "<a href=\"project-single.php?id=".$resPro["id"]."\" class=\"block-20 d-flex align-items-end img rounded mb-4\" style=\"background-image: url(assets/images/project-".$i.".jpg);\"></a>";
                         echo "<div class=\"text w-100 text-center\">";
-                          echo "<span class=\"cat\">".utf8_encode($resPro["status"])."</span>";
-                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".utf8_encode($resPro["financement"])."</a></h3>";
-                          echo "<p>".utf8_encode($resPro["description"])."</p>";
+                          echo "<span class=\"cat\">".$resPro["status"]."</span>";
+                          echo "<h3><a href=\"project-single.php?id=".$resPro["id"]."\">".$resPro["financement"]."</a></h3>";
+                          echo "<p>".$resPro["description"]."</p>";
                         echo "</div>";
                       echo "</div>";
                     echo "</div>";
