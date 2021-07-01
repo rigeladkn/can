@@ -99,6 +99,7 @@ class Carroussel{
     function getVisibleImages(){
      
         $sql = "SELECT * FROM ".$this->table." WHERE status = 'Visible' " ;
+
     
         if( $result = $this->connect->query($sql)){
 

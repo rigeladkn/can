@@ -49,14 +49,14 @@
 					
     
     while($resCarr = mysqli_fetch_assoc($resultCarrousel)){
-      echo "<div class=\"slider-item\" style=\"background-image:url("."admin/dashboard/can/uploads/".$resCarr["image"]."\");>";
+      echo "<div class=\"slider-item\" style=\"background-image:url("."admin/dashboard/can/uploads/caroussel".$resCarr["image"]."\");>";
           echo "<div class=\"overlay\"></div>";
           echo "<div class=\"container\">";
               echo "<div class=\"row no-gutters slider-text align-items-center justify-content-start\" data-scrollax-parent=\"true\">";
                     echo "<div class=\"col-md-7 ftco-animate mb-md-5\">";
           	          echo "<span class=\"subheading\">".$resCarr["title"]."</span>";
                               echo "<h1 class=\"mb-4\">".$resCarr["description"]."</h1>";
-                                    echo "<p><a href=\"actualite-single.php?".$resCarr["title"]." class=\"btn btn-primary px-4 py-3 mt-3\">Accéder<span class=\"ion-ios-arrow-round-forward\"></span></a></p>";
+                                    echo "<p><a href=\"actualite_single.php?".$resCarr["title"]." class=\"btn btn-primary px-4 py-3 mt-3\">Accéder<span class=\"ion-ios-arrow-round-forward\"></span></a></p>";
                     echo "</div>";
               echo "</div>";
           echo "</div>";
@@ -88,8 +88,10 @@
 								<h2>Bienvenue au Conseil de l'Alimentation et de la Nutrition</h2>
 							</center>
 						</div>
+            <center>
 						<p>Nous sommes ravis de vous acceuilir sur notre site web officiel ! Vous y trouverez tout le nécessaire. <a href="contact.php">Contactez-nous </a> au besoin</p>
-						<div class="tabulation-2 mt-4">
+						</center>
+            <div class="tabulation-2 mt-4">
 							<ul class="nav nav-pills nav-fill d-md-flex d-block">
                 <li class="nav-item px-lg-2">
 							    <a class="nav-link active py-2" data-toggle="tab" href="#home2"><span class="ion-ios-person mr-2"></span> Notre vision</a>
@@ -189,7 +191,7 @@
                 if($i <= 3){
                   echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
                   echo "<div class=\"blog-entry\">";
-                  echo "<a href=\"actualite_single.php?title=".$resAct["title"]."\" class=\"block-20 d-flex align-items-end\" style=\"background-image:url(admin/dashboard/can/uploads/".$resAct["image"]."\");>";
+                  echo "<a href=\"actualite_single.php?title=".$resAct["title"]."\" class=\"block-20 d-flex align-items-end\" style=\"background-image:url(admin/dashboard/can/uploads/actualites".$resAct["image"]."\");>";
 
                   echo "<div class=\"meta-date text-center p-2\">";
                         echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";
@@ -240,7 +242,7 @@
           <div class="col-md-8 text-center heading-section ftco-animate">
           	<!-- <span class="subheading">Testimonies</span> -->
             <h2 class="mb-4">Nos partenaires</h2>
-            <p>Ils nous ont fait confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
+            <p>Ils nous ont fait la confiance et nous soutiennent dans nos efforts ! Merci à eux</p>
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
@@ -256,7 +258,8 @@
 							echo "<div class=\"  \">";
 							echo "<center>";
 									echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
-										echo "<div class=\"user-img\" style=\"background-image: url(assets/images/person_1.jpg);height:200px;width:200px\">";
+										
+                    echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires".$resPar["image"]."\");height:200px;width:200px>";
 										echo "</div>";
 										echo "<div class=\"text py-1\">";
 											echo "<p>".$resPar["nom"]."</p>";

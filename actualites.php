@@ -73,7 +73,7 @@
               while($resAct = mysqli_fetch_assoc($resultActualites)){
                 echo "<div class=\"col-md-6 col-lg-4 ftco-animate\">";
                   echo "<div class=\"blog-entry\">";
-                  echo "<a href=\"actualite_single.php?title=".$resAct["title"]."\" class=\"block-20 d-flex align-items-end\" style=\"background-image:url(admin/dashboard/can/uploads/".$resAct["image"]."\");>";
+                  echo "<a href=\"actualite_single.php?title=".$resAct["title"]."\" class=\"block-20 d-flex align-items-end\" style=\"background-image:url(admin/dashboard/can/uploads/actualites".$resAct["image"]."\");>";
 
                   echo "<div class=\"meta-date text-center p-2\">";
                         echo "<span class=\"mos\">".$resAct["Ladate"]."</span>";

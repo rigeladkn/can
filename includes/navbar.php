@@ -18,7 +18,9 @@
 					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
+
 						    	<span> <?php echo $email; ?></span>
+
 						    </div>
 					    </div>
 					    <div class="col-md-2 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px">
