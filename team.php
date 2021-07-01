@@ -77,7 +77,7 @@
                     echo "<div class=\"staff border\">";
 
                     echo "<div class=\"img-wrap d-flex align-items-stretch\">";
-                    echo "<div class=\"img align-self-stretch\" style=\"background-image: url(admin/dashboard/can/uploads/".$resMem['image'].");\"></div>";
+                    echo "<div class=\"img align-self-stretch\" style=\"background-image: url(admin/dashboard/can/uploads/membres/".$resMem['image'].");\"></div>";
                     echo "</div>";
                     echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
                     echo "<style type=\"text/css\">div.text.pt-3.px-3.pb-4.text-center{height: 160px;}</style>";
