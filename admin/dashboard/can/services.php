@@ -134,7 +134,7 @@
                                                                             echo "<form id=\"form".$resServ["id"]."\" action=\"../../../Controllers/deleteService.php\" method=\"POST\">";
                                                                                 echo "<input type=\"hidden\" name=\"id\" value=\"".$resServ["id"]."\">";
                                                                                 echo "<input type=\"hidden\" name=\"type\" value=\"".$resServ["type"]."\">";
-                                                                                echo "<a href=\"#\" onClick=\"if(confirm('Êtes-vous sûr de vouloir supprimer ce ".$resServ["type"]." ?')) document.getElementById('form".$resServ["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                echo "<a href=\"#\" onClick=\"if(confirm('Êtes-vous sûr de vouloir supprimer ce ".$resServ["type"]." ?')) document.getElementById('form".$resServ["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"15px\" height=\"15px\"/></a>";
                                                                                 /*
                                                                                 echo "<a id=\"custom-confirm-box-button\" href=\"#\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
                                                                                 echo "<script>";
