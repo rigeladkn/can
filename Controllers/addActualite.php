@@ -60,7 +60,7 @@ if(isset($_POST["title"]) && isset($_POST["laDate"]) && isset($_POST["descriptio
             {
                 // echo 'reçu';
                 require_once '../Models/Actualite.php';
-                $actualite = new Actualite($_POST["title"], $_POST["description"], $_FILES["image"], $_POST["laDate"], "admin","");
+                $actualite = new Actualite($_POST["title"], $_POST["description"], $_FILES["image"]["name"], $_POST["laDate"], "admin","");
 
                 if($actualite->dbConnect()){
                     echo 'Connecté';

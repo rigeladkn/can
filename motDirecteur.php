@@ -83,7 +83,7 @@
                                     echo "<center><h1>".$resMot["title"]."</h1></center>";
                                     echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
                                         echo "<div class=\"lead text-justify\">";
-                                            echo "<img src=\"assets/images/staff-1.jpg\" width=230px height=290px style=\"float:left; margin-right:25px; margin-bottom:0px;\"/>";
+                                            echo "<img src=admin/dashboard/can/uploads/directeur/".$resMot["image"]." width=230px height=290px style=\"float:left; margin-right:25px; margin-bottom:0px;\"/>";
                                             echo "<p>".$resMot["description"]."</p>";
                                         echo "</div>";
                                     echo "</div>";
@@ -118,8 +118,6 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.animateNumber.min.js"></script>
   <script src="assets/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="assets/js/google-map.js"></script>
   <script src="assets/js/main.js"></script>
     
   </body>

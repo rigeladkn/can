@@ -57,7 +57,7 @@ if(isset($_POST["nom"]) && isset($_POST["poste"]) && isset($_POST["description"]
                 
                 require_once '../Models/Membre.php';
 
-                $membre = new Membre($_POST["nom"], $_POST["poste"], $_POST["description"], $_FILES["image"], $_POST["tweetlink"], $_POST["facelink"], "admin","");
+                $membre = new Membre($_POST["nom"], $_POST["poste"], $_POST["description"], $_FILES["image"]["name"], $_POST["tweetlink"], $_POST["facelink"], "admin","");
                 
                 if($membre->dbConnect()){
                     // echo 'Connecté';

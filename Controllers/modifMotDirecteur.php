@@ -57,7 +57,7 @@ if(isset($_POST["title"]) && isset($_POST["description"])){
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
         require_once '../Models/Extra.php';
 
-        $mot_directeur = new Extra($_POST["title"], $_POST["description"], $_FILES["image"], "motDirecteur", "admin","");
+        $mot_directeur = new Extra($_POST["title"], $_POST["description"], $_FILES["image"]["name"], "motDirecteur", "admin","");
 
         if($mot_directeur->dbConnect()){
             echo 'Connecté';

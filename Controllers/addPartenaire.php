@@ -58,7 +58,7 @@ if(isset($_POST["nom"]) && isset($_FILES["logo"]))
 
                     // echo 'reçu';
                     require_once '../Models/Partenaire.php';
-                    $partenaire = new Partenaire($_POST["nom"], $_FILES["logo"],$_POST["lien"], "admin","");
+                    $partenaire = new Partenaire($_POST["nom"], $_FILES["logo"]["name"],$_POST["lien"], "admin","");
 
                     if($partenaire->dbConnect()){
                         // echo 'Connecté';

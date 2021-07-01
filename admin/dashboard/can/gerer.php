@@ -33,7 +33,7 @@
       <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/style.css">
       <link rel="stylesheet" type="text/css" href="../../../assets/dashboard/css/jquery.mCustomScrollbar.css">
 
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<!--    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
 
   </head>
   <body>
@@ -111,7 +111,7 @@
                                     echo "<center>";
                                         echo "<form method=\"\"   id=\"form".$resIm["id"]."\">";
                                         
-                                        echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"id\" >";
+                                        echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"id\" hidden >";
                                         
                                         echo "<div class=\"col-2\">";
                                         if($resIm["status"]=="visible" or $resIm["status"]=="Visible"){
