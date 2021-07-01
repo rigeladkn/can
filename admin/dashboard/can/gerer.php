@@ -109,9 +109,9 @@
                                 echo "<div class=\"row\" >";
                                 echo "<div class=\"col-sm-10\"  >";
                                     echo "<center>";
-                                        echo "<form method=\"post\" action=\"updateVisibility.php\" id=\"".$resIm["id"]."\">";
-                                        echo "<input type=\"text\" value=\"".$resIm["image"]."\" hidden name =\"".$resIm["id"]."\" >";
-                                        echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"".$resIm["id"]."\" >";
+                                        echo "<form method=\"\"   id=\"form".$resIm["id"]."\">";
+                                        
+                                        echo "<input type=\"text\" value=\"".$resIm["id"]."\"  name =\"id\" >";
                                         
                                         echo "<div class=\"col-2\">";
                                         if($resIm["status"]=="visible" or $resIm["status"]=="Visible"){
@@ -120,9 +120,9 @@
                                         else{
                                             $color = 'danger';
                                         }
-                                        echo "<button  class=\"btn waves-effect waves-light btn-sm btn-".$color."\"onClick=\"sendId(".$resIm["id"].")\"></i>".$resIm["status"]."</button><br>";
+                                        echo "<button type=\"submit\" class=\"btn waves-effect sendId waves-light btn-sm btn-".$color."\"data-id=\"".$resIm["id"]."\"". " id=\"".$resIm["id"]."\" ></i>".$resIm["status"]."</button><br>";
                                         echo "</div>"; 
-                                        echo "<form>";  
+                                        echo "</form>";  
                                     echo "</center>"; 
                                 echo "</div>";
                                 echo "</div>";
@@ -164,23 +164,24 @@
 <script type="text/javascript" src="../../../assets/dashboard/js/script.js"></script>
 
 <script>
-    function sendId(idToSend){
-      
-        $.ajax({
-            type : 'post',
-            url : "updateVisibility.php",
-            // dataType : json,
-            data : json_encode({
-                id : idToSend
-            },),
-            success : function(response){
-                alert(this.data);
-            },
-            error: function(){
-                alert("error");
-            }
+        $('.sendId').click(function(e){
+            //e.preventDefault();
+            //console.log($(this).parents("form").serialize());
+            $.ajax({
+                type : 'get',
+                url : "../../../Controllers/updateVisibility.php",
+                // dataType : json,
+                data : $(this).parents("form").serialize(),
+                success : function(response){
+                    //console.log(response);
+                    // window.location.href = "http://localhost/can/admin/dashboard/can/gerer.php" ;
+                },
+                error: function(){
+                    alert("error");
+                }
+            });
         });
-    }
+        
 
 </script>
  

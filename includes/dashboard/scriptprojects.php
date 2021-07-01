@@ -13,28 +13,24 @@
               })";
         }
         else if($_GET["success"] == "false"){
-            echo "mymodal = $(\"#echecModal\").modal('show');";
-            echo  "$(\"#successModal\").on('hidden.bs.modal', function (e) {
+            echo "mymoda$(\"#echecModal\").modal('show');";
+            echo  "$(\"#echecModal\").on('hidden.bs.modal', function (e) {
                 window.location.replace('/can/admin/dashboard/can/projects.php');
                })";
         } 
         else if($_GET["success"] == "lostconn"){
-            echo "mymodal = $(\"#echeconnModal\").modal('show');";
-            echo  "$(\"#successModal\").on('hidden.bs.modal', function (e) {
+            echo "$(\"#echeconnModal\").modal('show');";
+            echo  "$(\"#echeconnModal\").on('hidden.bs.modal', function (e) {
                 window.location.replace('/can/admin/dashboard/can/projects.php');
                })";
         }  
         else if($_GET["success"] == "requis"){
-            echo "mymodal = $(\"#requisModal\").modal('show');";
-            echo  "$(\"#successModal\").on('hidden.bs.modal', function (e) {
+            echo "$(\"#requisModal\").modal('show');";
+            echo  "$(\"#requisModal\").on('hidden.bs.modal', function (e) {
                 window.location.replace('/can/admin/dashboard/can/projects.php');
                })";
         }
-        else{
-            echo  "$(\"#successModal\").on('hidden.bs.modal', function (e) {
-                window.location.replace('/can/admin/dashboard/can/');
-               })";
-        }
+      
       ?>
     </script>
 

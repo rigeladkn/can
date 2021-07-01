@@ -6,11 +6,17 @@ $user = new User();
 if (isset($_POST['email']) && isset($_POST['motdepasse'])) {
     if ($user->dbConnect()) {
         if ($user->logIn("users", $_POST['email'], $_POST['motdepasse'])) {
-            echo "ok";
-            //session_start();
-            //$_SESSION["matricule"] = $_POST['email'];
-            header("Location: http://localhost/can/admin/dashboard/can");
-            die();
-        } else echo "Données entrées non correctes";
-    } else echo "DBconnection";
-} else echo "impossible";
+            echo "<script> window.location.replace(\"http://localhost/can/admin/dashboard/can/\");</script>";
+        } else {
+            echo "<script> alert(\"Données entrées non correctes\"); </script>";
+            echo "<script> window.location.replace(\"http://localhost/can/admin/\");</script>";
+        }
+            
+    } else{
+        echo "<script> alert(\"Problème de connexion\"); </script>";
+        echo "<script> window.location.replace(\"http://localhost/can/admin/\");</script>";
+    } 
+} else{
+    echo "<script> alert(\"Tous les champs sont requis\"); </script>";
+    echo "<script> window.location.replace(\"http://localhost/can/admin/\");</script>";
+} 

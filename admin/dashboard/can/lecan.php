@@ -225,7 +225,9 @@
                                                                                                 echo "<form id=\"form".$resMission["id"]."\" action=\"../../../Controllers/deleteMission.php\" method=\"POST\">";
                                                                                                     echo "<input type=\"hidden\" name=\"id\" value=\"".$resMission["id"]."\">";
                                                                                                     echo "<input type=\"hidden\" name=\"type\" value=\"".$resMission["type"]."\">";
-                                                                                                    echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMission["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"15px\" height=\"15px\"/></a>";
+
+                                                                                                    // echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMission["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                                    echo "<a href=\"#\" onClick=\"if(confirm('Êtes-vous sûr de vouloir supprimer cette ".$resMission["type"]." ?')) document.getElementById('form".$resMission["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
                                                                                                 echo "</form>";
                                                                                                 echo "<br><br>";
                                                                                             echo "</td>";
@@ -305,7 +307,10 @@
                                 echo "<td>";
                                     echo "<form id=\"form".$resMem["id"]."\" action=\"../../../Controllers/deleteMembre.php\" method=\"POST\">";
                                         echo "<input type=\"hidden\" name=\"id\" value=\"".$resMem["id"]."\">";
-                                        echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMem["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"15px\" height=\"15px\"/></a>";
+
+                                        // echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMem["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                        echo "<a href=\"#\" onClick=\"if(window.confirm('Êtes-vous sûr de vouloir supprimer ce membre ?')) document.getElementById('form".$resMem["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+
                                     echo "</form>";
                                     echo "<br><br>";
                                 echo "</td>";

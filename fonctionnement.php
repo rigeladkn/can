@@ -41,8 +41,7 @@
 	        	'<li class="nav-item"><a href="actualites.php" id="studies" class="nav-link">Actualités</a></li>'+
 	        	'<li class="nav-item" ><a href="services.php" onclick="" class="nav-link">Services</a></li>'+
 	          '<li class="nav-item"><a href="contact.php" id="contact" class="nav-link">Contact</a></li>'+
-            '</ul>';
-            
+	        '</ul>';
 	  }
     </script>
 

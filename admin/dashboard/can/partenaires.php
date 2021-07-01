@@ -113,6 +113,7 @@
                                                                 <th>N°</th>
                                                                 <th>Nom</th>
                                                                 <th>Logo</th>
+                                                                <th>Lien</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
@@ -127,10 +128,12 @@
                                                                         echo "<th scope=\"row\">".$resPar["id"]."</th>";
                                                                         echo "<td>".$resPar["nom"]."</td>";
                                                                         echo "<td>".$resPar["logo"]."</td>";
+                                                                        echo "<td>".$resPar["lien"]."</td>";
                                                                         echo "<td>";
                                                                             echo "<form id=\"form".$resPar["id"]."\" action=\"../../../Controllers/deletePartenaire.php\" method=\"POST\">";
                                                                                 echo "<input type=\"hidden\" name=\"id\" value=\"".$resPar["id"]."\">";
-                                                                                echo "<a href=\"#\" onClick=\"document.getElementById('form".$resPar["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                // echo "<a href=\"#\" onClick=\"document.getElementById('form".$resPar["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                                echo "<a href=\"#\" onClick=\"if(confirm('Êtes-vous sûr de vouloir supprimer ce partenaire ?')) document.getElementById('form".$resPar["id"]."').submit();\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
                                                                             echo "</form>";
                                                                         echo "</td>";
                                                                     echo "</tr>";
