@@ -31,23 +31,22 @@ class User{
         return mysqli_real_escape_string($this->connect, stripslashes(htmlspecialchars($data)));
     }
   
-    function signup($table,$nom,$prenom,$email,$contact,$sexe,$matricule,$filiere,$naissance,$password,$confPassword){
-        $nom = $this->prepareData($nom);
-        $prenom = $this->prepareData($prenom);
+    function signup($table, $email, $password, $confPassword){
         $email = $this->prepareData($email);
-        $contact = $this->prepareData($contact);
-        $sexe = $this->prepareData($sexe);
-        $matricule = $this->prepareData($matricule);
-        $filiere = $this->prepareData($filiere);
-        $naissance = $this->prepareData($naissance);
+        $password = $this->prepareData($password);
         $confPassword = $this->prepareData($confPassword);
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $confPassword = $password;
+        $confPassword = password_hash($confPassword, PASSWORD_DEFAULT);
 
-        $this->sql = "INSERT INTO ".$table."(nom, prenom, email, contact,sexe,matricule,filiere_id,naissance,password,confPassword)VALUES('".$nom."','".$prenom."','".$email."','".$contact."','".$sexe."','".$matricule."','".$filiere."','".$naissance."','".$password."','".$confPassword."')";
+        if(password_verify($password, $confPassword)){
+            $this->sql = "INSERT INTO ".$table."(email, motdepasse, confmotdepasse)VALUES('".$email."','".$password."','".$confPassword."')";
 
-        if($this->connect->query($this->sql)){
-            return true;
+            if($this->connect->query($this->sql)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
             return false;
@@ -64,7 +63,7 @@ class User{
         if (mysqli_num_rows($result) != 0) {
             $dbemail = $row['email'];
             $dbpassword = $row['motdepasse'];
-            if ($dbemail == $email && $password == $dbpassword) {
+            if ($dbemail == $email && password_verify($password, $dbpassword)) {
                 $login = true;
             } else $login = false;
         } else $login = false;

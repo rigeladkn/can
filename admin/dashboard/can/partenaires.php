@@ -113,6 +113,7 @@
                                                                 <th>N°</th>
                                                                 <th>Nom</th>
                                                                 <th>Logo</th>
+                                                                <th>Lien</th>
                                                                 <th>Action</th>
                                                             </tr>
                                                         </thead>
@@ -127,6 +128,7 @@
                                                                         echo "<th scope=\"row\">".$resPar["id"]."</th>";
                                                                         echo "<td>".$resPar["nom"]."</td>";
                                                                         echo "<td>".$resPar["logo"]."</td>";
+                                                                        echo "<td>".$resPar["lien"]."</td>";
                                                                         echo "<td>";
                                                                             echo "<form id=\"form".$resPar["id"]."\" action=\"../../../Controllers/deletePartenaire.php\" method=\"POST\">";
                                                                                 echo "<input type=\"hidden\" name=\"id\" value=\"".$resPar["id"]."\">";

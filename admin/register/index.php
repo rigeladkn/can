@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Material Able bootstrap admin template by Codedthemes</title>
+    <title>CAN | Inscrire un admin</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -18,21 +18,21 @@
       <meta name="author" content="Codedthemes" />
       <!-- Favicon icon -->
 
-      <link rel="icon" href="../assets/dashboard/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="../../assets/dashboard/images/favicon.ico" type="image/x-icon">
       <!-- Google font-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
       <!-- Required Fremwork -->
-      <link rel="stylesheet" type="text/css" href="../assets/dashboard/css/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../../assets/dashboard/css/bootstrap/css/bootstrap.min.css">
       <!-- waves.css -->
-      <link rel="stylesheet" href="../assets/dashboard/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <link rel="stylesheet" href="../../assets/dashboard/pages/waves/css/waves.min.css" type="text/css" media="all">
       <!-- themify-icons line icon -->
-      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/themify-icons/themify-icons.css">
+      <link rel="stylesheet" type="text/css" href="../../assets/dashboard/icon/themify-icons/themify-icons.css">
       <!-- ico font -->
-      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/icofont/css/icofont.css">
+      <link rel="stylesheet" type="text/css" href="../../assets/dashboard/icon/icofont/css/icofont.css">
       <!-- Font Awesome -->
-      <link rel="stylesheet" type="text/css" href="../assets/dashboard/icon/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="../../assets/dashboard/icon/font-awesome/css/font-awesome.min.css">
       <!-- Style.css -->
-      <link rel="stylesheet" type="text/css" href="../assets/dashboard/css/style.css">
+      <link rel="stylesheet" type="text/css" href="../../assets/dashboard/css/style.css">
   </head>
 
   <body themebg-pattern="theme1">
@@ -98,26 +98,31 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
 
-                        <form class="md-float-material form-material" action="../Controllers/login.php" method="post">
+                        <form class="md-float-material form-material" action="../../Controllers/signup.php" method="post">
                             <div class="text-center">
-                                <img src="../assets/dashboard/images/logo.png" alt="logo.png">
+                                <img src="../../assets/dashboard/images/logo.png" alt="logo.png">
                             </div>
                             <div class="auth-box card">
                                 <div class="card-block">
                                     <div class="row m-b-20">
                                         <div class="col-md-12">
-                                            <h3 class="text-center">Connexion</h3>
+                                            <h3 class="text-center">Inscription</h3>
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="text" name="email" class="form-control">
+                                        <input type="text" name="email" class="form-control" required>
                                         <span class="form-bar"></span>
                                         <label class="float-label">Mail de connexion</label>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" name="motdepasse" class="form-control">
+                                        <input type="password" name="motdepasse" class="form-control" required>
                                         <span class="form-bar"></span>
                                         <label class="float-label">Mot de passe</label>
+                                    </div>
+                                    <div class="form-group form-primary">
+                                        <input type="password" name="confmotdepasse" class="form-control" required>
+                                        <span class="form-bar"></span>
+                                        <label class="float-label">Confirmation</label>
                                     </div>
                                     <!-- <div class="row m-t-25 text-left">
                                         <div class="col-12">
@@ -135,7 +140,7 @@
                                     </div> -->
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Connexion</button>
+                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Inscrire</button>
                                         </div>
                                     </div>
                                     <hr/>
@@ -143,13 +148,17 @@
                                         <div class="col-md-10">
                                             <center>
                                                 <!-- <p class="text-inverse text-left m-b-0">Bienvenu(e) sur le panel d'administration</p> -->
-                                                <p class="text-inverse text-left"><a href="../"><b>Retour</b></a></p>
+                                                <p class="text-inverse text-left"><a href="../../../../"><b>Retour</b></a></p>
                                             </center>
-                                                
                                         </div>
-                                        <!-- <div class="col-md-2">
-                                            <img src="../assets/dashboard/images/auth/Logo-small-bottom.png" alt="small-logo.png">
-                                        </div> -->
+                                    </div> 
+                                     <div class="row" style="margin-left: 30px;">
+                                        <div class="col-md-10">
+                                            <center>
+                                                <!-- <p class="text-inverse text-left m-b-0">Bienvenu(e) sur le panel d'administration</p> -->
+                                                <p class=" " id="alertmessage">Pannel de création d'un compte administrateur</p>
+                                            </center>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -207,15 +216,15 @@
 <![endif]-->
 <!-- Warning Section Ends -->
 <!-- Required Jquery -->
-<script type="text/javascript" src="../assets/dashboard/js/jquery/jquery.min.js "></script>
-<script type="text/javascript" src="../assets/dashboard/js/jquery-ui/jquery-ui.min.js "></script>
-<script type="text/javascript" src="../assets/dashboard/js/popper.js/popper.min.js"></script>
-<script type="text/javascript" src="../assets/dashboard/js/bootstrap/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../assets/dashboard/js/jquery/jquery.min.js "></script>
+<script type="text/javascript" src="../../assets/dashboard/js/jquery-ui/jquery-ui.min.js "></script>
+<script type="text/javascript" src="../../assets/dashboard/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="../../assets/dashboard/js/bootstrap/js/bootstrap.min.js "></script>
 <!-- waves js -->
-<script src="../assets/dashboard/pages/waves/js/waves.min.js"></script>
+<script src="../../assets/dashboard/pages/waves/js/waves.min.js"></script>
 <!-- jquery slimscroll js -->
-<script type="text/javascript" src="../assets/dashboard/js/jquery-slimscroll/jquery.slimscroll.js"></script>
-<script type="text/javascript" src="../assets/dashboard/js/common-pages.js"></script>
+<script type="text/javascript" src="../../assets/dashboard/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script type="text/javascript" src="../../assets/dashboard/js/common-pages.js"></script>
 </body>
 
 </html>

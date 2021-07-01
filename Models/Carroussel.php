@@ -110,17 +110,17 @@ class Carroussel{
     }
 
     function updateVisibility($id){
-        // var_dump($name);
+        var_dump($id);
         $table = $this->table;
 
         $sql0 = "SELECT status FROM ".$this->table." WHERE id = '".$id."'" ;
         // var_dump($sql0);
-        if( $result0 = $this->connect->query($sql0)){
-              $res = mysqli_fetch_assoc($result0);
+        $result0 = $this->connect->query($sql0);
+        $res = mysqli_fetch_assoc($result0);
             if($res["status"] == "Non visible"){
                 $newVisibility = 'Visible';
             }
-            else{
+            else if($res["status"] == "Visible"){
                 $newVisibility = 'Non visible';
             }
             var_dump($newVisibility);
@@ -132,7 +132,7 @@ class Carroussel{
             else{
                 return false;
             }
-        }
+        
        
     }
 

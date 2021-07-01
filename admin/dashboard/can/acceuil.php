@@ -80,9 +80,7 @@
                                 <div class="row">
                                         <div class="col-10"></div>
                                         <div class="col-2">
-                                            <form action="../../../Controllers/gestImages.php" method="post">
-                                                <button type="submit" class="btn waves-effect waves-light btn-primary "></i>Gérer</button><br>
-                                            </form>
+                                                <a type="button"  href="gerer.php" class="btn waves-effect waves-light btn-primary "></i>Gérer</a><br>
                                         </div>
                                 </div><br>
 

@@ -98,7 +98,7 @@
 	        <ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">
 	        	<li class="nav-item active" id="home"><a href="index.php" class="nav-link">Accueil</a></li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>
+					<a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 						<a class="dropdown-item" href="about.php">Présentation</a>
 						<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>

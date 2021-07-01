@@ -77,13 +77,13 @@ if(isset($_POST["nom"]) && isset($_FILES["logo"]))
                         header("location: http://localhost/can/admin/dashboard/can/partenaires.php?success=lostconn");
                             die();
                     }
+            }
         }
-    }
 }
-// else{
-//     // echo 'Tous les champs sont requis';
-//     header("location: http://localhost/can/admin/dashboard/can/partenaires.php?success=requis");
-//     die();
-// }
+else{
+    // echo 'Tous les champs sont requis';
+    header("location: http://localhost/can/admin/dashboard/can/partenaires.php?success=requis");
+    die();
+}
 
 ?>
