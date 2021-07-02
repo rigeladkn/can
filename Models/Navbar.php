@@ -103,15 +103,30 @@ class Navbar{
         $slogan = $this->prepareData($this->slogan);
         $table = $this->table;
         
-        $sql = "UPDATE ".$table." SET adresse = '".$adresse."', telephone = '".$telephone."', email = '".$email."', slogan = '".$slogan."'";
-    
-        if( $result = $this->connect->query($sql)){
+        $sqlexists = "SELECT COUNT(1) FROM ".$this->table;
+        $ifsqlexists = mysqli_fetch_assoc($this->connect->query($sqlexists));
+        if ( $ifsqlexists["COUNT(1)"] != 0) {
+            
+            $this->sql = "UPDATE ".$table." SET adresse = '".$adresse."', telephone = '".$telephone."', email = '".$email."', slogan = '".$slogan."'";
 
-            return $result;
+            if($this->connect->query($this->sql)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         else{
-            return false;
+            $this->sql = "INSERT INTO ".$this->table."(adresse, telephone, email, slogan)VALUES('".$adresse."','".$telephone."','".$email."','".$slogan."')";
+   
+           if($this->connect->query($this->sql)){
+               return true;
+           }
+           else{
+               return false;
+           }
         }
+
     }
 
 

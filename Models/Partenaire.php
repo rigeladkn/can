@@ -11,13 +11,14 @@ class Partenaire{
     private $table;
     private $nom;
     private $logo;
+    private $lienP;
 
     protected $servername;
     protected $username;
     protected $password;
     protected $databasename;
 
-    public function __construct($nom, $logo, $from,$op){
+    public function __construct($nom, $logo, $lienP,$from,$op){
         $this->from = $from;
 
         if($this->from == 'client'){
@@ -44,6 +45,7 @@ class Partenaire{
         $this->table = "partenaires";
         $this->nom = $nom;
         $this->logo = $logo;
+        $this->lienP = $lienP;
     }
 
     function dbConnect()
@@ -60,10 +62,12 @@ class Partenaire{
     function insertPartenaire(){
         $nom = $this->prepareData($this->nom);
         $logo = $this->prepareData($this->logo);
+        $lienP = $this->prepareData($this->lienP);
         $table = $this->table;
 
-        $this->sql = "INSERT INTO ".$table." (nom, logo)
-         VALUES ('".$nom."', '".$logo."')";
+        $this->sql = "INSERT INTO ".$table." (nom, logo, lien)
+         VALUES ('".$nom."', '".$logo."', '".$lienP."')";
+         var_dump($this->sql);
 
         if($this->connect->query($this->sql)){
             return true;
@@ -85,7 +89,7 @@ class Partenaire{
     }
 
     function deletePartenaire($id){
-        $this->sql = "DELETE FROM ".$this->table." WHERE id = '".$id."' ";
+        $this->sql = "DELETE FROM * ".$this->table." WHERE id = '".$id."'";
         if($result = $this->connect->query($this->sql)){
             return true;
         }
