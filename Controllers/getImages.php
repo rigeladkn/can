@@ -38,15 +38,12 @@ function getVisibleImages($from){
     $carroussel = new Carroussel("", "", "", "", $from,"show");
 
     if($carroussel->dbConnect()){
-        if($result = $carroussel->getAllImages()){
+        if($result = $carroussel->getVisibleImages()){
             return $result;
-        }
-        else{
-            echo 'Echec';
-        }
+        } 
     }
     else{
-        echo 'Connexion impossible';
+        return null;
     }
 }
 

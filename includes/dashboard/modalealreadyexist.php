@@ -1,11 +1,11 @@
 <?php 
 
-echo "<div class=\"modal fade\" id=\"successModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"successModalLabel\" aria-hidden=\"true\">";
+echo "<div class=\"modal fade\" id=\"existModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby\ \" aria-hidden=\"true\">";
                 echo "<div class=\"modal-dialog\" role=\"document\">";
                   echo "<div class=\"modal-content\">";
                  
                     echo "<div class=\"modal-header\">";
-                      echo "<h5  class=\"modal-title\" id=\"title\" style=\"color:green; font-size:20px; margin-left:150px\">Opération réussie</h5>";
+                      echo "<h5  class=\"modal-title\" id=\"title\" style=\"  font-size:20px; margin-left:150px\">Le fichier existe déjà</h5>";
                       echo "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">";
                       echo "<span aria-hidden=\"true\">&times;</span>";
                       echo "</button>";
@@ -13,7 +13,6 @@ echo "<div class=\"modal fade\" id=\"successModal\" tabindex=\"-1\" role=\"dialo
                    
                     echo "<center>";
                     echo "<div class=\"modal-body\">";
-                      echo "<img src=\"../../../assets/dashboard/images/validate.png\"  style=\"height:100px\">";
                     echo "</div>";
                     echo "<div class=\"\">";
                       echo "<div class=\"row\">";

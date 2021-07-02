@@ -109,6 +109,7 @@
                                                             <button class="btn waves-effect waves-light col-2" style="background-color: #7814ff; color:white" data-toggle="modal" data-target="#fonctionModal">Fonctionnement</button>
                                                             <button class="btn btn-danger waves-effect waves-light col-2" data-toggle="modal" data-target="#historiqueModal">Historique</button>
                                                             <button class="btn btn-inverse waves-effect waves-light col-1" data-toggle="modal" data-target="#membreModal">Membre</button>
+                                                            <button class="btn btn-inverse waves-effect waves-light col-1" data-toggle="modal" data-target="#successModal">succes</button>
                                                         </div>
                                                     </div>
 
@@ -360,8 +361,8 @@
 
   
     </div>
-
- 
+    <?php include("../../../includes/dashboard/scriptlecan.php");?>
+    
  
     <!-- Warning Section Ends -->
     <!-- Required Jquery -->
@@ -408,7 +409,7 @@
 
  <!-- script pour modals et redirections -->
    
- <?php include("../../../includes/dashboard/scriptlecan.php");?>
+ 
 
 
 

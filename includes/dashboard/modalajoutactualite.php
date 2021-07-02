@@ -1,5 +1,5 @@
  
- <form action="../../../Controllers/addActualite.php" method="POST"> 
+ <form action="../../../Controllers/addActualite.php" method="POST" enctype="multipart/form-data"> 
  <div class="modal fade" id="actualiteModal" tabindex="-1" role="dialog" aria-labelledby="actualiteModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

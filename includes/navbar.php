@@ -18,21 +18,23 @@
 					    	<div class="icon d-flex justify-content-center align-items-center" ><span class="ion-ios-paper-plane" style="font-size:17px"></span></div>
 					    	<div class="text">
 					    		<span>Email</span>
-						    	<span> <?php echo htmlEntities($email, ENT_COMPAT, 'UTF-8'); ?></span>
+
+						    	<span> <?php echo $email; ?></span>
+
 						    </div>
 					    </div>
 					    <div class="col-md-2 d-flex topper align-items-center align-items-stretch py-2" style="font-size:12px">
 					    	<div class="icon d-flex justify-content-center align-items-center"><span class="ion-ios-call" style="font-size:17px"></span></div>
 						    <div class="text">
 						    	<span>Télephone</span>
-						    	<span><?php echo utf8_encode($telephone); ?></span>
+						    	<span><?php echo $telephone; ?></span>
 						    </div>
 					    </div>
 					    
 						<div class="col-md-7 py-2" style="text-align: right;font-size:16px">
 					    	
 					    	<div class="">
-					    		<span> <strong style="color:#484848;"><?php echo utf8_encode($slogan); ?></strong>  </span>
+					    		<span> <strong style="color:#484848;"><?php echo $slogan; ?></strong>  </span>
 						    </div>
 					    </div>
 				    </div>
@@ -98,7 +100,7 @@
 	        <ul class="navbar-nav mr-auto" style="display:-webkit-inline-box">
 	        	<li class="nav-item active" id="home"><a href="index.php" class="nav-link">Accueil</a></li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>
+					<a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le CAN</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 						<a class="dropdown-item" href="about.php">Présentation</a>
 						<a class="dropdown-item" href="motDirecteur.php">Mot du directeur</a>

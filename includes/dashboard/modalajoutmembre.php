@@ -1,5 +1,5 @@
  
- <form action="../../../Controllers/addMembre.php" method="POST"> 
+ <form action="../../../Controllers/addMembre.php" method="POST"  enctype="multipart/form-data"> 
  <div class="modal fade" id="membreModal" tabindex="-1" role="dialog" aria-labelledby="membreModalLabel" aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label for="image" class="col-form-label">Photo de profil</label>
                    
-                        <input type="file" class="form-control" name="image">
+                        <input type="file" class="form-control" name="image" required>
                    
                 </div>
                 <div class="form-group">

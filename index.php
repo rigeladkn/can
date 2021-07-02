@@ -31,7 +31,7 @@
       include_once('Controllers/getImages.php');
       $resultMissions = getmissions("client");
       $resultVisions = getvisions("client");
-      $resultCarrousel = getVisibleImages("client");
+      
       // var_dump($resultMissions);
 
       include_once("Controllers/getNavbar.php");
@@ -47,9 +47,9 @@
 				
 						// var_dump($resultMembres);
 					
-    
+    $resultCarrousel = getVisibleImages("client");
     while($resCarr = mysqli_fetch_assoc($resultCarrousel)){
-      echo "<div class=\"slider-item\" style=\"background-image:url("."admin/dashboard/can/uploads/caroussel".$resCarr["image"]."\");>";
+      echo "<div class=\"slider-item\" style=\"background-image:url("."admin/dashboard/can/uploads/".$resCarr["image"]."\");>";
           echo "<div class=\"overlay\"></div>";
           echo "<div class=\"container\">";
               echo "<div class=\"row no-gutters slider-text align-items-center justify-content-start\" data-scrollax-parent=\"true\">";
@@ -259,7 +259,7 @@
 							echo "<center>";
 									echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
 										
-                    echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires".$resPar["image"]."\");height:200px;width:200px>";
+                    echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires/".$resPar["logo"]."\");height:200px;width:200px>";
 										echo "</div>";
 										echo "<div class=\"text py-1\">";
 											echo "<p>".utf8_encode($resPar["nom"])."</p>";
