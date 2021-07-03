@@ -80,7 +80,7 @@ class Partenaire{
             return $result;
         }
         else{
-            return false;
+            return null;
         }
     }
 

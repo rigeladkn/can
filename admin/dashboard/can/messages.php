@@ -94,7 +94,7 @@
                                                                     echo "<div class=\"col-1\">";
                                                                         echo "<form id=\"form".$resMes["id"]."\" action=\"../../../Controllers/deleteMessage.php\" method=\"POST\">";
                                                                             echo "<input type=\"hidden\" name=\"id\" value=\"".$resMes["id"]."\">";
-                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMes["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"30px\" height=\"30px\"/></a>";
+                                                                            echo "<a href=\"#\" onClick=\"document.getElementById('form".$resMes["id"]."').submit()\"><img src=\"../../../assets/dashboard/svg/trash-solid.svg\" width=\"15px\" height=\"15px\"/></a>";
                                                                         echo "</form>";
                                                                     echo "</div>";
                                                                 echo "</div>";

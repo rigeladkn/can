@@ -259,7 +259,7 @@
 							echo "<center>";
 									echo "<div class=\"testimony-wrap\" style=\"background:none;\">";
 										
-                    echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires".$resPar["image"]."\");height:200px;width:200px>";
+                    echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires/".$resPar["image"]."\");height:200px;width:200px>";
 										echo "</div>";
 										echo "<div class=\"text py-1\">";
 											echo "<p>". $resPar["nom"]."</p>";
