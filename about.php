@@ -80,7 +80,7 @@
                       echo "<center><h1>".$resHis["title"]."</h1></center>";
                       echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
                           echo "<div class=\"lead text-justify\">";
-                              echo "<p>".utf8_encode($resHis["description"])."</p>";
+                              echo "<p>". $resHis["description"]."</p>";
                           echo "</div>";
                       echo "</div>";
                   echo "</div>";

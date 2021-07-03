@@ -16,9 +16,9 @@
             	<h2 class="ftco-heading-2">Avez vous des questions à poser ?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text"><?php echo utf8_encode($adresse); ?></span></li>
-	                <li><?php echo "<a href=\"tel://".utf8_encode($telephone)."\"><span class=\"icon icon-phone\"></span><span class=\"text\"> ".utf8_encode($telephone)." </span></a>"; ?></li>
-	                <li><?php echo "<a href=\"mailto:".utf8_encode($email)."\"><span class=\"icon icon-envelope\"></span><span class=\"text\"> ".utf8_encode($email)." </span></a>"; ?></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text"><?php echo  $adresse; ?></span></li>
+	                <li><?php echo "<a href=\"tel://". $telephone."\"><span class=\"icon icon-phone\"></span><span class=\"text\"> ". $telephone." </span></a>"; ?></li>
+	                <li><?php echo "<a href=\"mailto:". $email."\"><span class=\"icon icon-envelope\"></span><span class=\"text\"> ". $email." </span></a>"; ?></li>
 	              </ul>
 	            </div>
 	            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">

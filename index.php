@@ -108,7 +108,7 @@
                                       <?php
                                         echo "<ul>";
                                           while($resMis = mysqli_fetch_assoc($resultMissions)){
-                                            echo "<li>".utf8_encode($resMis["description"])."</li>";
+                                            echo "<li>". $resMis["description"]."</li>";
                                           }
                                         echo "<ul>";
                                       ?>
@@ -118,7 +118,7 @@
                                   <p>
                                     <?php
                                       while($resVis = mysqli_fetch_assoc($resultVisions)){
-                                        echo utf8_encode($resVis["description"])."<br>";
+                                        echo  $resVis["description"]."<br>";
                                       }
                                     ?>
                                   </p>
@@ -166,7 +166,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
           <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-0"><?php echo utf8_encode($slogan); ?></h2>
+            <h2 class="mb-0"><?php echo  $slogan; ?></h2>
           </div>
         </div>	
 			</div>
@@ -230,7 +230,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
           <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
-            <h2 class="mb-0"><?php echo utf8_encode($slogan); ?></h2>
+            <h2 class="mb-0"><?php echo  $slogan; ?></h2>
           </div>
         </div>	
 			</div>
@@ -262,7 +262,7 @@
                     echo "<div class=\"user-img\" style=\"background-image:url("."admin/dashboard/can/uploads/partenaires".$resPar["image"]."\");height:200px;width:200px>";
 										echo "</div>";
 										echo "<div class=\"text py-1\">";
-											echo "<p>".utf8_encode($resPar["nom"])."</p>";
+											echo "<p>". $resPar["nom"]."</p>";
                       if ($resPar["lien"] != NULL){
                         echo "<p class=\"mb-0\"><a href=".$resPar["lien"]." class=\"btn btn-primary\"><span class=\"ion-md-planet\"></span> Visitez le site </a></p>";
                       }

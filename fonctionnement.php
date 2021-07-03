@@ -75,10 +75,10 @@
             while($resFon = mysqli_fetch_assoc($resultFonctions)){
 
                 echo "<div class=\"col-md-12 col-lg-12\">";
-                    echo "<center><h1>".utf8_encode($resFon["title"])."</h1></center>";
+                    echo "<center><h1>". $resFon["title"]."</h1></center>";
                     echo "<div class=\"text pt-3 px-3 pb-4 text-center\">";
                         echo "<div class=\"lead text-justify\">";
-                            echo "<p>".utf8_encode($resFon["description"])."</p>";
+                            echo "<p>". $resFon["description"]."</p>";
                         echo "</div>";
                     echo "</div>";
                 echo "</div>";
